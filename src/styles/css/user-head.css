@@ -1,0 +1,26 @@
+.user-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px 20px 20px;
+}
+.user-head-left {
+  font-size: 18px;
+  font-family: PingFangSC;
+  font-weight: 800;
+}
+.user-head-right {
+  display: flex;
+  font-size: 15px;
+  color: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+.user-head-right-block {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 10px;
+  background-color: #579df2;
+  color: #fff;
+}

@@ -1,0 +1,8 @@
+.user-arr-action {
+  display: flex;
+  color: #f00;
+}
+.user-arr-item {
+  cursor: pointer;
+  width: 25px;
+}

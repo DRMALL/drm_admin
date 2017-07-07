@@ -1,7 +1,7 @@
 
 
 import { browserHistory } from 'react-router'
-import notification from 'antd/notification'
+import notification from 'antd/lib/notification'
 
 export default () => {
   notification.error({

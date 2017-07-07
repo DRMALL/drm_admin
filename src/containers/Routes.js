@@ -5,6 +5,8 @@ import { Router, Route, browserHistory, IndexRoute  } from 'react-router'
 import App from './App'
 import Login from './Login'
 import User from './User'
+import NewUser from './NewUser'
+import UserEdit from './UserEdit'
 import Machine from './Machine'
 import Message from './Message'
 import Parts from './Parts'
@@ -21,6 +23,8 @@ export default () => (
       <Route path='login' component={ Login } />
       <Route component={ Nav } >
         <Route path='user' component={ User } />
+        <Route path='user/new' component={ NewUser } />
+        <Route path='user/edit' component={ UserEdit } />
         <Route path='authority' component={ Authority } />
         <Route path='machine' component={ Machine } />
         <Route path='message' component={ Message } />

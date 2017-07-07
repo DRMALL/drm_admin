@@ -1,7 +1,7 @@
 
 
 const nav ={
-  sliderSelect: '信息推送',
+  sliderSelect: '用户管理',
 }
 
 export default ( state=nav, action ) => {

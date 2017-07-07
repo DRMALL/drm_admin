@@ -5,17 +5,18 @@ import Layout from 'antd/lib/layout'
 import Menu from 'antd/lib/menu'
 import { siderArr } from '../commons/siderItem'
 import { Link } from 'react-router'
-import dispatch from '../actions/dispatch'
+// import dispatch from '../actions/dispatch'
 import NavHead from './NavHead'
-// import Icon from 'antd/lib/icon'
-// import verifyToken from '../actions/verifyToken'
+import navHandleClick from '../actions/navHandleClick'
+import getUserArr from '../actions/getUserArr'
+
 
 
 const { Header, Content, Sider } = Layout
 export default class Nav extends Component {
-  // componentDidMount() {
-  //   verifyToken()
-  // }
+  componentDidMount() {
+    getUserArr()
+  }
   render(){
     console.log(this.props)
     const { sliderSelect } = this.props.state.nav
@@ -24,10 +25,10 @@ export default class Nav extends Component {
        <Sider width={150} style={{ background: '#fff', borderRight: '1px solid #eee'}} >
          <div className='nav-sider-log' >Drm</div>
          <Menu
-          onClick={ handleClick }
+          onClick={ navHandleClick }
           mode="inline"
           theme="light"
-          defaultSelectedKeys={['信息推送']}
+          defaultSelectedKeys={[sliderSelect]}
         >
         {
           siderArr.map(item =>
@@ -43,7 +44,7 @@ export default class Nav extends Component {
           <Header style={{ background: '#fff' }} >
             <NavHead  { ...this.props } />
           </Header>
-           <Layout>
+           <Layout style={{ backgroundColor: '#F9FAFC' }} >
              <Content className='nav-content' >{
                this.props.children && React.cloneElement(this.props.children, { state: this.props.state, location: window.location })
             }</Content>
@@ -54,8 +55,8 @@ export default class Nav extends Component {
   }
 }
 
-function handleClick(e) {
-  dispatch('NAV_ON_SELECT' , e.key)
-}
+// function handleClick(e) {
+//   dispatch('NAV_ON_SELECT' , e.key)
+// }
 
 

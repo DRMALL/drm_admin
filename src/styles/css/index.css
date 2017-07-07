@@ -91,6 +91,7 @@
 }
 .nav-content {
   margin: 20px;
+  background-color: #fff;
 }
 .nav-head-container {
   margin-top: 12px;
@@ -108,4 +109,55 @@
 .nav-hed-right {
   cursor: pointer;
   border-left: 1px solid rgba(0,0,0,0.12);
+}
+.user-arr-action {
+  display: flex;
+  color: #f00;
+}
+.user-arr-item {
+  cursor: pointer;
+  width: 25px;
+}
+.user-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px 20px 20px;
+}
+.user-head-left {
+  font-size: 18px;
+  font-family: PingFangSC;
+  font-weight: 800;
+}
+.user-head-right {
+  display: flex;
+  font-size: 15px;
+  color: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+.user-head-right-block {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 10px;
+  background-color: #579df2;
+  color: #fff;
+}
+.new-user-container {
+  margin: 20px 25px;
+}
+.new-user-title {
+  font-size: 18px;
+  font-family: PingFangSC;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.new-user-item {
+  margin: 8px 0;
+}
+.new-user-item-left {
+  font-size: 15px;
+  margin-top: 5px;
+  align-items: center;
 }

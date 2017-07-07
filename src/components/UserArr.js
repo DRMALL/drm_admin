@@ -2,6 +2,8 @@
 
 import React from 'react'
 import Table from 'antd/lib/table'
+import Icon from 'antd/lib/icon'
+import editUser from '../actions/editUser'
 
 export default props => {
   const { userArr } = props.state.user
@@ -11,16 +13,16 @@ export default props => {
     key:'name'
   },{
     title: '用户邮箱',
-    dataIndex: 'mail',
-    key:'mail'
+    dataIndex: 'email',
+    key:'email'
   },{
     title: '联系电话',
     dataIndex: 'phone',
     key:'phone'
   },{
     title: '公司名称',
-    dataIndex: 'company',
-    key:'company'
+    dataIndex: 'company_name',
+    key:'company_name'
   },{
     title: '通讯地址',
     dataIndex: 'address',
@@ -29,6 +31,16 @@ export default props => {
     title: '创建时间',
     dataIndex: 'time',
     key:'time'
+  },{
+    title: '操作',
+    key:'action',
+    render: (text, record) => (
+      <div className='user-arr-action' >
+        <div className='user-arr-item'  style={{ color: '#579df2' }}
+             onClick={ editUser } data-user-id={ record._id } ><Icon type="edit" /></div>
+        <div className='user-arr-item' ><Icon type="delete" /></div>
+      </div>
+      )
   }]
   return(
     <div>
