@@ -1,0 +1,14 @@
+.user-container {
+  background-color: #fff;
+}
+.user-top {
+  height: 200px;
+  background-color: #543453;
+  display: flex;
+  align-items: center;
+}
+.user-top-item {
+  background-color: #f00;
+  text-align: center;
+  padding: 20px 0;
+}

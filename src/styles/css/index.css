@@ -1,0 +1,111 @@
+.login-container {
+  margin: 0 auto;
+  padding: 200px 0;
+  width: 200px;
+}
+.user-container {
+  background-color: #fff;
+}
+.user-top {
+  height: 200px;
+  background-color: #543453;
+  display: flex;
+  align-items: center;
+}
+.user-top-item {
+  background-color: #f00;
+  text-align: center;
+  padding: 20px 0;
+}
+.nav-container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  min-width: 1024px;
+}
+.nav-sider-log {
+  height: 90px;
+  position: relative;
+  top: 50px;
+  left: 80px;
+  font-size: 16px;
+  color: #0068d2;
+}
+.sider-icon {
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 0;
+  font-size: 14px;
+  text-indent: 25px;
+}
+.nav-sider-message {
+  background-image: url("../../images/messages-icon@3x.png");
+}
+.nav-sider-message-select {
+  background-image: url("../../images/messages-icon-hl@3x.png");
+  color: #579df2;
+}
+.nav-sider-machine {
+  background-image: url("../../images/device-icon@3x.png");
+}
+.nav-sider-machine-select {
+  background-image: url("../../images/device-icon-hl@3x.png");
+  color: #579df2;
+}
+.nav-sider-trouble {
+  background-image: url("../../images/bug-icon@3x.png");
+}
+.nav-sider-trouble-select {
+  background-image: url("../../images/bug-icon-hl@3x.png");
+  color: #579df2;
+}
+.nav-sider-parts {
+  background-image: url("../../images/parts-icon@3x.png");
+}
+.nav-sider-parts-select {
+  background-image: url("../../images/parts-icon-hl@3x.png");
+  color: #579df2;
+}
+.nav-sider-user {
+  background-image: url("../../images/users-icon@3x.png");
+}
+.nav-sider-user-select {
+  background-image: url("../../images/users-icon-hl@3x.png");
+  color: #579df2;
+}
+.nav-sider-authority {
+  background-image: url("../../images/authority-icon@3x.png");
+}
+.nav-sider-authority-select {
+  background-image: url("../../images/authority-icon-hl@3x.png");
+  color: #579df2;
+}
+.nav-sider-work-order {
+  background-image: url("../../images/record-icon@3x.png");
+}
+.nav-sider-work-order-select {
+  background-image: url("../../images/record-icon-hl@3x.png");
+  color: #579df2;
+}
+.nav-content {
+  margin: 20px;
+}
+.nav-head-container {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  justify-content: flex-end;
+}
+.nav-head-block {
+  width: 74px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.nav-hed-right {
+  cursor: pointer;
+  border-left: 1px solid rgba(0,0,0,0.12);
+}
