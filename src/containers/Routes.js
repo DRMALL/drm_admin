@@ -13,6 +13,7 @@ import Parts from './Parts'
 import Trouble from './Trouble'
 import WorkOrder from './WorkOrder'
 import Authority from './Authority'
+import AuthorityNew from './AuthorityNew'
 import Nav from '../components/Nav'
 import NoMatch from './NoMatch'
 
@@ -26,6 +27,7 @@ export default () => (
         <Route path='user/new' component={ NewUser } />
         <Route path='user/edit' component={ UserEdit } />
         <Route path='authority' component={ Authority } />
+        <Route path='authority/new' component={ AuthorityNew } />
         <Route path='machine' component={ Machine } />
         <Route path='message' component={ Message } />
         <Route path='parts' component={ Parts } />
