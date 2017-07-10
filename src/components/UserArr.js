@@ -5,6 +5,8 @@ import Table from 'antd/lib/table'
 import Icon from 'antd/lib/icon'
 import editUser from '../actions/editUser'
 import userDel from '../actions/userDel'
+import Modal from 'antd/lib/modal'
+// import store from '../commons/store'
 
 export default props => {
   const { userArr } = props.state.user
@@ -40,7 +42,7 @@ export default props => {
         <div className='user-arr-item'  style={{ color: '#579df2' }}
              onClick={ editUser } data-user-id={ record._id } ><Icon type="edit" /></div>
         <div className='user-arr-item'  data-user-id={ record._id }
-             onClick={ userDel }><Icon type="delete" /></div>
+             onClick={ confirmDelUser } data-user-name={ record.name } ><Icon type="delete" /></div>
       </div>
       )
   }]
@@ -50,3 +52,21 @@ export default props => {
     </div>
     )
 }
+
+
+
+function confirmDelUser(e){
+  const { userId, userName } = e.currentTarget.dataset
+  Modal.confirm({
+    title: '提示',
+    content: `确认删除用户${userName},该操作不可逆!!`,
+    onOk(){
+      userDel(userId)
+    },
+    onCancle(){
+      console.log('取消删除')
+    },
+    maskClosable: true
+  })
+}
+

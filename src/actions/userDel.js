@@ -5,9 +5,8 @@ import { userAction } from '../commons/apis'
 import getUserArr from './getUserArr'
 
 
-export default e => {
-  console.log(e.currentTarget.dataset)
-  const { userId } = e.currentTarget.dataset
+export default userId => {
+  console.log(userId)
   Http(`${userAction}/${userId}`, 'del', true)
   .then(res => {
     getUserArr()
