@@ -5,7 +5,7 @@ import Row from 'antd/lib/row'
 import Col from 'antd/lib/col'
 import Button from 'antd/lib/button'
 import userResetInput from '../actions/userResetInput'
-import addUser from '../actions/addUser'
+import putUser from '../actions/putUser'
 import UserInfoInput from '../components/UserInfoInput'
 import getUserById from '../actions/getUserById'
 
@@ -21,7 +21,7 @@ export default class User extends Component {
         <UserInfoInput { ...this.props } />
         <Row>
           <Col span={1} offset={3} ><Button onClick={ userResetInput } >清空</Button></Col>
-          <Col span={1} offset={3} ><Button onClick={ addUser } >提交修改</Button></Col>
+          <Col span={1} offset={3} ><Button onClick={ putUser } >提交修改</Button></Col>
         </Row>
       </div>
       )

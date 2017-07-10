@@ -2,8 +2,8 @@
 
 import React, { Component } from 'react'
 import AuthorityTable from '../components/AuthorityTable'
-import { Link } from 'react-router'
-import Icon from 'antd/lib/icon'
+import ContentTitle from '../components/ContentTitle'
+import { conentHeadStr } from '../commons/contentStr'
 
 
 export default class Authority extends Component{
@@ -11,9 +11,7 @@ export default class Authority extends Component{
       console.log(this.props)
     return(
         <div>
-          <div className='user-head' >
-          <div className='new-user-title' >新增权限</div>
-          </div>
+          <ContentTitle head={ conentHeadStr.authourity } />
           <AuthorityTable { ...this.props } />
         </div>
       )

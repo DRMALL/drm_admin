@@ -16,12 +16,12 @@ export default (api, method, tip, data ) => {
      		}
      		else if(res.body.code===402) resetLogin()
      		else {
-     			fail()
+     			fail(res)
      			reject(res)
      		}
      	})
      	.catch(res => {
-     		fail()
+     		fail(res)
      		reject(res)
      	})
      }
@@ -36,14 +36,34 @@ export default (api, method, tip, data ) => {
      		}
      		else if(res.body.code===402) resetLogin()
      		else {
-     			fail()
+     			fail(res)
      			reject(res)
      		}
      	})
      	.catch(res => {
-     		fail()
+     		fail(res)
      		reject(res)
      	})
+     }
+     else if(method==='del') {
+      request
+      .del(`${api}?token=${token}`)
+      // .send(data)
+      .then(res =>{
+        if(res.body.code===201){
+          success(res, tip)
+          resolve(res)
+        }
+        else if(res.body.code===402) resetLogin()
+        else {
+          fail(res)
+          reject(res)
+        }
+      })
+      .catch(res => {
+        fail(res)
+        reject(res)
+      })
      }
      else  {
      	request
@@ -56,12 +76,12 @@ export default (api, method, tip, data ) => {
      		}
      		else if(res.body.code===402) resetLogin()
      		else {
-     			fail()
+     			fail(res)
      			reject(res)
      		}
      	})
      	.catch(res => {
-     		fail()
+     		fail(res)
      		reject(res)
      	})
      }
@@ -80,8 +100,17 @@ function success(res, tip) {
 }
 
 function fail(res) {
-		notification.error({
-			message: '提示',
-			description: res.body.message ? res.body.message : '获取数据失败!'
-		})
+  if(res.body){
+    notification.error({
+      message: '提示',
+      description: res.body.message ? res.body.message : '获取数据失败!'
+    })
+  }
+  else {
+    notification.error({
+      message: '提示',
+      description: '获取数据失败!'
+    })
+  }
+
 }

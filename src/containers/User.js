@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react'
 import UserArr from '../components/UserArr'
-import UserHead from '../components/userHead'
+import ContentTitle from '../components/ContentTitle'
+import { conentHeadStr } from '../commons/contentStr'
 
 
 
@@ -10,7 +11,7 @@ export default class User extends Component {
   render() {
     return(
       <div className='user-container' >
-        <UserHead { ...this.props }  />
+        <ContentTitle head={ conentHeadStr.user } />
         <UserArr { ...this.props } />
       </div>
       )

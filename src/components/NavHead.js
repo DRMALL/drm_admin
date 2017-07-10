@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import handleLogout from '../actions/handleLogout'
 

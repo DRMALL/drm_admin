@@ -4,6 +4,7 @@ import React from 'react'
 import Table from 'antd/lib/table'
 import Icon from 'antd/lib/icon'
 import editUser from '../actions/editUser'
+import userDel from '../actions/userDel'
 
 export default props => {
   const { userArr } = props.state.user
@@ -38,7 +39,8 @@ export default props => {
       <div className='user-arr-action' >
         <div className='user-arr-item'  style={{ color: '#579df2' }}
              onClick={ editUser } data-user-id={ record._id } ><Icon type="edit" /></div>
-        <div className='user-arr-item' ><Icon type="delete" /></div>
+        <div className='user-arr-item'  data-user-id={ record._id }
+             onClick={ userDel }><Icon type="delete" /></div>
       </div>
       )
   }]
