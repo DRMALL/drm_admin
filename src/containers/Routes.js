@@ -9,6 +9,7 @@ import NewUser from './NewUser'
 import UserEdit from './UserEdit'
 import Machine from './Machine'
 import Message from './Message'
+import MessageNew from './MessageNew'
 import Parts from './Parts'
 import Trouble from './Trouble'
 import WorkOrder from './WorkOrder'
@@ -30,6 +31,7 @@ export default () => (
         <Route path='authority/new' component={ AuthorityNew } />
         <Route path='machine' component={ Machine } />
         <Route path='message' component={ Message } />
+        <Route path='message/new' component={ MessageNew } />
         <Route path='parts' component={ Parts } />
         <Route path='trouble' component={ Trouble } />
         <Route path='workOrder' component={ WorkOrder } />

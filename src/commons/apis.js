@@ -4,3 +4,5 @@ const host = 'https://api.wardenger.me/admin/'
 export const login = `${host}session`
 export const newUser = `${host}users/new`
 export const userAction = `${host}users`
+export const uploadImg = `${host}news/uploadimg`
+export const newMessage = `${host}news/new`

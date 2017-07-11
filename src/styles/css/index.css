@@ -27,11 +27,17 @@
 }
 .nav-sider-log {
   height: 90px;
-  position: relative;
-  top: 50px;
-  left: 80px;
+  background-image: url("../../images/logo.png");
+  background-size: 15px 35px;
+  background-repeat: no-repeat;
+  background-position: 40%;
   font-size: 16px;
   color: #0068d2;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  padding-right: 30px;
+  padding-bottom: 20px;
 }
 .sider-icon {
   background-repeat: no-repeat;
@@ -118,32 +124,6 @@
   cursor: pointer;
   width: 25px;
 }
-.user-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px 20px 20px;
-}
-.user-head-left {
-  font-size: 18px;
-  font-family: PingFangSC;
-  font-weight: 800;
-}
-.user-head-right {
-  display: flex;
-  font-size: 15px;
-  color: rgba(0,0,0,0.6);
-  cursor: pointer;
-}
-.user-head-right-block {
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  line-height: 22px;
-  margin-right: 10px;
-  background-color: #579df2;
-  color: #fff;
-}
 .new-user-container {
   margin: 20px 25px;
 }
@@ -191,4 +171,67 @@
   margin-right: 10px;
   background-color: #579df2;
   color: #fff;
+}
+.message-header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  height: 74px;
+}
+.message-header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.message-header-item {
+  padding-bottom: 6px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.message-header-select {
+  border-bottom: 5px solid #579df2;
+}
+.message-header-noselect {
+  border-bottom: 5px solid #fff;
+}
+.message-header-right {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: rgba(0,0,0,0.6);
+}
+.message-header-right:hover {
+  color: rgba(0,0,0,0.6);
+}
+.message-header-icon {
+  width: 22px;
+  height: 22px;
+  background-color: #579df2;
+  color: #fff;
+  text-align: center;
+  margin-right: 10px;
+}
+.message-new-title {
+  padding: 25px 0 14px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(0,0,0,0.87);
+}
+.message-new-content {
+  padding: 0 50px;
+  font-size: 15px;
+}
+.message-new-tip {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: rgba(0,0,0,0.6);
+  font-size: 15px;
+}
+.message-new-button {
+  margin-top: 30px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
 }

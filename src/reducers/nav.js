@@ -1,7 +1,7 @@
-
+import whichSelect from '../utils/whichSelect'
 
 const nav ={
-  sliderSelect: '用户管理',
+  sliderSelect: whichSelect(window.location.pathname),
 }
 
 export default ( state=nav, action ) => {

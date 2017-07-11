@@ -8,11 +8,17 @@
 }
 .nav-sider-log {
   height: 90px;
-  position: relative;
-  top: 50px;
-  left: 80px;
+  background-image: url("../../images/logo.png");
+  background-size: 15px 35px;
+  background-repeat: no-repeat;
+  background-position: 40%;
   font-size: 16px;
   color: #0068d2;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  padding-right: 30px;
+  padding-bottom: 20px;
 }
 .sider-icon {
   background-repeat: no-repeat;
