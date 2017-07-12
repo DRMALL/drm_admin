@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react'
-import UserArr from '../components/UserArr'
+import MachineHead from '../components/MachineHead'
 
 
 
@@ -9,7 +9,7 @@ export default class User extends Component {
   render() {
     return(
       <div className='user-container' >
-        <UserArr { ...this.props } />
+        <MachineHead { ...this.props } />
       </div>
       )
   }

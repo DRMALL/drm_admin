@@ -274,3 +274,56 @@
   display: flex;
   justify-content: space-between;
 }
+.machine-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px 20px 20px;
+}
+.machine-head-left {
+  font-size: 18px;
+  font-family: PingFangSC;
+  font-weight: 800;
+}
+.machine-head-right {
+  display: flex;
+  font-size: 15px;
+  color: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+.machine-head-right-block {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 10px;
+  background-color: #579df2;
+  color: #fff;
+}
+.machine-new-title {
+  padding: 25px 0 14px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(0,0,0,0.87);
+}
+.machine-new-content {
+  padding: 0 50px;
+  font-size: 15px;
+}
+.machine-input-flex {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: rgba(0,0,0,0.87);
+  margin-top: 15px;
+}
+.machine-input-flexs {
+  display: flex;
+  align-items: flex-start;
+  font-size: 15px;
+  color: rgba(0,0,0,0.87);
+  margin-top: 15px;
+}
+.machine-input-left {
+  width: 100px;
+}

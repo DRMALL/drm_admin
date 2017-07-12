@@ -3,7 +3,7 @@
 import React from 'react'
 import Table from 'antd/lib/table'
 import Icon from 'antd/lib/icon'
-import editUser from '../actions/editUser'
+import { browserHistory } from 'react-router'
 
 export default props => {
   console.log(props.state.authority.authorityArray)
@@ -34,7 +34,7 @@ export default props => {
     render: (text, record) => (
       <div className='user-arr-action' >
         <div className='user-arr-item'  style={{ color: '#579df2' }}
-             onClick={ editUser } data-user-id={ record._id } ><Icon type="edit" /></div>
+             onClick={ navToNewAuth } data-user-id={ record._id } ><Icon type="edit" /></div>
         <div className='user-arr-item' ><Icon type="delete" /></div>
       </div>
       )
@@ -46,8 +46,7 @@ export default props => {
     )
 }
 
-// const AuthorityTable =() => (
-//   <div>AuthorityTable</div>
-//   )
-
-// export default AuthorityTable
+function navToNewAuth(e){
+  // const { userId } = e.currentTarget.dataset
+  browserHistory.push('/authority/new')
+}

@@ -1,10 +1,10 @@
 
 
 import React, { Component } from 'react'
-// import authorityArr from '../components/authorityArr'
 import AuthorityTable from '../components/AuthorityTable'
-import { Link } from 'react-router'
-import Icon from 'antd/lib/icon'
+import { conentHeadStr } from '../commons/contentStr'
+import ContentTitle from '../components/ContentTitle'
+
 
 
 export default class Authority extends Component{
@@ -13,11 +13,7 @@ export default class Authority extends Component{
     return(
         <div>
           <div className='user-head' >
-          <div className='user-head-left' >权限管理</div>
-          <Link to='/authority/new' className='user-head-right' >
-            <div className='user-head-right-block' ><Icon type="plus" /></div>
-            <div className='user-head-right-text' >新增权限</div>
-          </Link>
+          <ContentTitle head={ conentHeadStr.authourity } />
           </div>
           <AuthorityTable { ...this.props } />
         </div>
