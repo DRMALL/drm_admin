@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react'
-import UserArr from '../components/UserArr'
+import MessageTable from '../components/MessageTable'
 import MessageHeader from '../components/MessageHeader'
 
 
@@ -11,7 +11,7 @@ export default class Message extends Component {
     return(
       <div className='user-container' >
         <MessageHeader { ...this.props } />
-        <UserArr { ...this.props } />
+        <MessageTable { ...this.props } />
       </div>
       )
   }

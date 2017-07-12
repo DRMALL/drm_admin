@@ -6,6 +6,8 @@ import resetLogin from './resetLogin'
 export default (api, method, tip, data ) => {
 	return new Promise((resolve, reject) => {
      const token = localStorage.getItem('token')
+
+
      if(method==='get'){
      	request
      	.get(`${api}?token=${token}`)
@@ -25,6 +27,8 @@ export default (api, method, tip, data ) => {
      		reject(res)
      	})
      }
+
+
      else if(method==='post') {
      	request
      	.post(`${api}?token=${token}`)
@@ -45,12 +49,37 @@ export default (api, method, tip, data ) => {
      		reject(res)
      	})
      }
+
+
      else if(method==='del') {
       request
       .del(`${api}?token=${token}`)
       // .send(data)
       .then(res =>{
         if(res.body.code===201){
+          success(res, tip)
+          resolve(res)
+        }
+        else if(res.body.code===402) resetLogin()
+        else {
+          fail(res)
+          reject(res)
+        }
+      })
+      .catch(res => {
+        fail(res)
+        reject(res)
+      })
+     }
+
+
+     else if(method==='getid') {
+      const { id } = data
+      request
+      .get(`${api}?token=${token}`)
+      .query(id)
+      .then(res =>{
+        if(res.body.code===200){
           success(res, tip)
           resolve(res)
         }

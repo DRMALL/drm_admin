@@ -10,7 +10,7 @@ import UserInfoInput from '../components/UserInfoInput'
 import getUserById from '../actions/getUserById'
 
 
-export default class User extends Component {
+export default class UserEdit extends Component {
   componentDidMount() {
     getUserById(localStorage.getItem('userId'))
   }

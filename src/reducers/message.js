@@ -1,18 +1,25 @@
 
 
 const message = {
-  messageArr: [
-  {title: '多元热流体稠油增产技术在金海采油厂...', tip: '我是摘要', authour: '作者', status: '已发送', time: '2017-6-29 10:41', pushTime:'2017-6-29 10:41', key: 0},
-  {title: '多元热流体稠油增产技术在金海采油厂...', tip: '我是摘要', authour: '作者', status: '已发送', time: '2017-6-29 10:41', pushTime:'2017-6-29 10:41', key: 1},
-  {title: '多元热流体稠油增产技术在金海采油厂...', tip: '我是摘要', authour: '作者', status: '已发送', time: '2017-6-29 10:41', pushTime:'2017-6-29 10:41', key: 2},],
+  messageArr: [],
   previewVisible: false,
   previewImage: '',
   fileList: [],
   title: '',
   abstract: '',
   content: '',
+  messageSelect: 'notsend'
 }
 
+const resetMessage = {
+  previewVisible: false,
+  previewImage: '',
+  fileList: [],
+  title: '',
+  abstract: '',
+  content: '',
+  messageSelect: 'notsend'
+}
 export default ( state=message, action ) => {
   switch(action.type){
     case 'MESSAGE_ON_LOAD':
@@ -35,8 +42,32 @@ export default ( state=message, action ) => {
                 title: '',
                 abstract: '',
                 content: '',} )
+    case 'MESSAGE_NEW_MESSAGE_START':
+      return Object.assign({}, state, { status: 'new message start' }, resetMessage )
     case 'MESSAGE_SAVE_FAIL':
       return Object.assign({}, state, { status: 'save message fail' } )
+    case 'MESSAGE_GET_MESSAGE_ARR_START':
+      return Object.assign({}, state, { status: 'get message arr start' } )
+    case 'MESSAGE_GET_MESSAGE_ARR_SUCCESS':
+      return Object.assign({}, state, { status: 'get message arr success', messageArr: action.payload, messageArray: action.payload } )
+    case 'MESSAGE_GET_MESSAGE_ARR_FAIL':
+      return Object.assign({}, state, { status: 'get message arr fail' } )
+    case 'MESSAGE_SELECT_SEND_FASLE':
+      return Object.assign({}, state, { messageArr: state.messageArray.filter( item => item.published===false ), messageSelect: 'notsend' } )
+    case 'MESSAGE_SELECT_SEND_TRUE':
+      return Object.assign({}, state, { messageArr: state.messageArray.filter( item => item.published=== true ), messageSelect: 'send' } )
+    case 'MESSAGE_GET_ONE_MESSAGE_START':
+      return Object.assign({}, state, { status:'get message start' })
+    case 'MESSAGE_GET_ONE_MESSAGE_SUCCESS':
+      return Object.assign({}, state, { status: 'get message success' }, action.payload )
+    case 'MESSAGE_GET_ONE_MESSAGE_FAIL':
+      return Object.assign({}, state, { status: 'get message fail' } )
+    case 'MESSAGE_EDIT_MESSAGE_START':
+      return Object.assign({}, state, { status: 'edit message start' } )
+    case 'MESSAGE_EDIT_MESSAGE_SUCCESS':
+      return Object.assign({}, state, { status: 'edit message success' }, resetMessage )
+    case 'MESSAGE_EDIT_MESSAGE_FAIL':
+      return Object.assign({}, state, { status: 'edit message fail' } )
     default :
       return state
   }

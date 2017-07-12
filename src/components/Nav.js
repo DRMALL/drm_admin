@@ -9,6 +9,7 @@ import { Link } from 'react-router'
 import NavHead from './NavHead'
 import navHandleClick from '../actions/navHandleClick'
 import getUserArr from '../actions/getUserArr'
+import getMessageArr from '../actions/getMessageArr'
 
 
 
@@ -16,6 +17,7 @@ const { Header, Content, Sider } = Layout
 export default class Nav extends Component {
   componentDidMount() {
     getUserArr()
+    getMessageArr()
   }
   render(){
     console.log(this.props)
