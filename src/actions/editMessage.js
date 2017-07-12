@@ -6,9 +6,26 @@ import Httpid from './Httpid'
 import store from '../commons/store'
 import { browserHistory } from 'react-router'
 import getMessageArr from './getMessageArr'
+import Modal from 'antd/lib/modal'
 
 export default e => {
   const published = e.currentTarget.dataset.type==='true' ? true : false
+  const { title } = store.getState().message
+  if(published) {
+    Modal.confirm({
+      title: '提示',
+      content: `确定群发信息 ${title}! 点击后不可取消`,
+      onOk(){
+        editSavexxx(published)
+      },
+      onCancle(){
+        console.log('取消')
+      }
+    })
+  }
+}
+
+function editSavexxx(published){
   const token = localStorage.getItem('token')
   const id = localStorage.getItem('messageId')
   const api = `${messageEdit}?id=${id}&token=${token}`
