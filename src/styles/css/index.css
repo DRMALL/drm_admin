@@ -310,6 +310,9 @@
   padding: 0 50px;
   font-size: 15px;
 }
+.machine-new-button {
+  margin-top: 30px;
+}
 .machine-input-flex {
   display: flex;
   align-items: center;
@@ -326,4 +329,76 @@
 }
 .machine-input-left {
   width: 100px;
+}
+.machine-input-upload {
+  margin-top: 10px;
+}
+.trouble-input-flex {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: rgba(0,0,0,0.87);
+  margin-top: 15px;
+}
+.trouble-input-flexs {
+  display: flex;
+  align-items: flex-start;
+  font-size: 15px;
+  color: rgba(0,0,0,0.87);
+  margin-top: 15px;
+}
+.trouble-input-left {
+  width: 100px;
+}
+.trouble-input-lefts {
+  padding-top: 5px;
+  width: 100px;
+}
+.trouble-new-title {
+  font-size: 18px;
+  font-family: PingFangSC;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding: 25px 20px;
+}
+.trouble-new-content {
+  padding: 0 50px;
+  font-size: 15px;
+}
+.trouble-new-button {
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.trouble-table-icon {
+  cursor: pointer;
+}
+.workorder-edit-title {
+  padding: 25px 0 14px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(0,0,0,0.87);
+}
+.workorder-edit-content {
+  padding: 0 50px;
+  font-size: 15px;
+  color: rgba(0,0,0,0.87);
+}
+.workorder-edit-flex {
+  display: flex;
+  align-items: flex-start;
+  font-size: 15px;
+  margin-top: 15px;
+}
+.workorder-edit-left {
+  width: 50px;
+}
+.workorder-edit-tip {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.workorder-edit-button {
+  margin-top: 30px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
 }

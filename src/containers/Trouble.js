@@ -1,15 +1,23 @@
 
 
 import React, { Component } from 'react'
-import UserArr from '../components/UserArr'
+import ContentTitle from '../components/ContentTitle'
+import { conentHeadStr } from '../commons/contentStr'
+import getTroubleArr from '../actions/getTroubleArr'
+import TroubleTable from '../components/TroubleTable'
 
 
 
 export default class User extends Component {
+  componentDidMount() {
+    getTroubleArr()
+  }
   render() {
+    console.log(this.props.state.trouble)
     return(
       <div className='user-container' >
-        <UserArr { ...this.props } />
+        <ContentTitle head={ conentHeadStr.trouble } />
+        <TroubleTable { ...this.props } />
       </div>
       )
   }

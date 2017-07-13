@@ -1,20 +1,21 @@
 
 
 export default (str) => {
-  switch(str){
-    case '/message':
+  const a = str.split('/')[1]
+  switch(a){
+    case 'message':
       return '信息推送'
-    case '/machine':
+    case 'machine':
       return '设备管理'
-    case '/trouble':
+    case 'trouble':
       return '故障排除'
-    case '/parts':
+    case 'parts':
       return '配件管理'
-    case '/user':
+    case 'user':
       return '用户管理'
-    case '/authority':
+    case 'authority':
       return '权限管理'
-    case '/workOrder':
+    case 'workOrder':
       return '工单管理'
     default :
       return null

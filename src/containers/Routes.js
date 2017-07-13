@@ -14,7 +14,10 @@ import MessageNew from './MessageNew'
 import MessageEdit from './MessageEdit'
 import Parts from './Parts'
 import Trouble from './Trouble'
+import TroubleNew from './TroubleNew'
+import TroubleEdit from './TroubleEdit'
 import WorkOrder from './WorkOrder'
+import WorkOrderEdit from './WorkOrderEdit'
 import Authority from './Authority'
 import AuthorityNew from './AuthorityNew'
 import Nav from '../components/Nav'
@@ -38,7 +41,10 @@ export default () => (
         <Route path='message/edit' component={ MessageEdit } />
         <Route path='parts' component={ Parts } />
         <Route path='trouble' component={ Trouble } />
+        <Route path='trouble/new' component={ TroubleNew } />
+        <Route path='trouble/edit' component={ TroubleEdit } />
         <Route path='workOrder' component={ WorkOrder } />
+        <Route path='workOrder/edit' component={ WorkOrderEdit } />
       </Route>
       <Route path='*' component={ NoMatch } />
     </Route>

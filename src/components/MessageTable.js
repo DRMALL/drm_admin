@@ -7,6 +7,7 @@ import Tooltip from 'antd/lib/tooltip'
 import Modal from 'antd/lib/modal'
 import messageChangeStatus from '../actions/messageChangeStatus'
 import messageDel from '../actions/messageDel'
+import textHidden from '../utils/textHidden'
 
 
 export default props => {
@@ -91,12 +92,12 @@ function editMessagexx(e) {
   browserHistory.push('/message/edit')
 }
 
-function textHidden(str){
-  if(str.length>=25){
-    return str.slice(0, 25) + '...'
-  }
-  else return str
-}
+// function textHidden(str){
+//   if(str.length>=25){
+//     return str.slice(0, 25) + '...'
+//   }
+//   else return str
+// }
 
 function confirSendxx(e){
   const { messageId } = e.currentTarget.dataset

@@ -51,8 +51,9 @@ export default props => {
 }
 
 function handlePreview(e) {
-  console.log(e.response.data.url)
-  const { url } = e.response.data
+  console.log(e)
+  let url
+  url = e.response ? e.response.data.url : e.url
   dispatch('MESSAGE_PREVIEW_IMG', url)
 }
 

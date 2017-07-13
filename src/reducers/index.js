@@ -6,6 +6,7 @@ import authority from './authority'
 import nav from './nav'
 import message from './message'
 import machine from './machine'
+import trouble from './trouble'
 
 export default {
   login,
@@ -14,4 +15,5 @@ export default {
   nav,
   message,
   machine,
+  trouble,
 }

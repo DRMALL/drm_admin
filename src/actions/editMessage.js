@@ -23,6 +23,7 @@ export default e => {
       }
     })
   }
+  else editSavexxx(published)
 }
 
 function editSavexxx(published){

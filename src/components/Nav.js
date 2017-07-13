@@ -20,7 +20,6 @@ export default class Nav extends Component {
     getMessageArr()
   }
   render(){
-    console.log(this.props)
     const { sliderSelect } = this.props.state.nav
     return(
       <Layout className='nav-container' >
