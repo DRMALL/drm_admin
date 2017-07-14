@@ -26,9 +26,9 @@ import NoMatch from './NoMatch'
 export default () => (
   <Router history={ browserHistory } >
     <Route path='/' component={ App } >
-      <IndexRoute component={ Login } />
       <Route path='login' component={ Login } />
       <Route component={ Nav } >
+        <IndexRoute component={ Message } />
         <Route path='user' component={ User } />
         <Route path='user/new' component={ NewUser } />
         <Route path='user/edit' component={ UserEdit } />

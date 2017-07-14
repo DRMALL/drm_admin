@@ -6,12 +6,14 @@ import request from 'superagent'
 export default () => {
   const path = window.location.pathname
   const token = localStorage.getItem('token')
-  console.log(path)
+  // console.log(path)
   if(path!=='/'){
     request
     .get(`${userAction}?token=${token}`)
     .then(res => {
-      if(res.body.code===200) { console.log('啥都不做') }
+      if(res.body.code===200) {
+        // console.log('啥都不做')
+      }
       else NavToLogin()
     })
     .catch(res => {

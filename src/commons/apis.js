@@ -11,4 +11,4 @@ export const messageOne = `${host}news/one`
 export const messageEdit = `${host}news/update`
 export const messageDel = `${host}news/delete`
 export const troubleAction = `${host}bugs`
-export const workOrderAction = `${host}`
+export const workOrderAction = `${host}orders`

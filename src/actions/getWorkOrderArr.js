@@ -10,10 +10,13 @@ export default () => {
   .then(res => {
     const result = res.body.data
     result.map(item => {
-      item.createdAtTime = moment(item.createdAt).format('YYYY-MM-DD HH:mm')
+      item.updatedAtTime = moment(item.updatedAt).format('YYYY-MM-DD HH:mm')
+      item.isDone = item.isDone ? '已解决': '未解决'
+      item.isHanlded = item.isHanlded ? '已处理': '未处理'
       return item
     })
 
-    dispatch('TROUBLE_GET_TROUBLE_ARR', result )
+    dispatch('WORKORDER_GET_ORDER_ARR', result )
   })
+  .catch(res => console.error(res))
 }

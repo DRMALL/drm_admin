@@ -1,7 +1,7 @@
 import whichSelect from '../utils/whichSelect'
 
 const nav ={
-  sliderSelect: whichSelect(window.location.pathname),
+  sliderSelect: whichSelect(window.location.pathname) ? whichSelect(window.location.pathname) : '信息推送' ,
 }
 
 export default ( state=nav, action ) => {

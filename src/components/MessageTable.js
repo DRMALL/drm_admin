@@ -19,7 +19,7 @@ export default props => {
     key: 'title',
     render: text =>
       <Tooltip title={ text }>
-        <div className='message-table-display' >{textHidden(text)}</div>
+        <div className='message-table-display' >{textHidden(text, 25)}</div>
       </Tooltip>
   },{
     title: '摘要',
@@ -28,7 +28,7 @@ export default props => {
     key: 'abstract',
     render: text =>
       <Tooltip title={ text }>
-        <div className='message-table-display' >{textHidden(text)}</div>
+        <div className='message-table-display' >{textHidden(text, 25)}</div>
       </Tooltip>
   },{
     title: '作者',

@@ -1,0 +1,21 @@
+.trouble-input-flex {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: rgba(0,0,0,0.87);
+  margin-top: 15px;
+}
+.trouble-input-flexs {
+  display: flex;
+  align-items: flex-start;
+  font-size: 15px;
+  color: rgba(0,0,0,0.87);
+  margin-top: 15px;
+}
+.trouble-input-left {
+  width: 100px;
+}
+.trouble-input-lefts {
+  padding-top: 5px;
+  width: 100px;
+}

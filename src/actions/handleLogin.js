@@ -15,7 +15,7 @@ export default () => {
     .then(res => {
       if(res.body.code===201) {
         localStorage.setItem('token', res.body.data)
-        browserHistory.push('/user')
+        browserHistory.push('/message')
       }
       else loginFail()
     })

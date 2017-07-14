@@ -402,3 +402,22 @@
   display: flex;
   justify-content: space-between;
 }
+.workorder-title {
+  display: flex;
+  padding: 40px 30px 0 40px;
+  color: rgba(0,0,0,0.6);
+  font-weight: 500;
+  font-size: 16px;
+}
+.workorder-title-item {
+  margin-left: 40px;
+  padding-bottom: 6px;
+  border-bottom: 5px solid #fff;
+  cursor: pointer;
+}
+.workorder-select {
+  border-bottom: 5px solid #579df2;
+}
+.xxx {
+  color: #fff;
+}

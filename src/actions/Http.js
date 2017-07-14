@@ -118,7 +118,9 @@ export default (api, method, tip, data ) => {
 }
 
 function success(res, tip) {
-	if(!tip) console.log('忽略')
+	if(!tip) {
+    // console.log('忽略')
+  }
 	else {
 		notification.success({
 			message: '提示',
