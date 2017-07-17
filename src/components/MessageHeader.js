@@ -7,7 +7,7 @@ import dispatch from '../actions/dispatch'
 const MessageHeader = ({ state }) => (
   <div className='message-header-container' >
     <div className='message-header-left' >
-      <div className={ state.message.messageSelect==='notsend' ? 'message-header-item message-header-select' : 'message-header-item message-header-noselect' }
+      <div className={ 'message-header-item' + (state.message.messageSelect==='notsend' ? ' message-header-select' : ' message-header-noselect') }
            onClick={ messageSelect } data-id='未发送' >未发送</div>
       <div className={ state.message.messageSelect==='send' ? 'message-header-item message-header-select' : 'message-header-item message-header-noselect' }
            onClick={ messageSelect } data-id='已发送' >已发送</div>
