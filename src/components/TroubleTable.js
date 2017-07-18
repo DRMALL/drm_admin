@@ -22,6 +22,8 @@ export default props => {
   dataIndex: 'category',
   key: 'category',
   width: '10%',
+  render: text =>
+  <div>{text.tip}</div>
   },{
   title: '内容',
   dataIndex: 'content',

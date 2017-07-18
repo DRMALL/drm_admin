@@ -5,7 +5,7 @@ import resetLogin from './resetLogin'
 
 export default (api, method, tip, data ) => {
 	return new Promise((resolve, reject) => {
-     const token = localStorage.getItem('token')
+     const token = localStorage ? localStorage.getItem('token') : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6ImFkbWluIiwicGFzc3dvcmQiOiJhZG1pbiIsImlhdCI6MTUwMDI3NTg3NX0.tG5hxE_HIFuOzemF4Bw2H149a_cVYhmLcQo6t9MuTD0'
 
 
      if(method==='get'){

@@ -9,7 +9,7 @@ import dispatch from '../actions/dispatch'
 import changeTroubleType from '../utils/changeTroubleType'
 
 export default props => {
-  const { title, category, content } = props.state.trouble
+  const { title, categoryxx, content } = props.state.trouble
   return (
     <div>
       <div className='trouble-input-flex' >
@@ -21,7 +21,7 @@ export default props => {
       <div className='trouble-input-flex' >
         <div className='trouble-input-left' >分类</div>
         <Select style={{ width:300 }} onChange={ troubleSelect }
-               placeholder='压力分类字典' value={ changeTroubleType(category) }  >
+               placeholder='压力分类字典' value={ changeTroubleType(categoryxx) }  >
             {
               troubleType.map( (item, index) =>
               <Select.Option key={index} value={ item.name } >{item.tip}</Select.Option> )
@@ -40,6 +40,6 @@ export default props => {
 }
 
 function troubleSelect(value){
-  console.log(value)
+  // console.log(value)
   dispatch('TROUBLE_GET_SELECT_VALUE', value)
 }

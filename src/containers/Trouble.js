@@ -13,7 +13,7 @@ export default class User extends Component {
     getTroubleArr()
   }
   render() {
-    console.log(this.props.state.trouble)
+    // console.log(this.props.state.trouble)
     return(
       <div className='user-container' >
         <ContentTitle head={ conentHeadStr.trouble } />

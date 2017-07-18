@@ -2,13 +2,13 @@
 
 const trouble = {
   title: '',
-  category: '',
+  categoryxx: '',
   content: '',
   troubleArr: []
 }
 const resetTrouble = {
   title: '',
-  category: '',
+  categoryxx: '',
   content: ''
 }
 
@@ -17,7 +17,7 @@ export default ( state=trouble, action ) =>{
     case 'TROUBLE_GET_INPUT_VALUE':
       return Object.assign({}, state, action.payload )
     case 'TROUBLE_GET_SELECT_VALUE':
-      return Object.assign({}, state, { category: action.payload } )
+      return Object.assign({}, state, { categoryxx: action.payload } )
     case 'TROUBLE_ADD_RESET':
       return Object.assign({}, state, resetTrouble )
     case 'TROUBLE_GET_TROUBLE_ARR':
