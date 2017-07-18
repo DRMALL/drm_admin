@@ -1,14 +1,46 @@
 
-import React from 'react'
+// import React from 'react'
 
-if(typeof window !== 'undefined') {
-  window.React = React
-  window.localStorage = () => {
-    let storage = {}
+// if(typeof window !== 'undefined') {
+//   window.React = React
+//   window.localStorage = () => {
+//     let storage = {}
+//     return {
+//       setTtem: (key, value) => {
+//         storage[key] = value || ''
+//       },
+//       getItem: key =>{
+//         return key in storage ? storage[key] : null
+//       },
+//       removeItem: key => {
+//         delete storage[key]
+//       }
+//     }
+//   }
+// }
+
+import React from 'react';
+if (typeof window !== 'undefined') {
+  window.React = React;
+  window.localStorage = ( function storageMock() {
+    var storage = {};
     return {
-      setTtem: (key, value) => {
-        storage[key] = value || ''
+      setItem: function(key, value) {
+        storage[key] = value || '';
+      },
+      getItem: function(key) {
+        return key in storage ? storage[key] : null;
+      },
+      removeItem: function(key) {
+        delete storage[key];
+      },
+      get length() {
+        return Object.keys(storage).length;
+      },
+      key: function(i) {
+        var keys = Object.keys(storage);
+        return keys[i] || null;
       }
     }
-  }
+  })()
 }
