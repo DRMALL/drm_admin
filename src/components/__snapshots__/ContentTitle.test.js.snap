@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contentTitle render test 1`] = `
+<div
+  className="content-head"
+>
+  <div
+    className="content-head-left"
+  >
+    故障排除
+  </div>
+  <a
+    className="content-head-right"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <div
+      className="content-head-right-block"
+    >
+      <i
+        className="anticon anticon-plus"
+      />
+    </div>
+    <div
+      className="content-head-right-text"
+    >
+      创建新信息
+    </div>
+  </a>
+</div>
+`;

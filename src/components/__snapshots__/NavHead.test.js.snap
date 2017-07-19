@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`中部导航渲染test 1`] = `
+<div
+  className="nav-head-container"
+>
+  <div
+    className="nav-head-left nav-head-block"
+  >
+    admin
+  </div>
+  <div
+    className="nav-hed-right nav-head-block"
+    onClick={[Function]}
+  >
+    退出
+  </div>
+</div>
+`;

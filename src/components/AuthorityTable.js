@@ -6,7 +6,6 @@ import Icon from 'antd/lib/icon'
 import { browserHistory } from 'react-router'
 
 export default props => {
-  console.log(props.state.authority.authorityArray)
   const { authorityArray } = props.state.authority
   const columns = [{
     title: '用户',

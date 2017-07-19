@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfoInput snapshot test 1`] = `
+<div>
+  <div
+    className="ant-row new-user-item"
+    style={undefined}
+  >
+    <div
+      className="ant-col-3 new-user-item-left"
+    >
+      用户名
+    </div>
+    <div
+      className="ant-col-7"
+    >
+      <input
+        className="ant-input"
+        data-id="name"
+        data-path="USER"
+        disabled={false}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="输入用户名"
+        type="text"
+        value="adssd"
+      />
+    </div>
+  </div>
+  <div
+    className="ant-row new-user-item"
+    style={undefined}
+  >
+    <div
+      className="ant-col-3 new-user-item-left"
+    >
+      密码
+    </div>
+    <div
+      className="ant-col-7"
+    >
+      <input
+        className="ant-input"
+        data-id="password"
+        data-path="USER"
+        disabled={false}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="输入密码"
+        type="text"
+        value="123423"
+      />
+    </div>
+  </div>
+  <div
+    className="ant-row new-user-item"
+    style={undefined}
+  >
+    <div
+      className="ant-col-3 new-user-item-left"
+    >
+      用户邮箱
+    </div>
+    <div
+      className="ant-col-7"
+    >
+      <input
+        className="ant-input"
+        data-id="email"
+        data-path="USER"
+        disabled={false}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="输入用户邮箱"
+        type="text"
+        value="432542345@qq.com"
+      />
+    </div>
+  </div>
+  <div
+    className="ant-row new-user-item"
+    style={undefined}
+  >
+    <div
+      className="ant-col-3 new-user-item-left"
+    >
+      联系电话
+    </div>
+    <div
+      className="ant-col-7"
+    >
+      <input
+        className="ant-input"
+        data-id="phone"
+        data-path="USER"
+        disabled={false}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="输入联系电话"
+        type="text"
+        value="13845873659"
+      />
+    </div>
+  </div>
+  <div
+    className="ant-row new-user-item"
+    style={undefined}
+  >
+    <div
+      className="ant-col-3 new-user-item-left"
+    >
+      公司名称
+    </div>
+    <div
+      className="ant-col-7"
+    >
+      <input
+        className="ant-input"
+        data-id="company_name"
+        data-path="USER"
+        disabled={false}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="输入公司名称"
+        type="text"
+        value="新潮科技"
+      />
+    </div>
+  </div>
+  <div
+    className="ant-row new-user-item"
+    style={undefined}
+  >
+    <div
+      className="ant-col-3 new-user-item-left"
+    >
+      通讯地址
+    </div>
+    <div
+      className="ant-col-7"
+    >
+      <input
+        className="ant-input"
+        data-id="address"
+        data-path="USER"
+        disabled={false}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="输入通讯地址"
+        type="text"
+        value="广东省潮州市潮安区"
+      />
+    </div>
+  </div>
+</div>
+`;

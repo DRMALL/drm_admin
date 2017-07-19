@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MachineHead snapshot test 1`] = `
+<div
+  className="machine-head"
+>
+  <div
+    className="machine-head-left"
+  >
+    设备管理
+  </div>
+  <span
+    className="ant-input-affix-wrapper"
+    style={
+      Object {
+        "width": 300,
+      }
+    }
+  >
+    <input
+      className="ant-input ant-input-search machine-head-input"
+      disabled={false}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="请输入关键词搜索设备"
+      style={null}
+      type="text"
+    />
+    <span
+      className="ant-input-suffix"
+    >
+      <i
+        className="anticon anticon-search ant-input-search-icon"
+        onClick={[Function]}
+      />
+    </span>
+  </span>
+  <a
+    className="machine-head-right"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <div
+      className="machine-head-right-block"
+    >
+      <i
+        className="anticon anticon-plus"
+      />
+    </div>
+    <div
+      className="machine-head-right-text"
+    >
+      添加新设备
+    </div>
+  </a>
+</div>
+`;
