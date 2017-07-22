@@ -1,23 +1,4 @@
 
-// import React from 'react'
-
-// if(typeof window !== 'undefined') {
-//   window.React = React
-//   window.localStorage = () => {
-//     let storage = {}
-//     return {
-//       setTtem: (key, value) => {
-//         storage[key] = value || ''
-//       },
-//       getItem: key =>{
-//         return key in storage ? storage[key] : null
-//       },
-//       removeItem: key => {
-//         delete storage[key]
-//       }
-//     }
-//   }
-// }
 
 import React from 'react';
 if (typeof window !== 'undefined') {

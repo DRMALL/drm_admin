@@ -8,19 +8,21 @@ import { Link } from 'react-router'
 // import dispatch from '../actions/dispatch'
 import NavHead from './NavHead'
 import navHandleClick from '../actions/navHandleClick'
-import getUserArr from '../actions/getUserArr'
+// import getUserArr from '../actions/getUserArr'
 import getMessageArr from '../actions/getMessageArr'
+import store from '../commons/store'
 
 
 
 const { Header, Content, Sider } = Layout
 export default class Nav extends Component {
   componentDidMount() {
-    getUserArr()
+    // getUserArr()
     getMessageArr()
   }
   render(){
-    const { sliderSelect } = this.props.state.nav
+    // const { sliderSelect } = this.props.state.nav
+    const { sliderSelect } = store.getState().nav
     return(
       <Layout className='nav-container' >
        <Sider width={150} style={{ background: '#fff', borderRight: '1px solid #eee'}} >
@@ -56,8 +58,5 @@ export default class Nav extends Component {
   }
 }
 
-// function handleClick(e) {
-//   dispatch('NAV_ON_SELECT' , e.key)
-// }
 
 

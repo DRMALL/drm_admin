@@ -16,7 +16,10 @@ export default (api, method, tip, data ) => {
      			success(res, tip)
      			 resolve(res)
      		}
-     		else if(res.body.code===402) resetLogin()
+     		else if(res.body.code===402) {
+          resetLogin()
+          reject(res)
+        }
      		else {
      			fail(res)
      			reject(res)
@@ -38,7 +41,10 @@ export default (api, method, tip, data ) => {
      			success(res, tip)
      			resolve(res)
      		}
-     		else if(res.body.code===402) resetLogin()
+     		// else if(res.body.code===402) {
+        //   resetLogin()
+        //   reject(res)
+        // }
      		else {
      			fail(res)
      			reject(res)
@@ -60,7 +66,10 @@ export default (api, method, tip, data ) => {
           success(res, tip)
           resolve(res)
         }
-        else if(res.body.code===402) resetLogin()
+        else if(res.body.code===402) {
+          resetLogin()
+          reject(res)
+        }
         else {
           fail(res)
           reject(res)
@@ -83,7 +92,10 @@ export default (api, method, tip, data ) => {
           success(res, tip)
           resolve(res)
         }
-        else if(res.body.code===402) resetLogin()
+        else if(res.body.code===402) {
+          resetLogin()
+          reject(res)
+        }
         else {
           fail(res)
           reject(res)
@@ -103,7 +115,10 @@ export default (api, method, tip, data ) => {
      			success(res, tip)
      			resolve(res)
      		}
-     		else if(res.body.code===402) resetLogin()
+     		else if(res.body.code===402) {
+          resetLogin()
+          reject(res)
+        }
      		else {
      			fail(res)
      			reject(res)

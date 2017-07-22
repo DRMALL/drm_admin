@@ -24,7 +24,8 @@
     "npm-run-all": "^4.0.2",
     "react-addons-test-utils": "^15.6.0",
     "react-scripts": "1.0.10",
-    "react-test-renderer": "^15.6.1"
+    "react-test-renderer": "^15.6.1",
+    "superagent-mocker": "^0.5.2"
   },
   "engines": {
     "node": "7.x"

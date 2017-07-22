@@ -4,6 +4,7 @@ import { login } from '../commons/apis'
 import request from 'superagent'
 import store from '../commons/store'
 import notification from 'antd/lib/notification'
+import LoginWarn from '../utils/LoginWarn'
 
 export default () => {
   const { admin, password } = store.getState().login
@@ -24,8 +25,7 @@ export default () => {
       loginFail('err')
     })
   }
-  else loginWarn(admin, password)
-  // browserHistory.push('/user')
+  else LoginWarn(admin)
 }
 
 function loginFail(e){
@@ -43,17 +43,3 @@ function loginFail(e){
   }
 }
 
-function loginWarn(admin, password){
-  if(!admin){
-      notification.warning({
-        message: '提示',
-        description: '请输入用户名'
-  })
-  }
-  else {
-      notification.warning({
-        message: '提示',
-        description: '请输入密码'
-  })
-  }
-}

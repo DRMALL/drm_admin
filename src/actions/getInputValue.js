@@ -2,7 +2,7 @@
 
 import dispatch from './dispatch'
 
-export default e=> {
+export default e => {
   const { path, id } = e.currentTarget.dataset
   const { value } = e.target
   const obj = {}

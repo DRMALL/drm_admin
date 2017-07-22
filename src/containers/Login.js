@@ -12,8 +12,6 @@ export default class App extends Component {
     dispatch('LOGIN_ON_LOAD')
   }
   render() {
-    console.log(this.props.state.login)
-    // const { password, user } = this.props.state.login
     return(
       <div className='login-container' >
         <div className='login-text' >用户名</div>
