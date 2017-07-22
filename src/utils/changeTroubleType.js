@@ -11,6 +11,6 @@ export default str => {
     case 'unit':
       return '单位换算'
     default :
-      return ''
+      return null
   }
 }
