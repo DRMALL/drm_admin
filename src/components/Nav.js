@@ -8,7 +8,7 @@ import { Link } from 'react-router'
 // import dispatch from '../actions/dispatch'
 import NavHead from './NavHead'
 import navHandleClick from '../actions/navHandleClick'
-// import getUserArr from '../actions/getUserArr'
+import getMachineArr from '../actions/getMachineArr'
 import getMessageArr from '../actions/getMessageArr'
 import store from '../commons/store'
 
@@ -17,11 +17,10 @@ import store from '../commons/store'
 const { Header, Content, Sider } = Layout
 export default class Nav extends Component {
   componentDidMount() {
-    // getUserArr()
+    getMachineArr()
     getMessageArr()
   }
   render(){
-    // const { sliderSelect } = this.props.state.nav
     const { sliderSelect } = store.getState().nav
     return(
       <Layout className='nav-container' >

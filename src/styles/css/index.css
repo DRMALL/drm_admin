@@ -313,6 +313,10 @@
 .machine-new-button {
   margin-top: 30px;
 }
+.machine-edit-content {
+  padding: 0 50px;
+  font-size: 15px;
+}
 .machine-input-flex {
   display: flex;
   align-items: center;
@@ -332,6 +336,21 @@
 }
 .machine-input-upload {
   margin-top: 10px;
+}
+.machine-table-action {
+  display: flex;
+  align-items: center;
+  color: #579df2;
+}
+.machine-table-left {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.machine-table-right {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
 }
 .trouble-input-flex {
   display: flex;

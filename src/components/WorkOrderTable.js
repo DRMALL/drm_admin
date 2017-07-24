@@ -2,9 +2,9 @@
 
 import React from 'react'
 import Table from 'antd/lib/table'
-import Tooltip from 'antd/lib/tooltip'
-import textHidden from '../utils/textHidden'
 import { browserHistory } from 'react-router'
+import TableTextHidden from './TableTextHidden'
+import TableTime from './TableTime'
 
 
 export default props => {
@@ -20,10 +20,7 @@ export default props => {
     dataIndex: 'content',
     key: 'content',
     width: '30%',
-    render: text =>
-    <Tooltip title={ text } >
-      <div>{ textHidden(text, 40) }</div>
-    </Tooltip>
+    render: text =>  TableTextHidden( text, 40 )
   },{
     title:'提问人',
     dataIndex: 'user',
@@ -46,11 +43,7 @@ export default props => {
     dataIndex: 'updatedAtTime',
     key: 'updatedAtTime',
     width: '10%',
-    render: text =>
-    <div>
-      <div>{ text.split(' ')[0] }</div>
-      <div style={{ marginLeft: 12 }} >{ text.split(' ')[1] }</div>
-    </div>
+    render: text => TableTime(text, 15)
   },{
     title:'操作',
     dataIndex: 'action',

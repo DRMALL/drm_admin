@@ -10,10 +10,12 @@ import { machineUploadImg } from '../commons/apis'
 import Modal from 'antd/lib/modal'
 import dispatch from '../actions/dispatch'
 import Icon from 'antd/lib/icon'
+import resetMachineImg from '../actions/resetMachineImg'
+import selectValue from '../utils/selectValue'
 
 
 export default props => {
-  const { fileList, previewImage, previewVisible } = props.state.machine
+  const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address } = props.state.machine
   console.log(props.state.machine)
   const uploadButton = (
       <div>
@@ -27,28 +29,18 @@ export default props => {
           <div  className='machine-input-left'>设备名称</div>
           <Input  className='machine-input-right' onChange={ getInputValue }
                   style={{ width: 400 }} placeholder='输入设备名称'
-                  data-path='MACHINE' data-id='name' />
+                  data-path='MACHINE' data-id='name' value={ name } />
         </div>
         <div className='machine-input-flex' >
           <div  className='machine-input-left'>设备编号</div>
           <Input  className='machine-input-right' onChange={ getInputValue }
                   style={{ width: 400 }} placeholder='输入设备编号'
-                  data-path='MACHINE' data-id='num' />
+                  data-path='MACHINE' data-id='number' value={ number } />
         </div>
         <div className='machine-input-flex' >
           <div  className='machine-input-left'>压力分类</div>
           <Select style={{ width: 400 }} placeholder='选择压力分类'
-                  onChange={ selectValue } >
-                  {
-                    fuelArr.map((item, index) =>
-                      <Select.Option key={ index } value={ item+'/fuel' } >{ item }</Select.Option>)
-                  }
-          </Select>
-        </div>
-        <div className='machine-input-flex' >
-          <div  className='machine-input-left'>燃料分类</div>
-          <Select style={{ width: 400 }} placeholder='选择燃料分类'
-                  onChange={ selectValue } >
+                  onChange={ selectValue } value={ pressure } >
                   {
                     pressureArr.map((item, index) =>
                       <Select.Option key={ index } value={ item+'/pressure' } >{ item }</Select.Option>)
@@ -56,12 +48,22 @@ export default props => {
           </Select>
         </div>
         <div className='machine-input-flex' >
+          <div  className='machine-input-left'>燃料分类</div>
+          <Select style={{ width: 400 }} placeholder='选择燃料分类'
+                  onChange={ selectValue } value={ combustible } >
+                  {
+                    fuelArr.map((item, index) =>
+                      <Select.Option key={ index } value={ item+'/combustible' } >{ item }</Select.Option>)
+                  }
+          </Select>
+        </div>
+        <div className='machine-input-flex' >
           <div  className='machine-input-left'>排量分类</div>
           <Select style={{ width: 400 }} placeholder='选择排量分类'
-                  onChange={ selectValue } >
+                  onChange={ selectValue } value={ cc } >
                   {
                     displacementArr.map((item, index) =>
-                      <Select.Option key={ index } value={ item+'/displacement' } >{ item }</Select.Option>)
+                      <Select.Option key={ index } value={ item+'/cc' } >{ item }</Select.Option>)
                   }
           </Select>
         </div>
@@ -69,14 +71,15 @@ export default props => {
           <div  className='machine-input-left'>设备所在地</div>
           <Input  className='machine-input-right' onChange={ getInputValue }
                   style={{ width: 400 }} placeholder='输入设备所在地'
-                  data-path='MACHINE' data-id='where' />
+                  data-path='MACHINE' data-id='address' value={ address } />
         </div>
         <div className='machine-input-flexs' >
           <div className='machine-input-left' >设备描述</div>
           <Input.TextArea rows={4} style={{ width: 400 }}
                   placeholder='输入设备描述'
                   onChange={ getInputValue }
-                  data-path='MACHINE' data-id='describle' />
+                  data-path='MACHINE' data-id='description'
+                  value={ description } />
         </div>
         <div>
           <div className='machine-input-left machine-input-flexs' >上传设备图片</div>
@@ -89,6 +92,7 @@ export default props => {
               multiple={ true }
               onPreview={ handlePreviewMachine }
               onChange={ handleChangeMachine }
+              onRemove={ resetMachineImg }
             >
               {fileList.length >= 10 ? null : uploadButton}
             </Upload>
@@ -101,12 +105,6 @@ export default props => {
       )
 }
 
-function selectValue(value){
-  let arr = value.split('/')
-  let obj ={}
-  obj[arr[1]] = arr[0]
-  dispatch('MACHINE_NEW_GET_SELECT', obj)
-}
 
 function handlePreviewMachine(e) {
   let url = e.response ? e.response.data.url : e.url

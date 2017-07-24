@@ -3,11 +3,11 @@
 import React from 'react'
 import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
-import Tooltip from 'antd/lib/tooltip'
 import Modal from 'antd/lib/modal'
 import messageChangeStatus from '../actions/messageChangeStatus'
 import messageDel from '../actions/messageDel'
-import textHidden from '../utils/textHidden'
+import TableTextHidden from './TableTextHidden'
+import TableTime from './TableTime'
 
 
 export default props => {
@@ -17,19 +17,13 @@ export default props => {
     dataIndex: 'title',
     width: '20%',
     key: 'title',
-    render: text =>
-      <Tooltip title={ text }>
-        <div className='message-table-display' >{textHidden(text, 25)}</div>
-      </Tooltip>
+    render: text => TableTextHidden(text, 25)
   },{
     title: '摘要',
     dataIndex: 'abstract',
     width: '20%',
     key: 'abstract',
-    render: text =>
-      <Tooltip title={ text }>
-        <div className='message-table-display' >{textHidden(text, 25)}</div>
-      </Tooltip>
+    render: text => TableTextHidden(text, 25)
   },{
     title: '作者',
     dataIndex: 'author',
@@ -45,21 +39,13 @@ export default props => {
     dataIndex: 'createdAt',
     width: '10%',
     key: 'createdAt',
-    render: text =>
-     <div>
-       <div>{ text.split(' ')[0] }</div>
-       <div className='message-table-time' >{ text.split(' ')[1] }</div>
-     </div>
+    render: text => TableTime(text, 15)
   },{
     title: '推送时间',
     dataIndex: messageSelect==='send' ? 'updatedAt' : '',
     width: '10%',
     key: 'updatedAt',
-    render: text =>
-     <div>
-       <div>{text.length? text.split(' ')[0] : '' }</div>
-       <div className='message-table-time' >{ text.length? text.split(' ')[1] : ''}</div>
-     </div>
+    render: text => TableTime(text, 15)
   },{
     title: '操作',
     key: 'action',

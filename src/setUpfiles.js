@@ -1,5 +1,5 @@
 
-
+//mock localStorage和react 的，只需要在文件中引入就行
 import React from 'react';
 if (typeof window !== 'undefined') {
   window.React = React;

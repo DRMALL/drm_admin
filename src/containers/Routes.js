@@ -9,6 +9,7 @@ import NewUser from './NewUser'
 import UserEdit from './UserEdit'
 import Machine from './Machine'
 import MachineNew from './MachineNew'
+import MachineEdit from './MachineEdit'
 import Message from './Message'
 import MessageNew from './MessageNew'
 import MessageEdit from './MessageEdit'
@@ -37,6 +38,7 @@ export default () => (
         <Route path='authority/new' component={ AuthorityNew } />
         <Route path='machine' component={ Machine } />
         <Route path='machine/new' component={ MachineNew } />
+        <Route path='machine/edit' component={ MachineEdit } />
         <Route path='message' component={ Message } />
         <Route path='message/new' component={ MessageNew } />
         <Route path='message/edit' component={ MessageEdit } />

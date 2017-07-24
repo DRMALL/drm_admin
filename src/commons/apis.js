@@ -17,3 +17,4 @@ export const troubleKindAction = `${host}bugs/categorys`
 export const workOrderAction = `${host}orders`
 export const machineUploadImg = `${host}devices/uploadimg`
 export const newMachine = `${host}devices/new`
+export const machineAction = `${host}devices`
