@@ -6,6 +6,7 @@ import store from '../commons/store'
 import dispatch from './dispatch'
 import message from 'antd/lib/message'
 import { browserHistory } from 'react-router'
+import socket from './socket'
 
 
 export default e => {
@@ -17,6 +18,7 @@ export default e => {
   .then(res => {
     browserHistory.push('/workOrder')
     dispatch('WORKORDER_EDIT_RESET')
+    socket()
 })
   .catch(res => console.error(res))
   }

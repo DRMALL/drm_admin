@@ -4,12 +4,12 @@ import React from 'react'
 import Input from 'antd/lib/input'
 import Select from 'antd/lib/select'
 import getInputValue from '../actions/getInputValue'
-import { troubleType } from '../commons/troubleCommon'
+// import { troubleType } from '../commons/troubleCommon'
 import dispatch from '../actions/dispatch'
 import changeTroubleType from '../utils/changeTroubleType'
 
 export default props => {
-  const { title, categoryxx, content } = props.state.trouble
+  const { title, categoryxx, content, troubleKinds } = props.state.trouble
   return (
     <div>
       <div className='trouble-input-flex' >
@@ -21,10 +21,10 @@ export default props => {
       <div className='trouble-input-flex' >
         <div className='trouble-input-left' >分类</div>
         <Select style={{ width:300 }} onChange={ troubleSelect }
-               placeholder='压力分类字典' value={ changeTroubleType(categoryxx) }  >
+               placeholder='压力分类字典' value={ changeTroubleType(categoryxx, troubleKinds) }  >
             {
-              troubleType.map( (item, index) =>
-              <Select.Option key={index} value={ item.name } >{item.tip}</Select.Option> )
+              troubleKinds.map( (item, index) =>
+              <Select.Option key={index} value={ item._id } >{item.text}</Select.Option> )
             }
         </Select>
       </div>

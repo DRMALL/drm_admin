@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import getWorkOrderArr from '../actions/getWorkOrderArr'
 import dispatch from '../actions/dispatch'
 import WorkOrderTable from '../components/WorkOrderTable'
-import socket from '../actions/socket'
+// import socket from '../actions/socket'
 
 
 export default class User extends Component {
@@ -30,12 +30,7 @@ export default class User extends Component {
 }
 
 function workOrderSelect(e){
-  // let socket = io()
-  // socket.on('newteo', (data) => console.log(data) )
-  socket()
-
-
-
+  // socket()
 
   const { type } = e.currentTarget.dataset
   if(type==='故障处理工单')

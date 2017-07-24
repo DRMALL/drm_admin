@@ -5,16 +5,13 @@ import Http from './Http'
 import store from '../commons/store'
 import dispatch from './dispatch'
 import message from 'antd/lib/message'
-import changeTroubleType from '../utils/changeTroubleType'
 
 
 export default e => {
   const { method } = e.currentTarget.dataset
   const { title, categoryxx, content } = store.getState().trouble
   if(title&&categoryxx&&content){
-  let category ={}
-  category.name = categoryxx
-  category.tip = changeTroubleType(categoryxx)
+  let category = categoryxx
   let data = { title, category, content }
     console.log(data)
   Http( troubleAction, method, true, data )

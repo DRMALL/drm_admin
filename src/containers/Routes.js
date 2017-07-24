@@ -16,6 +16,7 @@ import Parts from './Parts'
 import Trouble from './Trouble'
 import TroubleNew from './TroubleNew'
 import TroubleEdit from './TroubleEdit'
+import TroubleKind from './TroubleKind'
 import WorkOrder from './WorkOrder'
 import WorkOrderEdit from './WorkOrderEdit'
 import Authority from './Authority'
@@ -43,6 +44,7 @@ export default () => (
         <Route path='trouble' component={ Trouble } />
         <Route path='trouble/new' component={ TroubleNew } />
         <Route path='trouble/edit' component={ TroubleEdit } />
+        <Route path='trouble/kind' component={ TroubleKind } />
         <Route path='workOrder' component={ WorkOrder } />
         <Route path='workOrder/edit' component={ WorkOrderEdit } />
       </Route>

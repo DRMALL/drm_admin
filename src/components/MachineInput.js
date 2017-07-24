@@ -6,7 +6,7 @@ import Select from 'antd/lib/select'
 import { pressureArr, fuelArr, displacementArr } from '../commons/machineLable'
 import getInputValue from '../actions/getInputValue'
 import Upload from 'antd/lib/upload'
-import { uploadImg } from '../commons/apis'
+import { machineUploadImg } from '../commons/apis'
 import Modal from 'antd/lib/modal'
 import dispatch from '../actions/dispatch'
 import Icon from 'antd/lib/icon'
@@ -14,6 +14,7 @@ import Icon from 'antd/lib/icon'
 
 export default props => {
   const { fileList, previewImage, previewVisible } = props.state.machine
+  console.log(props.state.machine)
   const uploadButton = (
       <div>
         <Icon type="plus" />
@@ -81,8 +82,8 @@ export default props => {
           <div className='machine-input-left machine-input-flexs' >上传设备图片</div>
           <div className='machine-input-upload' >
             <Upload
-              action={`${uploadImg}?token=${localStorage.getItem('token')}`}
-              name="news"
+              action={`${machineUploadImg}?token=${localStorage.getItem('token')}`}
+              name="device"
               listType="picture-card"
               fileList={fileList}
               multiple={ true }

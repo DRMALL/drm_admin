@@ -9,9 +9,10 @@ import { browserHistory } from 'react-router'
 
 
 export default e => {
-  const { title, category, content } = store.getState().trouble
+  const { title, categoryxx, content } = store.getState().trouble
   const id = localStorage.getItem('troubleId')
-  if(title&&category&&content){
+  if(title&&categoryxx&&content){
+  let category = categoryxx
   let data = { title, category, content }
   Http( `${troubleAction}/${id}`, 'put', true, data )
   .then(res => {
