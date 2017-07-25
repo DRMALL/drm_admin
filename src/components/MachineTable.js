@@ -4,6 +4,7 @@ import Table from 'antd/lib/table'
 import React from 'react'
 import TableTime from './TableTime'
 import TableTextHidden from './TableTextHidden'
+import TableAddress from './TableAddress'
 import { browserHistory } from 'react-router'
 
 export default props => {
@@ -40,7 +41,8 @@ export default props => {
   },{
     title: '所在地',
     dataIndex: 'address',
-    key: 'address'
+    key: 'address',
+    render: text => TableAddress(text)
   },{
     title: '添加时间',
     dataIndex: 'createdAt',
@@ -55,7 +57,8 @@ export default props => {
              onClick={ navToMachineEdit } >
           <i className="iconfont icon-compile" style={{ fontSize:20 }} ></i>
         </div>
-        <div className='machine-table-right' >
+        <div className='machine-table-right' data-machine-id={ text._id }
+             onClick={ navToMachineControl } >
           <i className="iconfont icon-details" ></i>
         </div>
       </div>
@@ -72,4 +75,10 @@ function navToMachineEdit(e){
   const { machineId } = e.currentTarget.dataset
   localStorage.setItem('machineId', machineId)
   browserHistory.push('/machine/edit')
+}
+
+function navToMachineControl(e){
+  const { machineId } = e.currentTarget.dataset
+  localStorage.setItem('machineId', machineId)
+  browserHistory.push('/machine/control')
 }

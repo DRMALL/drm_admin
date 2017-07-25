@@ -18,3 +18,6 @@ export const workOrderAction = `${host}orders`
 export const machineUploadImg = `${host}devices/uploadimg`
 export const newMachine = `${host}devices/new`
 export const machineAction = `${host}devices`
+export const authorityNew = `${host}auths/new`
+export const authorityAction = `${host}auths`
+export const authorityPut = `${host}auth/change`

@@ -21,8 +21,10 @@ export default class MachineEdit extends Component {
         <div className='machine-edit-content' >
           <MachineInput { ...this.props } />
           <MachineRecord { ...this.props } />
-          <Button onClick={ editMachine } >提交</Button>
-          <MachineTimeline { ...this.props } />
+          <Button onClick={ editMachine } className='machine-edit-button' >提交</Button>
+          <div className='machine-edit-timeline' >
+            <MachineTimeline timelines={ this.props.state.machine.timelines } />
+          </div>
         </div>
       </div>
       )

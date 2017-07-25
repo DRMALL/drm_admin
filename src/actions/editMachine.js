@@ -10,7 +10,7 @@ import getMachineArr from './getMachineArr'
 import dispatch from './dispatch'
 
 export default () => {
-  const { name, number, fileList, cc, pressure, combustible, description, address, times, timedes, timetype } = store.getState().machine
+  const { name, number, fileList, cc, pressure, combustible, description, address, times, timedes, timetype, timelines, Taddress } = store.getState().machine
   if(!name||!number||!(fileList[0])||!cc||!pressure||!combustible||!description||!address) MissWarn()
     else {
       let imgArr = Array.from({ length: fileList.length })
@@ -21,16 +21,19 @@ export default () => {
         item.status = 'done'
         return item
       })
-      let timelines = {}
-      timelines.time = moment(times).format('YYYY-MM-DD')
-      timelines.timedes = timedes
-      timelines.timetype = timetype
-      let data = {name, number, images, cc, pressure, combustible, description, address}
-      let datas = {name, number, images, cc, pressure, combustible, description, address, timelines }
-      let dataxx = (!times||!timedes||!timetype) ? data : datas
+      let timeline = {}
+      timeline.time = moment(times).format('YYYY-MM-DD')
+      timeline.timedes = timedes
+      timeline.timetype = timetype
+
+      let addressxx = (Taddress.split('-')[0]===address) ? Taddress : `${address}-${Taddress}`
+
+      if(times&&timedes&&timetype) timelines.push(timeline)
+      let datas = {name, number, images, cc, pressure, combustible, description, timelines }
+       datas.address = addressxx
       let id = localStorage.getItem('machineId')
 
-      Http(`${machineAction}/${id}`, 'put', true, dataxx)
+      Http(`${machineAction}/${id}`, 'put', true, datas)
       .then(res => {
         dispatch('MACHINE_EDIT_MACHINE_SUCCESS')
         browserHistory.push('/machine')
