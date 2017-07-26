@@ -5,11 +5,14 @@ import Select from 'antd/lib/select'
 import Checkbox from 'antd/lib/checkbox'
 import dispatch from '../actions/dispatch'
 import store from '../commons/store'
+import changeAuthIdToText from '../utils/changeAuthIdToText'
 
 const Option = Select.Option
 export default props => {
-  const { userNameArr, machineNameArr, newAuthorityArr } = props.state.authority
+  const { userNameArr, machineNameArr, newAuthorityArr} = props.state.authority
   const { num } = props
+  console.log()
+  const path = window.location.pathname
   return (
     <div className='authority-input-container' >
       <div className='authority-input-flex' >
@@ -19,6 +22,7 @@ export default props => {
           style={{ width: 300 }}
           placeholder="选择设备"
           optionFilterProp="children"
+          value={ changeAuthIdToText(newAuthorityArr[num].deviceId, machineNameArr) }
           onChange={handleChange}
           filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
         >
@@ -30,8 +34,8 @@ export default props => {
       </div>
       <div className='authority-input-flex' >
         <div className='authority-input-text' >选择权限</div>
-        <Checkbox onChange={ onChange } id='canView' num={ num } >查看权限</Checkbox>
-        <Checkbox onChange={ onChange } id='canMonitor' num={ num } >监控权限</Checkbox>
+        <Checkbox onChange={ onChange } id='canView' num={ num } checked={ newAuthorityArr[num].canView } >查看权限</Checkbox>
+        <Checkbox onChange={ onChange } id='canMonitor' num={ num } checked={ newAuthorityArr[num].canMonitor } >监控权限</Checkbox>
       </div>
       <div className='authority-input-flex' >
         <div className='authority-input-text' >选择用户</div>
@@ -43,6 +47,7 @@ export default props => {
           onSelect={ addSelectUser }
           placeholder="选择用户"
           optionFilterProp="children"
+          value={ changeAuthIdToText(newAuthorityArr[num].userId, userNameArr ) }
           // onChange={handleChange}
           filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
         >
@@ -51,7 +56,7 @@ export default props => {
             <Option value={ num + '-' + item._id } key={ item._id } >{ item.name }</Option>)
         }
         </Select>
-        <div style={{ visibility: (newAuthorityArr.length -1 === num) ? 'visible' : 'hidden'}} className='authority-input-icon'
+        <div style={{ visibility: (newAuthorityArr.length -1 === num && path !=='/authority/edit') ? 'visible' : 'hidden'}} className='authority-input-icon'
              onClick={ addAuthorityInput } >
           <i className="iconfont icon-tianjiajiahaowubiankuang" style={{ width:12,height:12, color: '#fff' }}  ></i>
         </div>

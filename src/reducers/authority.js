@@ -1,15 +1,7 @@
 
 
 const authority ={
-  authorityArray:[{
-    name: '李工', see: '有', monitor: '有', proName: '设备二', time: '2017-6-29 11:20', key: 0
-  },{
-    name: '李工', see: '有', monitor: '无', proName: '设备二', time: '2017-6-29 11:20', key: 1
-  },{
-    name: '李工', see: '有', monitor: '无', proName: '设备二', time: '2017-6-29 11:20', key: 2
-  },{
-    name: '李工', see: '有', monitor: '有', proName: '设备二', time: '2017-6-29 11:20', key: 3
-  }],
+  authorityArray:[],
   userNameArr: [],
   machineNameArr: [],
   newAuthorityArr: [{
@@ -17,7 +9,8 @@ const authority ={
     deviceId: '',
     canView: false,
     canMonitor: false
-  }]
+  }],
+  filterValue: ''
 }
 
 const   newAuthoritys= {
@@ -37,6 +30,21 @@ export default ( state=authority, action ) => {
     const a = state.newAuthorityArr
       a.push(newAuthoritys)
       return Object.assign({}, state, { newAuthorityArr: a } )
+    case 'AUTHORITY_NEW_AUTHORITY_SUCCESS':
+      return Object.assign({}, state, { newAuthorityArr: [{
+          userId: '',
+          deviceId: '',
+          canView: false,
+          canMonitor: false
+        }]})
+    case 'AUTHORITY_NEW_AUTHORITY_RESET':
+      return Object.assign({}, state, { newAuthorityArr: action.payload } )
+    case 'AUTHORITY_GET_AUTHORITY_SUCCESS':
+      return Object.assign({}, state, { authorityArray: action.payload, TauthorityArray: action.payload } )
+    case 'AUTHORITY_GET_AUTHORITY_EDIT':
+      return Object.assign({}, state, { newAuthorityArr: action.payload } )
+    case 'AUTHORITY_FILTER_VALUE_TABLE':
+      return Object.assign({}, state, { authorityArray: action.payload } )
     default:
       return state
   }

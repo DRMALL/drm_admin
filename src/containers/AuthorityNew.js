@@ -7,6 +7,7 @@ import getMachineNameArr from '../actions/getMachineNameArr'
 import AuthorityInput from '../components/AuthorityInput'
 import Button from 'antd/lib/button'
 import authorityNew from '../actions/authorityNew'
+import authorityNewReset from '../actions/authorityNewReset'
 
 
 export default class Authority extends Component{
@@ -28,9 +29,14 @@ export default class Authority extends Component{
                <AuthorityInput { ...this.props } num={ index } key={index}/> )
             }
           </div>
-          <Button onClick={ authorityNew } >新增权限</Button>
+          <div className='authority-new-button' >
+            <Button onClick={ authorityNewReset }  >重置</Button>
+            <Button onClick={ authorityNew }  >提交</Button>
+          </div>
         </div>
       )
   }
 }
+
+
 

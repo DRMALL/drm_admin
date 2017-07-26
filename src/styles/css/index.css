@@ -149,6 +149,12 @@
 .authority-new-tip {
   padding: 20px 50px 0 50px;
 }
+.authority-new-button {
+  padding: 30px 50px;
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
 .authority-input-container {
   padding-top: 20px;
   padding-bottom: 20px;

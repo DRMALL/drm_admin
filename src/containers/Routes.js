@@ -23,6 +23,7 @@ import WorkOrder from './WorkOrder'
 import WorkOrderEdit from './WorkOrderEdit'
 import Authority from './Authority'
 import AuthorityNew from './AuthorityNew'
+import AuthorityEdit from './AuthorityEdit'
 import Nav from '../components/Nav'
 import NoMatch from './NoMatch'
 
@@ -37,6 +38,7 @@ export default () => (
         <Route path='user/edit' component={ UserEdit } />
         <Route path='authority' component={ Authority } />
         <Route path='authority/new' component={ AuthorityNew } />
+        <Route path='authority/edit' component={ AuthorityEdit } />
         <Route path='machine' component={ Machine } />
         <Route path='machine/new' component={ MachineNew } />
         <Route path='machine/edit' component={ MachineEdit } />
