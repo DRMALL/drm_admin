@@ -12,45 +12,55 @@ export default props => {
   const columns =[{
     title: '设备名称',
     dataIndex: 'name',
-    key: 'name'
+    key: 'name',
+    width: '10%'
   },{
     title: '设备编号',
     dataIndex: 'number',
-    key: 'number'
+    key: 'number',
+    width: '10%'
   },{
     title: '排量',
     dataIndex: 'cc',
-    key: 'cc'
+    key: 'cc',
+    width: '10%'
   },{
     title: '压力',
     dataIndex: 'pressure',
-    key: 'pressure'
+    key: 'pressure',
+    width: '10%'
   },{
     title: '燃料',
     dataIndex: 'combustible',
-    key: 'combustible'
+    key: 'combustible',
+    width: '10%',
   },{
     title: '描述',
     dataIndex: 'description',
     key: 'description',
+    width: '10%',
     render: text => TableTextHidden( text, 10)
   },{
     title: '负责人',
-    dataIndex: 'xx',
-    key: 'xx'
+    dataIndex: 'incharges',
+    width: '10%',
+    render: text => <div>{text.slice(0,4).join(', ')}</div>
   },{
     title: '所在地',
     dataIndex: 'address',
     key: 'address',
+    width: '10%',
     render: text => TableAddress(text)
   },{
     title: '添加时间',
     dataIndex: 'createdAt',
     key: 'createdAt',
+    width: '10%',
     render: text => TableTime(text, 15)
   },{
     title: '操作',
     key: 'action',
+    width: '10%',
     render: (text, record) =>(
       <div className='machine-table-action' >
         <div className='machine-table-left' data-machine-id={ text._id }
