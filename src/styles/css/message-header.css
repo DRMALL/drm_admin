@@ -22,20 +22,7 @@
 .message-header-noselect {
   border-bottom: 5px solid #fff;
 }
-.message-header-right {
+.message-header-link {
   display: flex;
   align-items: center;
-  font-size: 15px;
-  color: rgba(0,0,0,0.6);
-}
-.message-header-right:hover {
-  color: rgba(0,0,0,0.6);
-}
-.message-header-icon {
-  width: 22px;
-  height: 22px;
-  background-color: #579df2;
-  color: #fff;
-  text-align: center;
-  margin-right: 10px;
 }

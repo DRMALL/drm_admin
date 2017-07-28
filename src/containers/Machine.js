@@ -1,8 +1,9 @@
-
+//
 
 import React, { Component } from 'react'
-import MachineHead from '../components/MachineHead'
 import MachineTable from '../components/MachineTable'
+import ContentTitle from '../components/ContentTitle'
+import { conentHeadStr } from '../commons/contentStr'
 
 
 
@@ -10,7 +11,7 @@ export default class User extends Component {
   render() {
     return(
       <div className='user-container' >
-        <MachineHead { ...this.props } />
+        <ContentTitle head={ conentHeadStr.machine } />
         <MachineTable { ...this.props } />
       </div>
       )

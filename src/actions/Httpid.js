@@ -66,13 +66,13 @@ function fail(res) {
   if(res.body){
     notification.error({
       message: '提示',
-      description: res.body.message ? res.body.message : '获取数据失败!'
+      description: res.body.message ? res.body.message : '服务器出现错误!!'
     })
   }
   else {
     notification.error({
       message: '提示',
-      description: '获取数据失败!'
+      description: '服务器出现错误!!'
     })
   }
 

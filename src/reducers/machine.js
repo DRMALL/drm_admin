@@ -14,7 +14,8 @@ const machine ={
   times: null,
   timedes: '',
   timetype: null,
-  timelines: []
+  timelines: [],
+  affixChange: false,
 }
 
 const resetMachine = {
@@ -29,7 +30,8 @@ const resetMachine = {
   times: null,
   timedes: '',
   timetype: null,
-  timelines: []
+  timelines: [],
+  affixChange: false,
 }
 
 export default ( state=machine, action ) => {
@@ -56,6 +58,8 @@ export default ( state=machine, action ) => {
       return Object.assign({}, state, { times: action.payload } )
     case 'MACHINE_EDIT_MACHINE_SUCCESS':
       return Object.assign({}, state, resetMachine )
+    case 'MACHINE_AFFIX_PADDING_CHANGE':
+      return Object.assign({}, state, { affixChange: action.payload } )
     default:
       return state
   }

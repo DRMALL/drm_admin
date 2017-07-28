@@ -7,7 +7,7 @@ const TableFilter = ({ changeFun, arr }) => (
         <Select
           showSearch
           style={{ width: 200 }}
-          placeholder="点击下拉列表选择或者输入搜索"
+          placeholder="筛选"
           Focus = { true }
           optionFilterProp="children"
           allowClear= { true }

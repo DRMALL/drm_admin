@@ -10,10 +10,11 @@ import DatePicker from 'antd/lib/date-picker'
 import dispatch from '../actions/dispatch'
 
 
+
 export default props => {
   const { times, timetype, timedes } = props.state.machine
   return (
-    <div>
+    <div onChange={affixed => console.log(affixed)} >
       <div className='machine-input-flex' >
         <div className='machine-input-left' >时间</div>
         <DatePicker onChange={ getTime } style={{ width: 400 }}

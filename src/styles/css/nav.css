@@ -1,4 +1,7 @@
 .nav-container {
+  min-width: 1024px;
+}
+.nav-containers {
   position: absolute;
   top: 0px;
   bottom: 0px;

@@ -22,3 +22,4 @@ export const authorityNew = `${host}auths/new`
 export const authorityAction = `${host}auths`
 export const authorityPut = `${host}auth/change`
 export const authEdit = `${host}auths/one`
+export const partsAction = `${host}parts`

@@ -5,6 +5,7 @@ import getInputValue from '../actions/getInputValue'
 import Upload from 'antd/lib/upload'
 import Modal from 'antd/lib/modal'
 import Icon from 'antd/lib/icon'
+import beforeUpload from '../utils/beforeUpload'
 
 
 import { uploadImg } from '../commons/apis'
@@ -37,6 +38,7 @@ export default props => {
             listType="picture-card"
             fileList={fileList}
             multiple={ true }
+            beforeUpload={ beforeUpload }
             onPreview={ handlePreview }
             onChange={ handleChange }
           >
@@ -56,6 +58,7 @@ function handlePreview(e) {
   url = e.response ? e.response.data.url : e.url
   dispatch('MESSAGE_PREVIEW_IMG', url)
 }
+
 
 function handleChange(e){
   dispatch('MESSAGE_UPLOAD_IMG', e.fileList)

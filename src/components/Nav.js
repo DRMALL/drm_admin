@@ -20,10 +20,11 @@ export default class Nav extends Component {
     getMachineArr()
     getMessageArr()
   }
+
   render(){
     const { sliderSelect } = store.getState().nav
     return(
-      <Layout className='nav-container' >
+      <Layout className={(window.location.pathname==='/machine/edit') ?'nav-container' : 'nav-containers'}  >
        <Sider width={150} style={{ background: '#fff', borderRight: '1px solid #eee'}} >
          <div className='nav-sider-log' >Drm</div>
          <Menu
@@ -42,13 +43,13 @@ export default class Nav extends Component {
         }
         </Menu>
        </Sider>
-        <Layout>
+        <Layout >
           <Header style={{ background: '#fff' }} >
             <NavHead  { ...this.props } />
           </Header>
-           <Layout style={{ backgroundColor: '#F9FAFC' }} >
+           <Layout style={{ backgroundColor: '#F9FAFC' }}  >
              <Content className='nav-content' >{
-               this.props.children && React.cloneElement(this.props.children, { state: this.props.state, location: window.location })
+               this.props.children && React.cloneElement(this.props.children, { state: this.props.state, location: window.location, })
             }</Content>
            </Layout>
          </Layout>

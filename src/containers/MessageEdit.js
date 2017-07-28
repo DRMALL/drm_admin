@@ -11,13 +11,15 @@ export default class MessageEdit extends Component {
     getMessageById(localStorage.getItem('messageId'))
   }
   render() {
+    const { published } = this.props.state.message
     return(
       <div>
         <div className='message-edit-title' >修改信息</div>
         <div className='message-edit-content' >
           <MessageInput  { ...this.props } />
           <div className='message-edit-button' >
-            <Button data-type='false' onClick={ editMessage } >保存</Button>
+            <Button data-type='false' onClick={ editMessage }
+               disabled={ published } >保存</Button>
             <Button data-type='true' onClick={ editMessage } >群发</Button>
           </div>
         </div>

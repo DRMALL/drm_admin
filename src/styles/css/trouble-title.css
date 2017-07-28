@@ -1,0 +1,19 @@
+.trouble-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px 20px 20px;
+}
+.trouble-title-right {
+  font-size: 15px;
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+}
+.trouble-title-kind {
+  background-image: url("../../images/category@3x.png");
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  color: rgba(0,0,0,0.6);
+  text-indent: 30px;
+}

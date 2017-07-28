@@ -40,7 +40,9 @@ export default props => {
     render: (text, record) => (
       <div className='user-arr-action' >
         <div className='user-arr-item'  style={{ color: '#579df2' }}
-             onClick={ editUser } data-user-id={ record._id } ><Icon type="edit" /></div>
+             onClick={ editUser } data-user-id={ record._id } >
+          <i className="iconfont icon-compile"  style={{ color: '#0068d2' }} ></i>
+        </div>
         <div className='user-arr-item'  data-user-id={ record._id }
              onClick={ confirmDelUser } data-user-name={ record.name } ><Icon type="delete" /></div>
       </div>

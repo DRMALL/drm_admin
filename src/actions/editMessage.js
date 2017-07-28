@@ -13,8 +13,8 @@ export default e => {
   const published = e.currentTarget.dataset.type==='true' ? true : false
   const { title, abstract, content, fileList } = store.getState().message
   if(published) {
-    if(title&abstract&content&fileList)
-      {
+    if(!title||!abstract||!content||!fileList) MissWarn()
+    else {
         Modal.confirm({
             title: '提示',
             content: `确定群发信息 ${title}! 点击后不可取消`,
@@ -26,9 +26,8 @@ export default e => {
             }
           })
         }
-        else editSavexxx(published)
       }
-    else MissWarn()
+    else editSavexxx(published)
 }
 
 function editSavexxx(published){
@@ -36,7 +35,8 @@ function editSavexxx(published){
   const id = localStorage.getItem('messageId')
   const api = `${messageEdit}?id=${id}&token=${token}`
   const { title, abstract, content, fileList } = store.getState().message
-  if(title&abstract&content&fileList){
+  if(!title||!abstract||!content||!fileList) MissWarn()
+  else{
     let imagesArr = Array.from({ length: fileList.length })
     let images = imagesArr.map((item, index) => {
       item = {}
@@ -58,6 +58,5 @@ function editSavexxx(published){
       console.error(res)
     } )
   }
-  else MissWarn()
 
 }

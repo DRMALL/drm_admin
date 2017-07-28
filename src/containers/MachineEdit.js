@@ -7,22 +7,29 @@ import MachineRecord from '../components/MachineRecord'
 import Button from 'antd/lib/button'
 import editMachine from '../actions/editMachine'
 import MachineTimeline from '../components/MachineTimeline'
+import Affix from 'antd/lib/affix'
+import dispatch from '../actions/dispatch'
 
 export default class MachineEdit extends Component {
   componentDidMount() {
     getMachineById(localStorage.getItem('machineId'))
   }
+
   render() {
-    const { number } = this.props.state.machine
+    const { number, affixChange } = this.props.state.machine
     if(number)
     return(
       <div>
         <div className='machine-new-title' >修改设备</div>
         <div className='machine-edit-content' >
           <MachineInput { ...this.props } />
-          <MachineRecord { ...this.props } />
-          <Button onClick={ editMachine } className='machine-edit-button' >提交</Button>
-          <div className='machine-edit-timeline' >
+          <Affix onChange={ paddingTimeline } >
+          <div style={{ backgroundColor: '#fff', zIndex: 4 }}  >
+            <MachineRecord { ...this.props } />
+            <Button onClick={ editMachine } className='machine-edit-button' >提交</Button>
+            </div>
+          </Affix>
+          <div className='machine-edit-timeline' style={{ paddingTop: affixChange ? 270 : 0  }} >
             <MachineTimeline timelines={ this.props.state.machine.timelines } />
           </div>
         </div>
@@ -31,3 +38,9 @@ export default class MachineEdit extends Component {
   else return <div>loading...</div>
   }
 }
+
+function paddingTimeline(boolean){
+  dispatch('MACHINE_AFFIX_PADDING_CHANGE', boolean)
+}
+
+

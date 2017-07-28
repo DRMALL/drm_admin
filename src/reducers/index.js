@@ -8,6 +8,7 @@ import message from './message'
 import machine from './machine'
 import trouble from './trouble'
 import workOrder from './workOrder'
+import part from './part'
 
 export default {
   login,
@@ -18,4 +19,5 @@ export default {
   machine,
   trouble,
   workOrder,
+  part,
 }

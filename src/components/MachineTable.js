@@ -22,7 +22,7 @@ export default props => {
     dataIndex: 'cc',
     key: 'cc'
   },{
-    title: '压力MPa',
+    title: '压力',
     dataIndex: 'pressure',
     key: 'pressure'
   },{

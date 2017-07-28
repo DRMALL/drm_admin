@@ -18,6 +18,9 @@
   padding: 20px 0;
 }
 .nav-container {
+  min-width: 1024px;
+}
+.nav-containers {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -123,6 +126,8 @@
 .user-arr-item {
   cursor: pointer;
   width: 25px;
+  display: flex;
+  align-items: center;
 }
 .new-user-container {
   margin: 20px 25px;
@@ -227,22 +232,9 @@
 .message-header-noselect {
   border-bottom: 5px solid #fff;
 }
-.message-header-right {
+.message-header-link {
   display: flex;
   align-items: center;
-  font-size: 15px;
-  color: rgba(0,0,0,0.6);
-}
-.message-header-right:hover {
-  color: rgba(0,0,0,0.6);
-}
-.message-header-icon {
-  width: 22px;
-  height: 22px;
-  background-color: #579df2;
-  color: #fff;
-  text-align: center;
-  margin-right: 10px;
 }
 .message-new-title {
   padding: 25px 0 14px 20px;
@@ -304,32 +296,6 @@
   width: 200px;
   display: flex;
   justify-content: space-between;
-}
-.machine-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px 20px 20px;
-}
-.machine-head-left {
-  font-size: 18px;
-  font-family: PingFangSC;
-  font-weight: 800;
-}
-.machine-head-right {
-  display: flex;
-  font-size: 15px;
-  color: rgba(0,0,0,0.6);
-  cursor: pointer;
-}
-.machine-head-right-block {
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  line-height: 22px;
-  margin-right: 10px;
-  background-color: #579df2;
-  color: #fff;
 }
 .machine-new-title {
   padding: 25px 0 14px 20px;
@@ -566,8 +532,54 @@
   margin: 0 5px;
   color: #d0021b;
 }
+.trouble-kind-container {
+  padding: 25px 50px;
+}
+.trouble-kind-tip {
+  padding-bottom: 30px;
+}
 .page-tip {
   font-size: 18px;
   font-family: PingFangSC;
   font-weight: 800;
+}
+.content-link {
+  display: flex;
+  font-size: 15px;
+  color: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+.content-link-block {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 10px;
+  background-color: #579df2;
+  color: #fff;
+}
+.trouble-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px 20px 20px;
+}
+.trouble-title-right {
+  font-size: 15px;
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+}
+.trouble-title-kind {
+  background-image: url("../../images/category@3x.png");
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  color: rgba(0,0,0,0.6);
+  text-indent: 30px;
+}
+.part-content-title {
+  padding: 25px 50px;
+}
+.part-content-title {
+  padding: 25px 50px;
 }

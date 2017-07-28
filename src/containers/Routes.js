@@ -15,6 +15,7 @@ import Message from './Message'
 import MessageNew from './MessageNew'
 import MessageEdit from './MessageEdit'
 import Parts from './Parts'
+import PartsRemark from './PartsRemark'
 import Trouble from './Trouble'
 import TroubleNew from './TroubleNew'
 import TroubleEdit from './TroubleEdit'
@@ -47,6 +48,7 @@ export default () => (
         <Route path='message/new' component={ MessageNew } />
         <Route path='message/edit' component={ MessageEdit } />
         <Route path='parts' component={ Parts } />
+        <Route path='parts/remark' component={ PartsRemark } />
         <Route path='trouble' component={ Trouble } />
         <Route path='trouble/new' component={ TroubleNew } />
         <Route path='trouble/edit' component={ TroubleEdit } />

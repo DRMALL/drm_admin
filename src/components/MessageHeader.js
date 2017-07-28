@@ -1,8 +1,8 @@
 
 
 import React from 'react'
-import { Link } from 'react-router'
 import dispatch from '../actions/dispatch'
+import ContentLink from './ContentLink'
 
 const MessageHeader = ({ state }) => (
   <div className='message-header-container' >
@@ -12,12 +12,9 @@ const MessageHeader = ({ state }) => (
       <div className={ state.message.messageSelect==='send' ? 'message-header-item message-header-select' : 'message-header-item message-header-noselect' }
            onClick={ messageSelect } data-id='已发送' >已发送</div>
     </div>
-    <Link to='/message/new' className='message-header-right'  >
-      <div className='message-header-icon' >
-        <i className="iconfont icon-tianjiajiahaowubiankuang"  ></i>
-      </div>
-      <div className='message-header-text'  >创建信息</div>
-    </Link>
+    <div className='message-header-link' >
+      <ContentLink path='/message/new' tip='创建信息' />
+    </div>
   </div>
   )
 

@@ -7,22 +7,26 @@ exports[`contentTitle render test 1`] = `
   <div
     className="content-head-left"
   >
-    故障排除
+    <div
+      className="page-tip"
+    >
+      故障排除
+    </div>
   </div>
   <a
-    className="content-head-right"
+    className="content-link"
     onClick={[Function]}
     style={Object {}}
   >
     <div
-      className="content-head-right-block"
+      className="content-link-block"
     >
       <i
         className="anticon anticon-plus"
       />
     </div>
     <div
-      className="content-head-right-text"
+      className="content-link-text"
     >
       创建新信息
     </div>

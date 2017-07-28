@@ -12,6 +12,7 @@ import dispatch from '../actions/dispatch'
 import Icon from 'antd/lib/icon'
 import resetMachineImg from '../actions/resetMachineImg'
 import selectValue from '../utils/selectValue'
+import beforeUpload from '../utils/beforeUpload'
 
 
 export default props => {
@@ -90,6 +91,7 @@ export default props => {
               listType="picture-card"
               fileList={fileList}
               multiple={ true }
+              beforeUpload={ beforeUpload }
               onPreview={ handlePreviewMachine }
               onChange={ handleChangeMachine }
               onRemove={ resetMachineImg }
