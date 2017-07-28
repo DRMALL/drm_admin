@@ -8,6 +8,7 @@ import MissWarn from '../utils/MissWarn'
 import { machineAction } from '../commons/apis'
 import getMachineArr from './getMachineArr'
 import dispatch from './dispatch'
+import editMachineLocation from './editMachineLocation'
 
 export default () => {
   const { name, number, fileList, cc, pressure, combustible, description, address, times, timedes, timetype, timelines, Taddress } = store.getState().machine
@@ -26,13 +27,13 @@ export default () => {
       timeline.timedes = timedes
       timeline.timetype = timetype
 
-      let addressxx = (Taddress.split('-')[0]===address) ? Taddress : `${address}-${Taddress}`
+
 
       if(times&&timedes&&timetype) timelines.push(timeline)
       let datas = {name, number, images, cc, pressure, combustible, description, timelines }
-       datas.address = addressxx
       let id = localStorage.getItem('machineId')
 
+      if(Taddress !== address ) editMachineLocation(address)
       Http(`${machineAction}/${id}`, 'put', true, datas)
       .then(res => {
         dispatch('MACHINE_EDIT_MACHINE_SUCCESS')

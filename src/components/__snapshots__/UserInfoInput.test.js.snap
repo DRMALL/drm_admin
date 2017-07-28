@@ -23,7 +23,7 @@ exports[`UserInfoInput snapshot test 1`] = `
         onKeyDown={[Function]}
         placeholder="输入用户名"
         type="text"
-        value="adssd"
+        value=""
       />
     </div>
   </div>
@@ -48,7 +48,7 @@ exports[`UserInfoInput snapshot test 1`] = `
         onKeyDown={[Function]}
         placeholder="输入密码"
         type="text"
-        value="123423"
+        value=""
       />
     </div>
   </div>
@@ -73,7 +73,7 @@ exports[`UserInfoInput snapshot test 1`] = `
         onKeyDown={[Function]}
         placeholder="输入用户邮箱"
         type="text"
-        value="432542345@qq.com"
+        value=""
       />
     </div>
   </div>
@@ -98,7 +98,7 @@ exports[`UserInfoInput snapshot test 1`] = `
         onKeyDown={[Function]}
         placeholder="输入联系电话"
         type="text"
-        value="13845873659"
+        value=""
       />
     </div>
   </div>
@@ -123,7 +123,7 @@ exports[`UserInfoInput snapshot test 1`] = `
         onKeyDown={[Function]}
         placeholder="输入公司名称"
         type="text"
-        value="新潮科技"
+        value=""
       />
     </div>
   </div>
@@ -148,7 +148,7 @@ exports[`UserInfoInput snapshot test 1`] = `
         onKeyDown={[Function]}
         placeholder="输入通讯地址"
         type="text"
-        value="广东省潮州市潮安区"
+        value=""
       />
     </div>
   </div>

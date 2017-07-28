@@ -12,6 +12,7 @@ import workOrderEditxx from '../actions/workOrderEditxx'
 
 export default class WorkOrderEdit extends Component {
   componentDidMount() {
+    dispatch('WORKORDER_EDIT_RESET')
     getWorkOrderById(localStorage.getItem('workOrderId'))
   }
   render() {
