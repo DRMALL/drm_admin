@@ -2,7 +2,8 @@
 
 const login ={
   admin: '',
-  password: ''
+  password: '',
+  loginStatus: false
 }
 
 export default ( state=login, action ) => {
@@ -11,6 +12,10 @@ export default ( state=login, action ) => {
       return Object.assign({}, state, { admin: '', password: '' } )
     case 'LOGIN_GET_INPUT_VALUE':
       return Object.assign({}, state, action.payload )
+    case 'LOGIN_RESET':
+      return Object.assign({}, state, { loginStatus: false } )
+    case "LOGIN_SUCCESS_LOGIN":
+      return Object.assign({}, state, { loginStatus: true } )
     default:
       return state
   }

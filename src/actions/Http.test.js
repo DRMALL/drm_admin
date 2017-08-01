@@ -6,6 +6,7 @@ import setUpfiles from '../setUpfiles'
 import Http from './Http'
 import request from 'superagent'
 import mocker from 'superagent-mocker'
+import store from '../commons/store'
 
 let mock = mocker(request)
 
@@ -25,6 +26,29 @@ it('Http test for get', () => {
 
 it('Http test for post', () => {
 
+    const data = { name: '小明', password: '12345', email: '65464146@qq.com', code: 402 }
+    //为了方便数据构造，直接在post数据中添加了code码，这应该是不规范的
+    mock.post(`${newUser}?token=*`, function(req) {
+      // const body = req.body
+      // body.code = 201
+      return { body: data }
+    });
+    expect.assertions(1)
+    return Http( newUser, 'post', false, data )
+            .then(e =>{
+              // let body = data
+              // body.code = 201
+              expect(e).toEqual({ body: data, status: 200})
+              // expect(store.getState().login.loginStatus).toBe(false)
+            })
+            .catch(e => {
+              expect(store.getState().login.loginStatus).toBe(false)
+            })
+
+})
+
+it('Http test for post', () => {
+
     const data = { name: '小明', password: '12345', email: '65464146@qq.com', code: 201 }
     //为了方便数据构造，直接在post数据中添加了code码，这应该是不规范的
     mock.post(`${newUser}?token=*`, function(req) {
@@ -38,6 +62,10 @@ it('Http test for post', () => {
               // let body = data
               // body.code = 201
               expect(e).toEqual({ body: data, status: 200})
-            }
-  );
+              // expect(store.getState().login.loginStatus).toBe(false)
+            })
+            .catch(e => {
+              expect(store.getState().login.loginStatus).toBe(false)
+            })
+
 })

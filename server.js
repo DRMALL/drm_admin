@@ -1,5 +1,6 @@
 
 var AV = require('leanengine');
+var express = require('express')
 
 AV.init({
   appId: process.env.LEANCLOUD_APP_ID ,
@@ -10,9 +11,9 @@ AV.init({
 var app = require('./app')
 
 // 强制使用 https
-app.use(AV.express());
-app.enable('trust proxy');
 
+app.enable('trust proxy');
+app.use(AV.express());
 app.use(AV.Cloud.HttpsRedirect());
 
 

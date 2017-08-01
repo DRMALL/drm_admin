@@ -5,6 +5,7 @@ import request from 'superagent'
 import store from '../commons/store'
 import notification from 'antd/lib/notification'
 import LoginWarn from '../utils/LoginWarn'
+import dispatch from './dispatch'
 
 export default () => {
   const { admin, password } = store.getState().login
@@ -16,6 +17,7 @@ export default () => {
     .then(res => {
       if(res.body.code===201) {
         localStorage.setItem('token', res.body.data)
+        dispatch('LOGIN_SUCCESS_LOGIN')
         browserHistory.push('/message')
       }
       else loginFail()

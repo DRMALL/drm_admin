@@ -23,6 +23,10 @@ export default ( state=user, action ) => {
       return Object.assign({}, state, { userArr: action.payload } )
     case 'USER_GET_USER_INFO_BY_ID':
       return Object.assign({}, state,  action.payload  )
+    case 'USER_SHORT_PARAMETER':
+      return Object.assign({}, state, { status: 'short parameter' } )
+    case 'USER_NEW_USER_START':
+      return Object.assign({}, state, { status: 'new user start' } )
     default:
       return state
   }
