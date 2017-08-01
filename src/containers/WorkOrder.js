@@ -2,9 +2,8 @@
 
 import React, { Component } from 'react'
 import getWorkOrderArr from '../actions/getWorkOrderArr'
-import dispatch from '../actions/dispatch'
 import WorkOrderTable from '../components/WorkOrderTable'
-// import socket from '../actions/socket'
+import workOrderSelect from '../utils/workOrderSelect'
 
 
 export default class User extends Component {
@@ -29,11 +28,3 @@ export default class User extends Component {
   }
 }
 
-function workOrderSelect(e){
-  // socket()
-
-  const { type } = e.currentTarget.dataset
-  if(type==='故障处理工单')
-    dispatch('WORKORDER_DISPLAY_TROUBLE_ORDER', type )
-  else dispatch('WORKORDER_DISPLAY_PART_ORDER', type)
-}
