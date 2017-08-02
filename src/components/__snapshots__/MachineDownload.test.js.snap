@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MachineDownload test 1`] = `
+<div
+  className="machine-download-container"
+>
+  <div
+    className="machine-download-flex"
+  >
+    <div
+      className="machine-download-text"
+    >
+      导出历史数据
+    </div>
+    <span
+      className="ant-calendar-picker"
+      style={Object {}}
+    >
+      <span
+        className="ant-calendar-picker-input ant-input"
+        disabled={undefined}
+        onBlur={undefined}
+        onClick={[Function]}
+        onFocus={undefined}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={undefined}
+        onMouseLeave={undefined}
+        onTouchStart={[Function]}
+      >
+        <input
+          className="ant-calendar-range-picker-input"
+          disabled={undefined}
+          placeholder="开始日期"
+          readOnly={true}
+          value=""
+        />
+        <span
+          className="ant-calendar-range-picker-separator"
+        >
+           ~ 
+        </span>
+        <input
+          className="ant-calendar-range-picker-input"
+          disabled={undefined}
+          placeholder="结束日期"
+          readOnly={true}
+          value=""
+        />
+        <span
+          className="ant-calendar-picker-icon"
+        />
+      </span>
+    </span>
+  </div>
+  <button
+    className="ant-btn machine-download-button"
+    onClick={[Function]}
+    onMouseUp={[Function]}
+    type="button"
+  >
+    <span>
+      导出excel
+    </span>
+  </button>
+</div>
+`;
