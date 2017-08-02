@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentLink test 1`] = `
+<a
+  className="content-link"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="content-link-block"
+  >
+    <i
+      className="anticon anticon-plus"
+    />
+  </div>
+  <div
+    className="content-link-text"
+  >
+    创建新信息
+  </div>
+</a>
+`;
