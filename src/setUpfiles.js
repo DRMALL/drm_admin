@@ -2,6 +2,17 @@
 //mock localStorage和react 的，只需要在文件中引入就行
 import React from 'react';
 if (typeof window !== 'undefined') {
+    const matchMediaPolyfill = function matchMediaPolyfill() {
+    return {
+      matches: false,
+      addListener() {
+      },
+      removeListener() {
+      },
+    };
+  };
+  window.matchMedia = window.matchMedia || matchMediaPolyfill;
+
   window.React = React;
   window.localStorage = ( function storageMock() {
     var storage = {};

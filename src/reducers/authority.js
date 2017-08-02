@@ -13,12 +13,6 @@ const authority ={
   filterValue: ''
 }
 
-const   newAuthoritys= {
-    userId: '',
-    deviceId: '',
-    canView: false,
-    canMonitor: false
-  }
 
 export default ( state=authority, action ) => {
   switch(action.type) {
@@ -28,9 +22,21 @@ export default ( state=authority, action ) => {
       return Object.assign({}, state, { machineNameArr: action.payload } )
     case 'AUTHORITY_ADD_NEW_AUTHORITY_INPUT':
     const a = state.newAuthorityArr
-      a.push(newAuthoritys)
-      return Object.assign({}, state, { newAuthorityArr: a } )
+     let b = a.concat([{
+    userId: '',
+    deviceId: '',
+    canView: false,
+    canMonitor: false
+  }])
+      return Object.assign({}, state, { newAuthorityArr: b } )
     case 'AUTHORITY_NEW_AUTHORITY_SUCCESS':
+      return Object.assign({}, state, { newAuthorityArr: [{
+          userId: '',
+          deviceId: '',
+          canView: false,
+          canMonitor: false
+        }]})
+    case 'AUTHORITY_NEW_RESET':
       return Object.assign({}, state, { newAuthorityArr: [{
           userId: '',
           deviceId: '',
@@ -45,6 +51,10 @@ export default ( state=authority, action ) => {
       return Object.assign({}, state, { newAuthorityArr: action.payload } )
     case 'AUTHORITY_FILTER_VALUE_TABLE':
       return Object.assign({}, state, { authorityArray: action.payload } )
+
+//测试构造数据
+    case 'AUTHORITY_TEST_AUTHORITY_ARR_CHANGE':
+      return Object.assign({}, state, { newAuthorityArr: action.payload } )
     default:
       return state
   }

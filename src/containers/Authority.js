@@ -18,12 +18,15 @@ export default class Authority extends Component{
   }
   render() {
       console.log(this.props.state.authority)
+      const { authorityArray, userNameArr, machineNameArr } = this.props.state.authority
     return(
         <div>
           <div className='user-head' >
           <ContentTitle head={ conentHeadStr.authourity } />
           </div>
-          <AuthorityTable { ...this.props } />
+          <AuthorityTable authorityArray={ authorityArray }
+                          userNameArr={ userNameArr }
+                          machineNameArr={ machineNameArr } />
         </div>
       )
   }

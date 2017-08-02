@@ -1,0 +1,307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorityInputs test 1`] = `
+<div
+  className="authority-input-container"
+>
+  <div
+    className="authority-input-flex"
+  >
+    <div
+      className="authority-input-text"
+    >
+      选择设备
+    </div>
+    <div
+      className="ant-select ant-select-enabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="ant-select-selection
+                  ant-select-selection--single"
+        onKeyDown={[Function]}
+        role="combobox"
+        tabIndex={0}
+      >
+        <div
+          className="ant-select-selection__rendered"
+        >
+          <div
+            className="ant-select-selection__placeholder"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "WebkitUserSelect": "none",
+                "display": "none",
+                "userSelect": "none",
+              }
+            }
+            unselectable="unselectable"
+          >
+            选择设备
+          </div>
+          <div
+            className="ant-select-selection-selected-value"
+            style={
+              Object {
+                "display": "block",
+                "opacity": 1,
+              }
+            }
+            title={null}
+          />
+          <div
+            className="ant-select-search ant-select-search--inline"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="ant-select-search__field__wrap"
+            >
+              <input
+                className="ant-select-search__field"
+                disabled={undefined}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              />
+              <span
+                className="ant-select-search__field__mirror"
+              >
+                
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <span
+          className="ant-select-arrow"
+          onClick={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="authority-input-flex"
+  >
+    <div
+      className="authority-input-text"
+    >
+      选择权限
+    </div>
+    <label
+      className="ant-checkbox-wrapper"
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      style={undefined}
+    >
+      <span
+        className="ant-checkbox"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-checkbox-input"
+          disabled={undefined}
+          name={undefined}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={undefined}
+          onFocus={[Function]}
+          readOnly={undefined}
+          tabIndex={undefined}
+          type="checkbox"
+        />
+        <span
+          className="ant-checkbox-inner"
+        />
+      </span>
+      <span>
+        查看权限
+      </span>
+    </label>
+    <label
+      className="ant-checkbox-wrapper"
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      style={undefined}
+    >
+      <span
+        className="ant-checkbox"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-checkbox-input"
+          disabled={undefined}
+          name={undefined}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={undefined}
+          onFocus={[Function]}
+          readOnly={undefined}
+          tabIndex={undefined}
+          type="checkbox"
+        />
+        <span
+          className="ant-checkbox-inner"
+        />
+      </span>
+      <span>
+        监控权限
+      </span>
+    </label>
+  </div>
+  <div
+    className="authority-input-flex"
+  >
+    <div
+      className="authority-input-text"
+    >
+      选择用户
+    </div>
+    <div
+      className="ant-select ant-select-enabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="ant-select-selection
+                  ant-select-selection--single"
+        onKeyDown={[Function]}
+        role="combobox"
+        tabIndex={0}
+      >
+        <div
+          className="ant-select-selection__rendered"
+        >
+          <div
+            className="ant-select-selection__placeholder"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "WebkitUserSelect": "none",
+                "display": "none",
+                "userSelect": "none",
+              }
+            }
+            unselectable="unselectable"
+          >
+            选择用户
+          </div>
+          <div
+            className="ant-select-selection-selected-value"
+            style={
+              Object {
+                "display": "block",
+                "opacity": 1,
+              }
+            }
+            title={null}
+          />
+          <div
+            className="ant-select-search ant-select-search--inline"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="ant-select-search__field__wrap"
+            >
+              <input
+                className="ant-select-search__field"
+                disabled={undefined}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              />
+              <span
+                className="ant-select-search__field__mirror"
+              >
+                
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <span
+          className="ant-select-arrow"
+          onClick={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+    <div
+      className="authority-input-icon"
+      onClick={[Function]}
+      style={
+        Object {
+          "visibility": "visible",
+        }
+      }
+    >
+      <i
+        className="iconfont icon-tianjiajiahaowubiankuang"
+        style={
+          Object {
+            "color": "#fff",
+            "height": 12,
+            "width": 12,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

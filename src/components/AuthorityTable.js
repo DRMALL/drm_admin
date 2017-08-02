@@ -10,7 +10,7 @@ import store from '../commons/store'
 import TableFilter from './TableFilter'
 
 export default props => {
-  const { authorityArray, userNameArr, machineNameArr } = props.state.authority
+  const { authorityArray, userNameArr, machineNameArr } = props
   const columns = [{
     title: '用户',
     dataIndex: 'user.name',
