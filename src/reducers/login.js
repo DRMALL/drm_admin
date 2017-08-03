@@ -3,7 +3,8 @@
 const login ={
   admin: '',
   password: '',
-  loginStatus: false
+  loginStatus: false,
+  verifyArr:[6,5,7,5,8,4]
 }
 
 export default ( state=login, action ) => {
@@ -16,6 +17,8 @@ export default ( state=login, action ) => {
       return Object.assign({}, state, { loginStatus: false } )
     case "LOGIN_SUCCESS_LOGIN":
       return Object.assign({}, state, { loginStatus: true } )
+    case 'LOGIN_GET_VERIFY_NUM':
+      return Object.assign({}, state, { verifyArr: action.payload } )
     default:
       return state
   }

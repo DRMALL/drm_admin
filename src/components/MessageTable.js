@@ -42,9 +42,9 @@ export default props => {
     render: text => TableTime(text, 15)
   },{
     title: '推送时间',
-    dataIndex: messageSelect==='send' ? 'updatedAt' : '',
+    dataIndex: messageSelect==='send' ? 'publish_time' : '',
     width: '10%',
-    key: 'updatedAt',
+    key: 'publish_time',
     render: text => TableTime(text, 15)
   },{
     title: '操作',

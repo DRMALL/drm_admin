@@ -12,21 +12,21 @@ import dispatch from '../actions/dispatch'
 
 
 export default props => {
-  const { times, timetype, timedes } = props.state.machine
+  const { line_time, line_type, line_des } = props
   return (
     <div onChange={affixed => console.log(affixed)} >
       <div className='machine-input-flex' >
         <div className='machine-input-left' >时间</div>
         <DatePicker onChange={ getTime } style={{ width: 400 }}
-                    value={ times } />
+                    value={ line_time } />
       </div>
       <div className='machine-input-flex' >
           <div  className='machine-input-left'>分类</div>
           <Select style={{ width: 400 }} placeholder='选择分类'
-                  onChange={ selectValue } value={ timetype } >
+                  onChange={ selectValue } value={ line_type } >
                   {
                     recordKind.map((item, index) =>
-                      <Select.Option key={ index } value={ item+'/timetype' } >{ item }</Select.Option>)
+                      <Select.Option key={ index } value={ item+'/line_type' } >{ item }</Select.Option>)
                   }
           </Select>
         </div>
@@ -35,7 +35,7 @@ export default props => {
         <Input.TextArea rows={4} className='machine-input-right'
                   onChange={ getInputValue }
                   style={{ width: 400 }} placeholder='输入描述'
-                  data-path='MACHINE' data-id='timedes' value={ timedes } />
+                  data-path='MACHINE' data-id='line_des' value={ line_des } />
       </div>
     </div>
     )

@@ -25,7 +25,7 @@ export default class MachineEdit extends Component {
           <MachineInput { ...this.props } />
           <Affix onChange={ paddingTimeline } >
           <div style={{ backgroundColor: '#fff', zIndex: 4 }}  >
-            <MachineRecord { ...this.props } />
+            <MachineRecord { ...this.props.state.machine } />
             <Button onClick={ editMachine } className='machine-edit-button' >提交</Button>
             </div>
           </Affix>

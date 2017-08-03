@@ -17,7 +17,7 @@ export default () => {
       item.key = index
       item.status = item.published ? '已发送': '未发送'
       item.createdAt = moment(item.createdAt).format('YYYY-MM-DD HH:mm')
-      item.updatedAt = moment(item.updatedAt).format('YYYY-MM-DD HH:mm')
+      item.publish_time = moment(item.publish_time).format('YYYY-MM-DD HH:mm')
       return item
     })
    dispatch('MESSAGE_GET_MESSAGE_ARR_SUCCESS', a)

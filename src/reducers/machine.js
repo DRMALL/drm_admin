@@ -11,8 +11,8 @@ const machine ={
   combustible: '',
   description: '',
   address: '',
-  times: null,
-  timedes: '',
+  line_time: null,
+  line_des: '',
   timetype: null,
   timelines: [],
   affixChange: false,
@@ -27,8 +27,8 @@ const resetMachine = {
   combustible: '',
   description: '',
   address: '',
-  times: null,
-  timedes: '',
+  line_time: null,
+  line_des: '',
   timetype: null,
   timelines: [],
   affixChange: false,
@@ -55,7 +55,7 @@ export default ( state=machine, action ) => {
     case 'MACHINE_GET_MACHINE_BY_ID':
       return Object.assign({}, state, action.payload )
     case 'MACHINE_SELCET_TIME':
-      return Object.assign({}, state, { times: action.payload } )
+      return Object.assign({}, state, { line_time: action.payload } )
     case 'MACHINE_EDIT_MACHINE_SUCCESS':
       return Object.assign({}, state, resetMachine )
     case 'MACHINE_AFFIX_PADDING_CHANGE':

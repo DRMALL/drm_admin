@@ -5,6 +5,7 @@ import Button from 'antd/lib/button'
 import handleLogin from '../actions/handleLogin'
 import getInputValue from '../actions/getInputValue'
 import dispatch from '../actions/dispatch'
+import VerifyImg from '../components/VerifyImg'
 
 
 export default class App extends Component {
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Input onChange={ getInputValue } data-id='password' data-path='LOGIN'
                onPressEnter={ handleLogin } type='password'
                 />
+        <VerifyImg />
         <Button onClick={ handleLogin } >登录</Button>
       </div>
       )
