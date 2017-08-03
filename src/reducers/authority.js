@@ -10,7 +10,9 @@ const authority ={
     canView: false,
     canMonitor: false
   }],
-  filterValue: ''
+  filterValue: '',
+  authModal: false,
+  authId: ''
 }
 
 
@@ -51,6 +53,12 @@ export default ( state=authority, action ) => {
       return Object.assign({}, state, { newAuthorityArr: action.payload } )
     case 'AUTHORITY_FILTER_VALUE_TABLE':
       return Object.assign({}, state, { authorityArray: action.payload } )
+    case 'AUTHORITY_DEL_GET_AUTHID':
+      return Object.assign({}, state, { authId: action.payload, authModal: true } )
+    case 'AUTHORITY_CANCLE_DEL_AUTH':
+      return Object.assign({}, state, { authModal: false } )
+    case 'AUTHROITY_DEL_AUTH_SUCCESS':
+      return Object.assign({}, state, { authModal: false } )
 
 //测试构造数据
     case 'AUTHORITY_TEST_AUTHORITY_ARR_CHANGE':

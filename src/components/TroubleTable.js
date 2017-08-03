@@ -2,13 +2,16 @@
 
 import React from 'react'
 import Table from 'antd/lib/table'
-// import Tooltip from 'antd/lib/tooltip'
 import { browserHistory } from 'react-router'
 import TableTextHidden from './TableTextHidden'
 import TableTime from './TableTime'
+import Modal from 'antd/lib/modal'
+import troubleDelById from '../actions/troubleDelById'
+import dispatch from '../actions/dispatch'
 
 export default props => {
-  const { troubleArr } = props.state.trouble
+  const { troubleArr, troubleModal, troubleId } = props.state.trouble
+  console.log(troubleId)
   const columns = [{
   title: '标题',
   dataIndex: 'title',
@@ -39,23 +42,35 @@ export default props => {
   key: 'action',
   width: '15%',
   render: (text, record) =>
-    <div onClick={ getTrouble } data-trouble-id={ record._id } >
-      <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2' }} ></i>
+    <div className='troubel-cation' >
+      <div onClick={ getTrouble } data-trouble-id={ record._id } >
+        <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2' }} ></i>
+      </div>
+      <div className='user-arr-item' onClick={ delTroubel } data-trouble-id={ record._id }  >
+          <i className="iconfont icon-shanchu message-del-icon"  ></i>
+        </div>
     </div>
   },]
   return (
     <div>
       <Table dataSource={troubleArr} columns={columns} rowKey={ record => record._id } />
+      <Modal title='提示' visible={ troubleModal } okText='确定' cancelText='取消'
+             onOk={ troubleDelById } onCancel={ cancleDeltrouble } >
+             <p>确定删除此信息？</p>
+      </Modal>
     </div>
     )
 }
 
-// function textHiddenxxx(str){
-//   if(str.length>=40){
-//     return str.slice(0, 40) + '...'
-//   }
-//   else return str
-// }
+function delTroubel(e){
+  const { troubleId } = e.currentTarget.dataset
+  dispatch('TROUBLE_GET_TROUBLE_ID', troubleId )
+}
+
+function cancleDeltrouble(){
+  dispatch('TROUBEL_CANCLE_DEL_TROUBEL')
+}
+
 
 function getTrouble(e){
   const { troubleId } = e.currentTarget.dataset

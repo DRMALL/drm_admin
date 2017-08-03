@@ -9,7 +9,7 @@ import messageDel from '../actions/messageDel'
 import TableTextHidden from './TableTextHidden'
 import TableTime from './TableTime'
 
-
+//本页面没有配置好table，还是使用了复制。。
 export default props => {
   const { messageArr, messageSelect } = props.state.message
   const columns = [{
@@ -41,10 +41,58 @@ export default props => {
     key: 'createdAt',
     render: text => TableTime(text, 15)
   },{
-    title: '推送时间',
+    title: '发布时间',
     dataIndex: messageSelect==='send' ? 'publish_time' : '',
     width: '10%',
     key: 'publish_time',
+    render: text =>  TableTime(text, 15)
+  },{
+    title: '操作',
+    key: 'action',
+    width: '15%',
+    render: (text, record) => (
+      <div className='message-arr-action' >
+        <div className='message-arr-item'  style={{ color: '#579df2' }}
+             onClick={ editMessagexx } data-message-id={ record._id } >
+             <i className="iconfont icon-compile  message-edit-icon" ></i>
+        </div>
+        <div className='message-arr-item' style={{ display: messageSelect==='send' ? 'none' : 'block' }} onClick={ confirSendxx } data-message-id={ record._id } >
+          <i className="iconfont icon-fasong  message-send-icon" style={{ width:12,height:12 }}  ></i>
+        </div>
+        <div className='message-arr-item' onClick={ delMessagexx } data-message-id={ record._id }  >
+          <i className="iconfont icon-shanchu message-del-icon"  ></i>
+        </div>
+      </div>
+      )
+  },]
+
+  const columnnosend = [{
+    title: '标题',
+    dataIndex: 'title',
+    width: '20%',
+    key: 'title',
+    render: text => TableTextHidden(text, 25)
+  },{
+    title: '摘要',
+    dataIndex: 'abstract',
+    width: '20%',
+    key: 'abstract',
+    render: text => TableTextHidden(text, 25)
+  },{
+    title: '作者',
+    dataIndex: 'author',
+    width: '5%',
+    key: 'author'
+  },{
+    title: '状态',
+    dataIndex: 'status',
+    width: '5%',
+    key: 'status'
+  },{
+    title: '创建时间',
+    dataIndex: 'createdAt',
+    width: '10%',
+    key: 'createdAt',
     render: text => TableTime(text, 15)
   },{
     title: '操作',
@@ -67,7 +115,7 @@ export default props => {
   },]
   return(
     <div>
-      <Table dataSource={ messageArr } columns={ columns } />
+      <Table dataSource={ messageArr } columns={ messageSelect==='send' ? columns : columnnosend } />
     </div>
     )
 }

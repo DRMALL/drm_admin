@@ -20,7 +20,7 @@ export default class MessageEdit extends Component {
           <div className='message-edit-button' >
             <Button data-type='false' onClick={ editMessage }
                disabled={ published } >保存</Button>
-            <Button data-type='true' onClick={ editMessage } >群发</Button>
+            <Button data-type='true' onClick={ editMessage } >发布</Button>
           </div>
         </div>
       </div>

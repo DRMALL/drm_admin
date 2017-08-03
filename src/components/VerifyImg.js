@@ -1,55 +1,20 @@
 
 
-// import React from 'react'
-// // import ReactDOM from 'react-dom'
-// import {Layer, Rect, Stage, Group} from 'react-konva'
-
-
-// const VerifyImg = () => {
-//   return (
-//     <div>
-//       <div>看不清？点击刷新下一张</div>
-//       <Stage width={100} height={50}>
-//         <Layer>
-//           <Rect
-//                 x={10} y={10} width={50} height={50}
-//                 fill={'#553353'}
-//                 shadowBlur={10}
-//                 // onClick={handleClick}
-//             />
-//         </Layer>
-//       </Stage>
-//     </div>
-//     )
-// }
-
-// export default VerifyImg
-
 import React, { Component } from 'react'
-import {Layer, Stage, Image, Text, Star} from 'react-konva'
+import {Layer, Stage, Text, Star} from 'react-konva'
 import dispatch from '../actions/dispatch'
 import store from '../commons/store'
 
 // try drag& drop rectangle
 export default class MyImage extends Component{
-  state = {
-    image: null
-  }
-    componentWillMount() {
-       const image = new window.Image();
-      image.src = 'http://www.tukuwa.com/uploadfile/2012/1020/20121020100014909.jpg';
-      image.onload = () => {
-        this.setState({
-          image: image
-        });
-      }
+    componentDidMount() {
       getStr()
+      getStar()
     }
     render() {
-      const { verifyArr } = store.getState().login
-      console.log(verifyArr)
+      const { verifyArr, verifyBgStar } = store.getState().login
         return (
-        <Stage width={200} height={200} onClick={ getStr } >
+        <Stage width={200} height={70} onClick={ change } >
           <Layer >
           {
            verifyArr.map((item,index) =>
@@ -59,34 +24,51 @@ export default class MyImage extends Component{
                     scaleX={ 2 }
                     scaleY={ 1.5 }
                     padding={ 5 }
-                    fillPatternImage={ <img src='http://www.tukuwa.com/uploadfile/2012/1020/20121020100014909.jpg' alt='填充图片' /> }
-                    text={item}
-                    rotation={ (Math.random()>0.5) ? item*2 : -(item*2) }
-                    // fontSize= {30}
-                    fontFamily= {'Philingc4b24b46519de2'}
+                    text={item.text}
+                    rotation={ item.degree }
+                    fontSize= {20}
+                    fontFamily= {'AnJingChenYWc4bf61f8a19de2'}
                     fill={ 'green'}
                />)
           }
-          <Star numPoints= {6} x={ 20 } y={ 20 } fill={ 'red' }
-                // stroke={ 'black' }
-                innerRadius={ 20 } outerRadius={ 10 }
-                opacity={ 0.3 } />
-          <Image image={this.state.image}  width={ 100 }
-            height={100} opacity={ 0.5 }  />
+          {
+            verifyBgStar.map((item, index) =>
+            <Star numPoints= { item.point } x={ 20 +index*45 } y={ item.y } fill={ 'red' }
+                innerRadius={ 2*item.size } outerRadius={ item.size }
+                key={ index }
+                opacity={ 0.2 } /> )
+            }
           </Layer>
         </Stage>
         );
     }
 }
 
+function change(){
+  getStr()
+  getStar()
+}
+
 function getStr(e){
-  const arr = [1,5,6,5,7,8]
-  let array = arr.map(item => item = getNum(9).toString() )
+  const str = '6z7x9c56v5b48n176m4a7s4d4fg2h5j8kl3q4w0e2r6t4yu5i4o4p'
+  const strArr = str.split('')
+  // const arr = [1,5,6,5,7,8]
+  const arr = [{ text: 1, degree: 10 },
+               { text: 2, degree: 5 },
+               { text: 2, degree: 15 },
+               { text: 2, degree: -5 },
+               { text: 2, degree: -15 },
+               { text: 2, degree: 10 },]
+  let array = arr.map(item => {
+    item.text = strArr[getNum(52)]
+    item.degree = getDegree()
+    return item
+  } )
   dispatch('LOGIN_GET_VERIFY_NUM', array)
 }
 
 function getDegree(){
-  const arr = [ 10, -13, 15, 8, 10, 5 ]
+  return (Math.random()>0.5) ? getNum(20) : -(getNum(20))
 }
 
 function getNum(num){
@@ -94,3 +76,17 @@ function getNum(num){
   return Math.round(a)
 }
 
+function getStar(){
+  const arr = [{ size: 1, y: 10, point: 6 },
+               { size: 1, y: 10, point: 6 },
+               { size: 1, y: 10, point: 6 },
+               { size: 1, y: 10, point: 6 },
+               { size: 1, y: 10, point: 6 },]
+ let  array = arr.map(item => {
+    item.size = getNum(5) + 5
+    item.y = getNum(30) + 20
+    item.point = getNum(2) + 5
+    return item
+  })
+  dispatch('LOGIN_GET_VERIFY_BG', array)
+}

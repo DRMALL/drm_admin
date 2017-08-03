@@ -8,8 +8,32 @@ import LoginWarn from '../utils/LoginWarn'
 import dispatch from './dispatch'
 
 export default () => {
+  const { verify, verifyArr } = store.getState().login
+  if(typeof verify === 'undefined') {
+    notification.error({
+      message: '提示',
+      description: '请输入验证码'
+    })
+  }
+
+  else {
+    const arr = verifyArr.map(item => item= item.text)
+  const str = arr.join('')
+  console.log(str)
+  if(verify.toLowerCase()===str.toLowerCase()) {
+    loginxx()
+  }
+  else {
+    notification.error({
+      message: '提示',
+      description: '验证码错误，请重新输入'
+    })
+  }
+  }
+}
+
+function loginxx(){
   const { admin, password } = store.getState().login
-  console.log(window.location.pathname)
   if(admin&&password){
     request
     .post(login)

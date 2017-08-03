@@ -7,7 +7,9 @@ const trouble = {
   troubleArr: [],
   troubleKinds: [],
   kind: '',
-  troubleKindId: ''
+  troubleKindId: '',
+  troubleModal: false,
+  troubleId: ''
 }
 const resetTrouble = {
   title: '',
@@ -36,6 +38,12 @@ export default ( state=trouble, action ) =>{
       return Object.assign({}, state, { troubleKindId: action.payload })
     case 'TOUBLE_DEL_TROUBLE_KIND_SUCCESS':
       return Object.assign({}, state, { troubleKindId: '' })
+    case 'TROUBEL_CANCLE_DEL_TROUBEL':
+      return Object.assign({}, state, { troubleModal: false } )
+    case 'TROUBLE_DEL_TROUBLE_SUCCESS':
+      return Object.assign({}, state, { troubleModal: false } )
+    case 'TROUBLE_GET_TROUBLE_ID':
+      return Object.assign({}, state, { troubleModal: true, troubleId: action.payload } )
     default :
       return state
   }

@@ -8,9 +8,11 @@ import moment from 'moment'
 import dispatch from '../actions/dispatch'
 import store from '../commons/store'
 import TableFilter from './TableFilter'
+import Modal from 'antd/lib/modal'
+import authorityDelById from '../actions/authorityDelById'
 
 export default props => {
-  const { authorityArray, userNameArr, machineNameArr } = props
+  const { authorityArray, userNameArr, machineNameArr, authModal } = props
   const columns = [{
     title: '用户',
     dataIndex: 'user.name',
@@ -42,12 +44,19 @@ export default props => {
              onClick={ navToEditAuth } data-auth-id={ record._id } >
           <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2' }} ></i>
         </div>
+        <div className='user-arr-item' onClick={ delAuth } data-auth-id={ record._id }  >
+          <i className="iconfont icon-shanchu message-del-icon"  ></i>
+        </div>
       </div>
       )
   }]
   return(
     <div>
       <Table columns={columns} dataSource={authorityArray} rowKey='_id' />
+      <Modal title='提示' visible={ authModal } okText='确定' cancelText='取消'
+             onOk={ authorityDelById } onCancel={ cancleDelAuth } >
+             <p>确定删除此权限？</p>
+      </Modal>
     </div>
     )
 }
@@ -74,4 +83,13 @@ function handleChangeMachine(e){
   dispatch('AUTHORITY_FILTER_VALUE_TABLE', arr)
   }
   else dispatch('AUTHORITY_FILTER_VALUE_TABLE', TauthorityArray)
+}
+
+function delAuth(e){
+  const { authId } = e.currentTarget.dataset
+  dispatch( 'AUTHORITY_DEL_GET_AUTHID', authId )
+}
+
+function cancleDelAuth(){
+  dispatch('AUTHORITY_CANCLE_DEL_AUTH')
 }

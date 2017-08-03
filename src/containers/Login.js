@@ -19,7 +19,11 @@ export default class App extends Component {
         <Input onChange={ getInputValue } data-id='admin' data-path='LOGIN' />
         <div className='login-text' >密码</div>
         <Input onChange={ getInputValue } data-id='password' data-path='LOGIN'
-               onPressEnter={ handleLogin } type='password'
+               type='password' onPressEnter={ handleLogin }
+                />
+        <div className='login-text' >验证码</div>
+        <Input onChange={ getInputValue } data-id='verify' data-path='LOGIN'
+               onPressEnter={ handleLogin }
                 />
         <VerifyImg />
         <Button onClick={ handleLogin } >登录</Button>

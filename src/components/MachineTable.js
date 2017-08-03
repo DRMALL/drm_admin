@@ -6,9 +6,12 @@ import TableTime from './TableTime'
 import TableTextHidden from './TableTextHidden'
 import TableAddress from './TableAddress'
 import { browserHistory } from 'react-router'
+import Modal from 'antd/lib/modal'
+import machineDelById from '../actions/machineDelById'
+import dispatch from '../actions/dispatch'
 
 export default props => {
-  const { machineArr } = props.state.machine
+  const { machineArr, machineModal } = props.state.machine
   const columns =[{
     title: '设备名称',
     dataIndex: 'name',
@@ -77,8 +80,16 @@ export default props => {
   return(
     <div>
       <Table dataSource={ machineArr } columns={ columns } rowKey='_id' />
+      <Modal title='提示' visible={ machineModal } okText='确定' cancelText='取消'
+             onOk={ machineDelById } onCancel={ cancleDelAuth }  >
+        <p>确定删除此设备？</p>
+      </Modal>
     </div>
     )
+}
+
+function cancleDelAuth(){
+  dispatch('MACHINE_CANCLE_DEL_MACHINE')
 }
 
 function navToMachineEdit(e){

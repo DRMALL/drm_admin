@@ -18,7 +18,7 @@ export default class Authority extends Component{
   }
   render() {
       console.log(this.props.state.authority)
-      const { authorityArray, userNameArr, machineNameArr } = this.props.state.authority
+      const { authorityArray, userNameArr, machineNameArr, authModal } = this.props.state.authority
     return(
         <div>
           <div className='user-head' >
@@ -26,7 +26,8 @@ export default class Authority extends Component{
           </div>
           <AuthorityTable authorityArray={ authorityArray }
                           userNameArr={ userNameArr }
-                          machineNameArr={ machineNameArr } />
+                          machineNameArr={ machineNameArr }
+                          authModal={ authModal } />
         </div>
       )
   }

@@ -4,7 +4,9 @@ const login ={
   admin: '',
   password: '',
   loginStatus: false,
-  verifyArr:[6,5,7,5,8,4]
+  verifyArr:[],
+  verifyBgStar:[{ size: 1, y: 10, point: 6 }],
+  verify: undefined
 }
 
 export default ( state=login, action ) => {
@@ -19,6 +21,8 @@ export default ( state=login, action ) => {
       return Object.assign({}, state, { loginStatus: true } )
     case 'LOGIN_GET_VERIFY_NUM':
       return Object.assign({}, state, { verifyArr: action.payload } )
+    case 'LOGIN_GET_VERIFY_BG':
+      return Object.assign({}, state, { verifyBgStar: action.payload } )
     default:
       return state
   }

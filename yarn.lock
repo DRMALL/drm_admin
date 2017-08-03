@@ -1766,7 +1766,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@15.x, create-react-class@^15.5.2, create-react-class@^15.5.3, create-react-class@^15.6.0:
+create-react-class@15.x, create-react-class@^15.5.2, create-react-class@^15.5.3:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.0.tgz#ab448497c26566e1e29413e883207d57cfe7bed4"
   dependencies:
@@ -2782,21 +2782,9 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.1, fbjs@^0.8.4:
+fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.6, fbjs@^0.8.7, fbjs@^0.8.9:
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.12.tgz#10b5d92f76d45575fd63a217d4ea02bea2f8ed04"
-  dependencies:
-    core-js "^1.0.0"
-    isomorphic-fetch "^2.1.1"
-    loose-envify "^1.0.0"
-    object-assign "^4.1.0"
-    promise "^7.1.1"
-    setimmediate "^1.0.5"
-    ua-parser-js "^0.7.9"
-
-fbjs@^0.8.14, fbjs@^0.8.7, fbjs@^0.8.9:
-  version "0.8.14"
-  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.14.tgz#d1dbe2be254c35a91e09f31f9cd50a40b2a0ed1c"
   dependencies:
     core-js "^1.0.0"
     isomorphic-fetch "^2.1.1"
@@ -4220,9 +4208,9 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-konva@^1.6.7:
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/konva/-/konva-1.6.7.tgz#1b5267a293b9bf3587c2bec9edb23cd546448369"
+konva@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-1.2.2.tgz#ed72bee1d7f51c3ddd09b8dc0a87bf9a1ef82f43"
 
 latest-version@^2.0.0:
   version "2.0.0"
@@ -6035,14 +6023,12 @@ react-error-overlay@^1.0.9:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
-react-konva@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-1.1.4.tgz#35e49e57097cae085e0fc7aeb7748ee6a993c7aa"
+react-konva@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-1.1.1.tgz#93d972a6243a3b4126a42f51bf72457dec43436c"
   dependencies:
-    create-react-class "^15.6.0"
-    fbjs "^0.8.14"
-    object-assign "^4.1.1"
-    prop-types "^15.5.10"
+    fbjs "^0.8.6"
+    object-assign "^4.1.0"
 
 react-lazy-load@^3.0.10:
   version "3.0.12"

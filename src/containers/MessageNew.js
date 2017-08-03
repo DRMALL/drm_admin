@@ -19,7 +19,7 @@ export default class MessageNew extends Component {
           <MessageInput  { ...this.props } />
           <div className='message-new-button' >
             <Button data-type='false' onClick={ saveMessage } >保存</Button>
-            <Button data-type='true' onClick={ saveMessage } >群发</Button>
+            <Button data-type='true' onClick={ saveMessage } >发布</Button>
           </div>
         </div>
       </div>

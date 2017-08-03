@@ -11,9 +11,9 @@ const machine ={
   combustible: '',
   description: '',
   address: '',
-  line_time: null,
-  line_des: '',
-  timetype: null,
+  line_time: undefined,
+  line_des: undefined,
+  timetype: undefined,
   timelines: [],
   affixChange: false,
 }
