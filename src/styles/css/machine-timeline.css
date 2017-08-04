@@ -8,3 +8,12 @@
 .machine-time-des {
   margin-left: 5px;
 }
+.timeline-edit-tip {
+  padding: 25px;
+}
+.timeline-edit-input {
+  padding: 0 50px;
+}
+.timeline-edit-button {
+  padding: 30px 150px;
+}

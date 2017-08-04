@@ -13,9 +13,12 @@ const machine ={
   address: '',
   line_time: undefined,
   line_des: undefined,
-  timetype: undefined,
+  line_type: undefined,
   timelines: [],
   affixChange: false,
+  timeLineId: undefined,
+  machineArr: [],
+  machineModal: false,
 }
 
 const resetMachine = {
@@ -60,6 +63,19 @@ export default ( state=machine, action ) => {
       return Object.assign({}, state, resetMachine )
     case 'MACHINE_AFFIX_PADDING_CHANGE':
       return Object.assign({}, state, { affixChange: action.payload } )
+    case 'MACHINE_GET_TIME_LINE_ID':
+     const arrxx = state.timelines.filter(item => item._id ===action.payload)
+      return Object.assign({}, state, { timeLineId: action.payload, editTimeline: arrxx[0] } )
+    case 'MACHINE_GET_DEL_MACHINE_ID':
+      return Object.assign({}, state, { delMachineId: action.payload, machineModal: true } )
+    case 'MACHINE_CANCLE_DEL_MACHINE':
+      return Object.assign({}, state,  { delMachineId: undefined, machineModal: false } )
+    case 'MACHINE_DEL_MACHINE_SUCCESS':
+      return Object.assign({}, state,  { delMachineId: undefined, machineModal: false } )
+    case 'MACHINE_PUT_TIMELINE_SUCCESS':
+      return Object.assign({}, state, { line_time: undefined, line_des: undefined, line_type: undefined } )
+    case 'MACHINE_GET_DWONLOAD_EXCEL_TIME':
+      return Object.assign({}, state, { downloadTime: action.payload } )
     default:
       return state
   }

@@ -11,6 +11,7 @@ import Machine from './Machine'
 import MachineNew from './MachineNew'
 import MachineEdit from './MachineEdit'
 import MachineControl from './MachineControl'
+import MachineEditTimeline from './MachineEditTimeline'
 import Message from './Message'
 import MessageNew from './MessageNew'
 import MessageEdit from './MessageEdit'
@@ -43,6 +44,7 @@ export default () => (
         <Route path='machine' component={ Machine } />
         <Route path='machine/new' component={ MachineNew } />
         <Route path='machine/edit' component={ MachineEdit } />
+        <Route path='machine/edit/timeline' component={ MachineEditTimeline } />
         <Route path='machine/control' component={ MachineControl } />
         <Route path='message' component={ Message } />
         <Route path='message/new' component={ MessageNew } />

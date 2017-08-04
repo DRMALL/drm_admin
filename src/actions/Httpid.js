@@ -48,6 +48,27 @@ export default (api, method, tip, data ) => {
       })
      }
 
+    else if(method==='put') {
+      request
+      .put(api)
+      .send(data)
+      .then(res =>{
+        if(res.body.code===201){
+          success(res, tip)
+          resolve(res)
+        }
+        else if(res.body.code===402) resetLogin()
+        else {
+          fail(res)
+          reject(res)
+        }
+      })
+      .catch(res => {
+        fail(res)
+        reject(res)
+      })
+     }
+
   })
 }
 

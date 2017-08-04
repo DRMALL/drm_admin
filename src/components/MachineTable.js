@@ -59,6 +59,7 @@ export default props => {
     dataIndex: 'createdAt',
     key: 'createdAt',
     width: '10%',
+    sorter: (a,b) => new Date(a.createdAt) - new Date(b.createdAt),
     render: text => TableTime(text, 15)
   },{
     title: '操作',
@@ -88,6 +89,10 @@ export default props => {
     )
 }
 
+// function delMachinexx(e){
+//   dispatch('MACHINE_GET_DEL_MACHINE_ID', e.currentTarget.dataset.machineId)
+// }
+
 function cancleDelAuth(){
   dispatch('MACHINE_CANCLE_DEL_MACHINE')
 }
@@ -103,3 +108,8 @@ function navToMachineControl(e){
   localStorage.setItem('machineId', machineId)
   browserHistory.push('/machine/control')
 }
+
+//设备删除
+        // <div className='message-arr-item' onClick={ delMachinexx } data-machine-id={ record._id }  >
+        //   <i className="iconfont icon-shanchu message-del-icon"  ></i>
+        // </div>

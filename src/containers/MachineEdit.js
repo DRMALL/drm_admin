@@ -16,7 +16,7 @@ export default class MachineEdit extends Component {
   }
 
   render() {
-    const { number, affixChange } = this.props.state.machine
+    const { number, affixChange, timelines, editTimeline } = this.props.state.machine
     if(number)
     return(
       <div>
@@ -30,7 +30,8 @@ export default class MachineEdit extends Component {
             </div>
           </Affix>
           <div className='machine-edit-timeline' style={{ paddingTop: affixChange ? 270 : 0  }} >
-            <MachineTimeline timelines={ this.props.state.machine.timelines } />
+            <MachineTimeline timelines={ timelines }
+                             editTimeline={ editTimeline } />
           </div>
         </div>
       </div>

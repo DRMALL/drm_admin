@@ -322,6 +322,11 @@
   margin-left: 100px;
   margin-top: 30px;
 }
+.edit-timeline {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
 .machine-input-flex {
   display: flex;
   align-items: center;
@@ -366,6 +371,15 @@
 }
 .machine-time-des {
   margin-left: 5px;
+}
+.timeline-edit-tip {
+  padding: 25px;
+}
+.timeline-edit-input {
+  padding: 0 50px;
+}
+.timeline-edit-button {
+  padding: 30px 150px;
 }
 .machine-control-container {
   padding: 25px 50px;
@@ -587,4 +601,16 @@
 }
 .part-content-title {
   padding: 25px 25px;
+}
+.part-remark-input {
+  padding: 20px 50px;
+  font-size: 15px;
+}
+.part-remark-input-flex {
+  display: flex;
+  padding: 10px 0;
+}
+.part-remark-input-text {
+  width: 100px;
+  line-height: 28px;
 }
