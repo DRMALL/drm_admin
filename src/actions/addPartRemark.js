@@ -9,8 +9,8 @@ import { browserHistory } from 'react-router'
 
 
 export default () => {
+  console.log('1')
   const { machineId, remark } = store.getState().part
-  console.log(machineId, remark)
   if(machineId&&remark){
     postRemark(machineId, remark)
   }
@@ -18,12 +18,17 @@ export default () => {
 }
 
 function postRemark(machineId, remark){
+  console.log('2')
   const token = localStorage.getItem('token')
   const partId = localStorage.getItem('partId')
   Httpid(`${partRemark}?partId=${partId}&token=${token}`, 'post', true, { deviceId:machineId, remark })
   .then(res => {
     dispatch('PART_ADD_REMARK_SUCCESS')
     browserHistory.push('/parts')
+    console.log('3')
   })
-  .catch(res => console.error(res))
+  .catch(res => {
+    console.log('5')
+    console.error(res)
+  })
 }

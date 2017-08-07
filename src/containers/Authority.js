@@ -17,7 +17,6 @@ export default class Authority extends Component{
     getMachineNameArr()
   }
   render() {
-      console.log(this.props.state.authority)
       const { authorityArray, userNameArr, machineNameArr, authModal } = this.props.state.authority
     return(
         <div>

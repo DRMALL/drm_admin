@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableTime 1`] = `
+<div>
+  <div>
+    2017-8-7
+  </div>
+  <div
+    style="margin-left:15px;"
+  >
+    15:22
+  </div>
+</div>
+`;

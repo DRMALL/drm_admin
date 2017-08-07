@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AuthorityTable test 1`] = `
+exports[`TroubleTable test 1`] = `
 <div>
   <div
     class="ant-table-wrapper"
@@ -24,12 +24,21 @@ exports[`AuthorityTable test 1`] = `
                 class=""
               >
                 <colgroup>
-                  <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
+                  <col
+                    style="width:20%;min-width:20%;"
+                  />
+                  <col
+                    style="width:10%;min-width:10%;"
+                  />
+                  <col
+                    style="width:30%;min-width:30%;"
+                  />
+                  <col
+                    style="width:20%;min-width:20%;"
+                  />
+                  <col
+                    style="width:15%;min-width:15%;"
+                  />
                 </colgroup>
                 <thead
                   class="ant-table-thead"
@@ -39,43 +48,28 @@ exports[`AuthorityTable test 1`] = `
                       class=""
                     >
                       <span>
-                        用户
-                        <i
-                          class="anticon anticon-filter ant-dropdown-trigger"
-                          title="筛选"
-                        />
+                        标题
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        查看权限
+                        分类
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        监控权限
+                        内容
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        设备名称
-                        <i
-                          class="anticon anticon-filter ant-dropdown-trigger"
-                          title="筛选"
-                        />
-                      </span>
-                    </th>
-                    <th
-                      class=""
-                    >
-                      <span>
-                        修改时间
+                        添加时间
                       </span>
                     </th>
                     <th
@@ -100,51 +94,35 @@ exports[`AuthorityTable test 1`] = `
                         class="ant-table-row-indent indent-level-0"
                         style="padding-left:0px;"
                       />
-                      李四
-                    </td>
-                    <td
-                      class=""
-                    >
                       <div>
-                        有
+                        z标题
                       </div>
                     </td>
                     <td
                       class=""
                     >
                       <div>
-                        有
+                        sfaer
                       </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      设备名称
                     </td>
                     <td
                       class=""
                     >
                       <div>
-                        <div>
-                          2017-08-02
-                        </div>
-                        <div
-                          style="margin-left:15px;"
-                        >
-                          10:07
-                        </div>
+                        sdaw34325235
                       </div>
                     </td>
+                    <td
+                      class=""
+                    />
                     <td
                       class=""
                     >
                       <div
-                        class="user-arr-action"
+                        class="troubel-cation"
                       >
                         <div
-                          class="user-arr-item"
-                          data-auth-id="frghs3453464"
-                          style="color:#579df2;"
+                          data-trouble-id="sd345"
                         >
                           <i
                             class="iconfont icon-compile trouble-table-icon"
@@ -153,7 +131,7 @@ exports[`AuthorityTable test 1`] = `
                         </div>
                         <div
                           class="user-arr-item"
-                          data-auth-id="frghs3453464"
+                          data-trouble-id="sd345"
                         >
                           <i
                             class="iconfont icon-shanchu message-del-icon"
@@ -172,51 +150,35 @@ exports[`AuthorityTable test 1`] = `
                         class="ant-table-row-indent indent-level-0"
                         style="padding-left:0px;"
                       />
-                      张三
-                    </td>
-                    <td
-                      class=""
-                    >
                       <div>
-                        无
+                        z标题
                       </div>
                     </td>
                     <td
                       class=""
                     >
                       <div>
-                        有
+                        sfaedsdr
                       </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      设备名称2
                     </td>
                     <td
                       class=""
                     >
                       <div>
-                        <div>
-                          2017-08-02
-                        </div>
-                        <div
-                          style="margin-left:15px;"
-                        >
-                          10:07
-                        </div>
+                        sdaw34325235
                       </div>
                     </td>
+                    <td
+                      class=""
+                    />
                     <td
                       class=""
                     >
                       <div
-                        class="user-arr-action"
+                        class="troubel-cation"
                       >
                         <div
-                          class="user-arr-item"
-                          data-auth-id="frghs3455367"
-                          style="color:#579df2;"
+                          data-trouble-id="sd3ds45"
                         >
                           <i
                             class="iconfont icon-compile trouble-table-icon"
@@ -225,79 +187,7 @@ exports[`AuthorityTable test 1`] = `
                         </div>
                         <div
                           class="user-arr-item"
-                          data-auth-id="frghs3455367"
-                        >
-                          <i
-                            class="iconfont icon-shanchu message-del-icon"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="ant-table-row  ant-table-row-level-0"
-                  >
-                    <td
-                      class=""
-                    >
-                      <span
-                        class="ant-table-row-indent indent-level-0"
-                        style="padding-left:0px;"
-                      />
-                      王二
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div>
-                        有
-                      </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div>
-                        无
-                      </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      设备名称3
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div>
-                        <div>
-                          2017-08-02
-                        </div>
-                        <div
-                          style="margin-left:15px;"
-                        >
-                          10:07
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div
-                        class="user-arr-action"
-                      >
-                        <div
-                          class="user-arr-item"
-                          data-auth-id="frghs3453473"
-                          style="color:#579df2;"
-                        >
-                          <i
-                            class="iconfont icon-compile trouble-table-icon"
-                            style="color:#0068d2;"
-                          />
-                        </div>
-                        <div
-                          class="user-arr-item"
-                          data-auth-id="frghs3453473"
+                          data-trouble-id="sd3ds45"
                         >
                           <i
                             class="iconfont icon-shanchu message-del-icon"

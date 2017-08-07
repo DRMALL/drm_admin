@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TroubleKindArr test 1`] = `
+<div>
+  <div
+    class="trouble-kind-arr"
+  >
+    <div
+      class="troubel-kind-left"
+    >
+      swdafrt text
+    </div>
+    <i
+      class="iconfont icon-zhiding troubel-kind-mid"
+      data-id="sd4225"
+      style="visibility:hidden;"
+    />
+    <i
+      class="iconfont icon-shanchu troubel-kind-right"
+      data-id="sd4225"
+    />
+  </div>
+  <div
+    class="trouble-kind-arr"
+  >
+    <div
+      class="troubel-kind-left"
+    >
+      swdafrt text
+    </div>
+    <i
+      class="iconfont icon-zhiding troubel-kind-mid"
+      data-id="sd4sd25"
+      style="visibility:visible;"
+    />
+    <i
+      class="iconfont icon-shanchu troubel-kind-right"
+      data-id="sd4sd25"
+    />
+  </div>
+</div>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MachineTable test 1`] = `
+exports[`WorkOrderTable test 1`] = `
 <div>
   <div
     class="ant-table-wrapper"
@@ -25,19 +25,10 @@ exports[`MachineTable test 1`] = `
               >
                 <colgroup>
                   <col
-                    style="width:8%;min-width:8%;"
+                    style="width:15%;min-width:15%;"
                   />
                   <col
-                    style="width:8%;min-width:8%;"
-                  />
-                  <col
-                    style="width:8%;min-width:8%;"
-                  />
-                  <col
-                    style="width:8%;min-width:8%;"
-                  />
-                  <col
-                    style="width:8%;min-width:8%;"
+                    style="width:30%;min-width:30%;"
                   />
                   <col
                     style="width:10%;min-width:10%;"
@@ -46,10 +37,7 @@ exports[`MachineTable test 1`] = `
                     style="width:10%;min-width:10%;"
                   />
                   <col
-                    style="width:10%;min-width:10%;"
-                  />
-                  <col
-                    style="width:10%;min-width:10%;"
+                    style="width:15%;min-width:15%;"
                   />
                   <col
                     style="width:10%;min-width:10%;"
@@ -66,42 +54,21 @@ exports[`MachineTable test 1`] = `
                       class=""
                     >
                       <span>
-                        设备名称
+                        标题
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        设备编号
+                        内容
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        排量
-                      </span>
-                    </th>
-                    <th
-                      class=""
-                    >
-                      <span>
-                        压力
-                      </span>
-                    </th>
-                    <th
-                      class=""
-                    >
-                      <span>
-                        燃料
-                      </span>
-                    </th>
-                    <th
-                      class=""
-                    >
-                      <span>
-                        描述
+                        提问人
                       </span>
                     </th>
                     <th
@@ -115,41 +82,14 @@ exports[`MachineTable test 1`] = `
                       class=""
                     >
                       <span>
-                        负责人
+                        用户反馈
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        所在地
-                      </span>
-                    </th>
-                    <th
-                      class=""
-                    >
-                      <span>
-                        添加时间
-                        <div
-                          class="ant-table-column-sorter"
-                        >
-                          <span
-                            class="ant-table-column-sorter-up off"
-                            title="↑"
-                          >
-                            <i
-                              class="anticon anticon-caret-up"
-                            />
-                          </span>
-                          <span
-                            class="ant-table-column-sorter-down off"
-                            title="↓"
-                          >
-                            <i
-                              class="anticon anticon-caret-down"
-                            />
-                          </span>
-                        </div>
+                        修改时间
                       </span>
                     </th>
                     <th
@@ -174,44 +114,20 @@ exports[`MachineTable test 1`] = `
                         class="ant-table-row-indent indent-level-0"
                         style="padding-left:0px;"
                       />
-                      张三
+                      标题
                     </td>
-                    <td
-                      class=""
-                    >
-                      a1254
-                    </td>
-                    <td
-                      class=""
-                    >
-                      354
-                    </td>
-                    <td
-                      class=""
-                    >
-                      30mpa
-                    </td>
-                    <td
-                      class=""
-                    >
-                      汽油
-                    </td>
-                    <td
-                      class=""
-                    />
-                    <td
-                      class=""
-                    />
                     <td
                       class=""
                     >
                       <div>
-                        daes, sdse
+                        asldjajtwe;ojawrw
                       </div>
                     </td>
                     <td
                       class=""
-                    />
+                    >
+                      admin
+                    </td>
                     <td
                       class=""
                     />
@@ -219,25 +135,23 @@ exports[`MachineTable test 1`] = `
                       class=""
                     >
                       <div
-                        class="machine-table-action"
+                        style="color:#d0011b;"
+                      />
+                    </td>
+                    <td
+                      class=""
+                    />
+                    <td
+                      class=""
+                    >
+                      <div
+                        data-order-id="2323dsrw"
+                        style="cursor:pointer;"
                       >
-                        <div
-                          class="machine-table-left"
-                          data-machine-id="4541342dsf"
-                        >
-                          <i
-                            class="iconfont icon-compile"
-                            style="font-size:20px;"
-                          />
-                        </div>
-                        <div
-                          class="machine-table-right"
-                          data-machine-id="4541342dsf"
-                        >
-                          <i
-                            class="iconfont icon-details"
-                          />
-                        </div>
+                        <i
+                          class="iconfont icon-compile"
+                          style="color:#579df2;"
+                        />
                       </div>
                     </td>
                   </tr>
@@ -251,44 +165,20 @@ exports[`MachineTable test 1`] = `
                         class="ant-table-row-indent indent-level-0"
                         style="padding-left:0px;"
                       />
-                      张三
+                      标题
                     </td>
-                    <td
-                      class=""
-                    >
-                      a1254
-                    </td>
-                    <td
-                      class=""
-                    >
-                      354
-                    </td>
-                    <td
-                      class=""
-                    >
-                      30mpa
-                    </td>
-                    <td
-                      class=""
-                    >
-                      汽油
-                    </td>
-                    <td
-                      class=""
-                    />
-                    <td
-                      class=""
-                    />
                     <td
                       class=""
                     >
                       <div>
-                        daes, sdse
+                        asldjajtwe;ojawrw
                       </div>
                     </td>
                     <td
                       class=""
-                    />
+                    >
+                      admin
+                    </td>
                     <td
                       class=""
                     />
@@ -296,25 +186,23 @@ exports[`MachineTable test 1`] = `
                       class=""
                     >
                       <div
-                        class="machine-table-action"
+                        style="color:#d0011b;"
+                      />
+                    </td>
+                    <td
+                      class=""
+                    />
+                    <td
+                      class=""
+                    >
+                      <div
+                        data-order-id="2323dsrds"
+                        style="cursor:pointer;"
                       >
-                        <div
-                          class="machine-table-left"
-                          data-machine-id="4541342dssdr"
-                        >
-                          <i
-                            class="iconfont icon-compile"
-                            style="font-size:20px;"
-                          />
-                        </div>
-                        <div
-                          class="machine-table-right"
-                          data-machine-id="4541342dssdr"
-                        >
-                          <i
-                            class="iconfont icon-details"
-                          />
-                        </div>
+                        <i
+                          class="iconfont icon-compile"
+                          style="color:#579df2;"
+                        />
                       </div>
                     </td>
                   </tr>

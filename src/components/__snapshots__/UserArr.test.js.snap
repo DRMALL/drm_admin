@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AuthorityTable test 1`] = `
+exports[`UserArr test 1`] = `
 <div>
   <div
     class="ant-table-wrapper"
@@ -30,6 +30,7 @@ exports[`AuthorityTable test 1`] = `
                   <col />
                   <col />
                   <col />
+                  <col />
                 </colgroup>
                 <thead
                   class="ant-table-thead"
@@ -39,43 +40,42 @@ exports[`AuthorityTable test 1`] = `
                       class=""
                     >
                       <span>
-                        用户
-                        <i
-                          class="anticon anticon-filter ant-dropdown-trigger"
-                          title="筛选"
-                        />
+                        用户名称
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        查看权限
+                        用户邮箱
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        监控权限
+                        联系电话
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        设备名称
-                        <i
-                          class="anticon anticon-filter ant-dropdown-trigger"
-                          title="筛选"
-                        />
+                        公司名称
                       </span>
                     </th>
                     <th
                       class=""
                     >
                       <span>
-                        修改时间
+                        通讯地址
+                      </span>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <span>
+                        创建时间
                       </span>
                     </th>
                     <th
@@ -100,113 +100,25 @@ exports[`AuthorityTable test 1`] = `
                         class="ant-table-row-indent indent-level-0"
                         style="padding-left:0px;"
                       />
-                      李四
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div>
-                        有
-                      </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div>
-                        有
-                      </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      设备名称
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div>
-                        <div>
-                          2017-08-02
-                        </div>
-                        <div
-                          style="margin-left:15px;"
-                        >
-                          10:07
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class=""
-                    >
-                      <div
-                        class="user-arr-action"
-                      >
-                        <div
-                          class="user-arr-item"
-                          data-auth-id="frghs3453464"
-                          style="color:#579df2;"
-                        >
-                          <i
-                            class="iconfont icon-compile trouble-table-icon"
-                            style="color:#0068d2;"
-                          />
-                        </div>
-                        <div
-                          class="user-arr-item"
-                          data-auth-id="frghs3453464"
-                        >
-                          <i
-                            class="iconfont icon-shanchu message-del-icon"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="ant-table-row  ant-table-row-level-0"
-                  >
-                    <td
-                      class=""
-                    >
-                      <span
-                        class="ant-table-row-indent indent-level-0"
-                        style="padding-left:0px;"
-                      />
                       张三
                     </td>
                     <td
                       class=""
                     >
-                      <div>
-                        无
-                      </div>
+                      3255243@fsaer.com
                     </td>
                     <td
                       class=""
-                    >
-                      <div>
-                        有
-                      </div>
-                    </td>
+                    />
                     <td
                       class=""
-                    >
-                      设备名称2
-                    </td>
+                    />
                     <td
                       class=""
-                    >
-                      <div>
-                        <div>
-                          2017-08-02
-                        </div>
-                        <div
-                          style="margin-left:15px;"
-                        >
-                          10:07
-                        </div>
-                      </div>
-                    </td>
+                    />
+                    <td
+                      class=""
+                    />
                     <td
                       class=""
                     >
@@ -215,20 +127,19 @@ exports[`AuthorityTable test 1`] = `
                       >
                         <div
                           class="user-arr-item"
-                          data-auth-id="frghs3455367"
                           style="color:#579df2;"
                         >
                           <i
-                            class="iconfont icon-compile trouble-table-icon"
+                            class="iconfont icon-compile"
                             style="color:#0068d2;"
                           />
                         </div>
                         <div
                           class="user-arr-item"
-                          data-auth-id="frghs3455367"
+                          data-user-name="张三"
                         >
                           <i
-                            class="iconfont icon-shanchu message-del-icon"
+                            class="anticon anticon-delete"
                           />
                         </div>
                       </div>
@@ -244,41 +155,25 @@ exports[`AuthorityTable test 1`] = `
                         class="ant-table-row-indent indent-level-0"
                         style="padding-left:0px;"
                       />
-                      王二
+                      李四
                     </td>
                     <td
                       class=""
                     >
-                      <div>
-                        有
-                      </div>
+                      ds55243@fsaer.com
                     </td>
                     <td
                       class=""
-                    >
-                      <div>
-                        无
-                      </div>
-                    </td>
+                    />
                     <td
                       class=""
-                    >
-                      设备名称3
-                    </td>
+                    />
                     <td
                       class=""
-                    >
-                      <div>
-                        <div>
-                          2017-08-02
-                        </div>
-                        <div
-                          style="margin-left:15px;"
-                        >
-                          10:07
-                        </div>
-                      </div>
-                    </td>
+                    />
+                    <td
+                      class=""
+                    />
                     <td
                       class=""
                     >
@@ -287,20 +182,19 @@ exports[`AuthorityTable test 1`] = `
                       >
                         <div
                           class="user-arr-item"
-                          data-auth-id="frghs3453473"
                           style="color:#579df2;"
                         >
                           <i
-                            class="iconfont icon-compile trouble-table-icon"
+                            class="iconfont icon-compile"
                             style="color:#0068d2;"
                           />
                         </div>
                         <div
                           class="user-arr-item"
-                          data-auth-id="frghs3453473"
+                          data-user-name="李四"
                         >
                           <i
-                            class="iconfont icon-shanchu message-del-icon"
+                            class="anticon anticon-delete"
                           />
                         </div>
                       </div>

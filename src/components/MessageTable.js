@@ -137,7 +137,7 @@ function confirSendxx(e){
   const { messageId } = e.currentTarget.dataset
   Modal.confirm({
     title: '提示',
-    content: '确定群发本条信息',
+    content: '确定发布本条信息',
     onOk(){
       messageChangeStatus(messageId)
     },

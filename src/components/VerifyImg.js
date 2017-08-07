@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import {Layer, Stage, Text, Star} from 'react-konva'
 import dispatch from '../actions/dispatch'
-import store from '../commons/store'
+// import store from '../commons/store'
 
 // try drag& drop rectangle
 export default class MyImage extends Component{
@@ -12,7 +12,7 @@ export default class MyImage extends Component{
       getStar()
     }
     render() {
-      const { verifyArr, verifyBgStar } = store.getState().login
+      const { verifyArr, verifyBgStar } = this.props.state.login
         return (
         <Stage width={200} height={70} onClick={ change } >
           <Layer >

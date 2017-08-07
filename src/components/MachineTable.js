@@ -16,33 +16,38 @@ export default props => {
     title: '设备名称',
     dataIndex: 'name',
     key: 'name',
-    width: '10%'
+    width: '8%'
   },{
     title: '设备编号',
     dataIndex: 'number',
     key: 'number',
-    width: '10%'
+    width: '8%'
   },{
     title: '排量',
     dataIndex: 'cc',
     key: 'cc',
-    width: '10%'
+    width: '8%'
   },{
     title: '压力',
     dataIndex: 'pressure',
     key: 'pressure',
-    width: '10%'
+    width: '8%'
   },{
     title: '燃料',
     dataIndex: 'combustible',
     key: 'combustible',
-    width: '10%',
+    width: '8%',
   },{
     title: '描述',
     dataIndex: 'description',
     key: 'description',
     width: '10%',
     render: text => TableTextHidden( text, 10)
+  },{
+    title: '状态',
+    dataIndex: 'status',
+    key: 'status',
+    width: '10%',
   },{
     title: '负责人',
     dataIndex: 'incharges',

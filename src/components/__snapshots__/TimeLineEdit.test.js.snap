@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeLineEdit test 1`] = `
+<div>
+  <div
+    class="machine-input-flex"
+  >
+    <div
+      class="machine-input-left"
+    >
+      时间
+    </div>
+    <span
+      class="ant-calendar-picker"
+      style="width:400px;"
+    >
+      <div>
+        <input
+          class="ant-calendar-picker-input ant-input"
+          placeholder="2017-08-07"
+          readonly=""
+          value=""
+        />
+        <span
+          class="ant-calendar-picker-icon"
+        />
+      </div>
+    </span>
+  </div>
+  <div
+    class="machine-input-flex"
+  >
+    <div
+      class="machine-input-left"
+    >
+      分类
+    </div>
+    <div
+      class="ant-select ant-select-enabled"
+      style="width:400px;"
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="ant-select-selection
+                  ant-select-selection--single"
+        role="combobox"
+        tabindex="0"
+      >
+        <div
+          class="ant-select-selection__rendered"
+        >
+          <div
+            class="ant-select-selection__placeholder"
+            style="display:none;user-select:none;-webkit-user-select:none;"
+            unselectable="unselectable"
+          >
+            选择分类
+          </div>
+          <div
+            class="ant-select-selection-selected-value"
+            style="display:block;opacity:1;"
+            title="line_type"
+          >
+            line_type
+          </div>
+        </div>
+        <span
+          class="ant-select-arrow"
+          style="user-select:none;-webkit-user-select:none;"
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="machine-input-flexs"
+  >
+    <div
+      class="machine-input-left"
+    >
+      描述
+    </div>
+    <textarea
+      class="ant-input machine-input-right"
+      data-id="line_des"
+      data-path="MACHINE"
+      placeholder="输入描述"
+      rows="4"
+      style="width:400px;"
+    >
+      line_des
+    </textarea>
+  </div>
+</div>
+`;

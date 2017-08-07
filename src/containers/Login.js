@@ -25,7 +25,7 @@ export default class App extends Component {
         <Input onChange={ getInputValue } data-id='verify' data-path='LOGIN'
                onPressEnter={ handleLogin }
                 />
-        <VerifyImg />
+        <VerifyImg { ...this.props } />
         <Button onClick={ handleLogin } >登录</Button>
       </div>
       )

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TroubleTitle test 1`] = `
+<div
+  class="trouble-title"
+>
+  <div
+    class="page-tip"
+  >
+    新增设备
+  </div>
+  <div
+    class="trouble-title-right"
+  >
+    <a
+      class="trouble-title-kind"
+    >
+      分类管理
+    </a>
+    <a
+      class="content-link"
+    >
+      <div
+        class="content-link-block"
+      >
+        <i
+          class="anticon anticon-plus"
+        />
+      </div>
+      <div
+        class="content-link-text"
+      >
+        tip
+      </div>
+    </a>
+  </div>
+</div>
+`;

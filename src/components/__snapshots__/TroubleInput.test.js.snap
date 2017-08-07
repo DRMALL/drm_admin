@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TroubleInput test 1`] = `
+<div>
+  <div
+    class="trouble-input-flex"
+  >
+    <div
+      class="trouble-input-left"
+    >
+      标题
+    </div>
+    <input
+      class="ant-input"
+      data-id="title"
+      data-path="TROUBLE"
+      placeholder="输入设备编号"
+      style="width:300px;"
+      type="text"
+      value="标题"
+    />
+  </div>
+  <div
+    class="trouble-input-flex"
+  >
+    <div
+      class="trouble-input-left"
+    >
+      分类
+    </div>
+    <div
+      class="ant-select ant-select-enabled"
+      style="width:300px;"
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-haspopup="true"
+        class="ant-select-selection
+                  ant-select-selection--single"
+        role="combobox"
+        tabindex="0"
+      >
+        <div
+          class="ant-select-selection__rendered"
+        >
+          <div
+            class="ant-select-selection__placeholder"
+            style="display:none;user-select:none;-webkit-user-select:none;"
+            unselectable="unselectable"
+          >
+            压力分类字典
+          </div>
+          <div
+            class="ant-select-selection-selected-value"
+            style="display:block;opacity:1;"
+            title=""
+          />
+        </div>
+        <span
+          class="ant-select-arrow"
+          style="user-select:none;-webkit-user-select:none;"
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="trouble-input-flexs"
+  >
+    <div
+      class="trouble-input-lefts"
+    >
+      设备描述
+    </div>
+    <textarea
+      class="ant-input"
+      data-id="content"
+      data-path="TROUBLE"
+      placeholder="输入对设备的描述"
+      style="width:300px;"
+    />
+  </div>
+</div>
+`;
