@@ -3,6 +3,7 @@
 import React from 'react'
 import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
+import TableTextHidden from './TableTextHidden'
 
 const PartTable = ({ table }) => {
   const columns =[{
@@ -23,6 +24,7 @@ const PartTable = ({ table }) => {
   },{
     title: '备注',
     dataIndex: 'remark',
+    render: text => TableTextHidden(text, 30)
   },{
     title: '添加时间',
     dataIndex: 'time',

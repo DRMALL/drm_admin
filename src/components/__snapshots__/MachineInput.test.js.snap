@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MachineInput test 1`] = `
+<div>
+  <div
+    className="machine-input-flex"
+  >
+    <div
+      className="machine-input-left"
+    >
+      设备名称
+    </div>
+    <input
+      className="ant-input machine-input-right"
+      data-id="name"
+      data-path="MACHINE"
+      disabled={false}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="输入设备名称"
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="machine-input-flex"
+  >
+    <div
+      className="machine-input-left"
+    >
+      设备编号
+    </div>
+    <input
+      className="ant-input machine-input-right"
+      data-id="number"
+      data-path="MACHINE"
+      disabled={false}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="输入设备编号"
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="machine-input-flex"
+  >
+    <div
+      className="machine-input-left"
+    >
+      压力分类
+    </div>
+    <div
+      className="ant-select ant-select-enabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="ant-select-selection
+                  ant-select-selection--single"
+        onKeyDown={[Function]}
+        role="combobox"
+        tabIndex={0}
+      >
+        <div
+          className="ant-select-selection__rendered"
+        >
+          <div
+            className="ant-select-selection__placeholder"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "WebkitUserSelect": "none",
+                "display": "block",
+                "userSelect": "none",
+              }
+            }
+            unselectable="unselectable"
+          >
+            选择压力分类
+          </div>
+        </div>
+        <span
+          className="ant-select-arrow"
+          onClick={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="machine-input-flex"
+  >
+    <div
+      className="machine-input-left"
+    >
+      燃料分类
+    </div>
+    <div
+      className="ant-select ant-select-enabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="ant-select-selection
+                  ant-select-selection--single"
+        onKeyDown={[Function]}
+        role="combobox"
+        tabIndex={0}
+      >
+        <div
+          className="ant-select-selection__rendered"
+        >
+          <div
+            className="ant-select-selection__placeholder"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "WebkitUserSelect": "none",
+                "display": "block",
+                "userSelect": "none",
+              }
+            }
+            unselectable="unselectable"
+          >
+            选择燃料分类
+          </div>
+        </div>
+        <span
+          className="ant-select-arrow"
+          onClick={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="machine-input-flex"
+  >
+    <div
+      className="machine-input-left"
+    >
+      排量分类
+    </div>
+    <div
+      className="ant-select ant-select-enabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="ant-select-selection
+                  ant-select-selection--single"
+        onKeyDown={[Function]}
+        role="combobox"
+        tabIndex={0}
+      >
+        <div
+          className="ant-select-selection__rendered"
+        >
+          <div
+            className="ant-select-selection__placeholder"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "WebkitUserSelect": "none",
+                "display": "block",
+                "userSelect": "none",
+              }
+            }
+            unselectable="unselectable"
+          >
+            选择排量分类
+          </div>
+        </div>
+        <span
+          className="ant-select-arrow"
+          onClick={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="machine-input-flex"
+  >
+    <div
+      className="machine-input-left"
+    >
+      设备所在地
+    </div>
+    <input
+      className="ant-input machine-input-right"
+      data-id="address"
+      data-path="MACHINE"
+      disabled={false}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="输入设备所在地"
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="machine-input-flexs"
+  >
+    <div
+      className="machine-input-left"
+    >
+      设备描述
+    </div>
+    <textarea
+      className="ant-input"
+      data-id="description"
+      data-path="MACHINE"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="输入设备描述"
+      rows={4}
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+      value={undefined}
+    />
+  </div>
+  <div>
+    <div
+      className="machine-input-left machine-input-flexs"
+    >
+      上传设备图片
+    </div>
+    <div
+      className="machine-input-upload"
+    >
+      <span
+        className=""
+      >
+        <div
+          className="ant-upload-list ant-upload-list-picture-card"
+          style={undefined}
+        />
+        <div
+          className="ant-upload ant-upload-select ant-upload-select-picture-card"
+          style={
+            Object {
+              "display": "",
+            }
+          }
+        >
+          <span
+            className="ant-upload"
+            onClick={[Function]}
+            onDragOver={[Function]}
+            onDrop={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            style={undefined}
+            tabIndex="0"
+          >
+            <input
+              accept=""
+              multiple={true}
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+              type="file"
+            />
+            <div>
+              <i
+                className="anticon anticon-plus"
+              />
+              <div
+                className="ant-upload-text"
+              >
+                上传图片
+              </div>
+            </div>
+          </span>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+`;

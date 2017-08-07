@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PartsRemarkInput test 1`] = `
+<div
+  className="part-remark-input"
+>
+  <div
+    className="part-remark-input-flex"
+  >
+    <div
+      className="part-remark-input-text"
+    >
+      设备编号
+    </div>
+    <div
+      className="ant-select ant-select-enabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="ant-select-selection
+                  ant-select-selection--single"
+        onKeyDown={[Function]}
+        role="combobox"
+        tabIndex={0}
+      >
+        <div
+          className="ant-select-selection__rendered"
+        >
+          <div
+            className="ant-select-selection-selected-value"
+            style={
+              Object {
+                "display": "block",
+                "opacity": 1,
+              }
+            }
+            title={null}
+          />
+          <div
+            className="ant-select-search ant-select-search--inline"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="ant-select-search__field__wrap"
+            >
+              <input
+                className="ant-select-search__field"
+                disabled={undefined}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              />
+              <span
+                className="ant-select-search__field__mirror"
+              >
+                
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <span
+          className="ant-select-arrow"
+          onClick={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="part-remark-input-flex"
+  >
+    <div
+      className="part-remark-input-text"
+    >
+      设备名称
+    </div>
+    <div
+      className="ant-select ant-select-enabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    >
+      <div
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="ant-select-selection
+                  ant-select-selection--single"
+        onKeyDown={[Function]}
+        role="combobox"
+        tabIndex={0}
+      >
+        <div
+          className="ant-select-selection__rendered"
+        >
+          <div
+            className="ant-select-selection-selected-value"
+            style={
+              Object {
+                "display": "block",
+                "opacity": 1,
+              }
+            }
+            title={null}
+          />
+          <div
+            className="ant-select-search ant-select-search--inline"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="ant-select-search__field__wrap"
+            >
+              <input
+                className="ant-select-search__field"
+                disabled={undefined}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              />
+              <span
+                className="ant-select-search__field__mirror"
+              >
+                
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <span
+          className="ant-select-arrow"
+          onClick={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="unselectable"
+        >
+          <b />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="part-remark-input-flex"
+  >
+    <div
+      className="part-remark-input-text"
+    >
+      备注
+    </div>
+    <textarea
+      className="ant-input"
+      data-id="remark"
+      data-path="PART"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="添加备注"
+      rows={6}
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+    />
+  </div>
+</div>
+`;

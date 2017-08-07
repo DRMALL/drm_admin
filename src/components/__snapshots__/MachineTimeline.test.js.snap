@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MachineTimeline test 1`] = `
+<div>
+  <ul
+    className="ant-timeline machine-timeline"
+  >
+    <li
+      className="ant-timeline-item"
+    >
+      <div
+        className="ant-timeline-item-tail"
+      />
+      <div
+        className="ant-timeline-item-head ant-timeline-item-head-blue"
+        style={
+          Object {
+            "borderColor": null,
+          }
+        }
+      />
+      <div
+        className="ant-timeline-item-content"
+      >
+        <div
+          data-timeline-id={undefined}
+          onBlur={undefined}
+          onClick={[Function]}
+          onFocus={undefined}
+          onMouseDown={[Function]}
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "width": 400,
+            }
+          }
+        >
+          <span
+            className="machine-time-time"
+          >
+            2017-08-07
+          </span>
+          <span
+            className="machine-time-type"
+          >
+            <b>
+              维修
+              :
+            </b>
+          </span>
+          <span
+            className="machine-time-des"
+          >
+            第一次维修
+          </span>
+        </div>
+      </div>
+    </li>
+    <li
+      className="ant-timeline-item ant-timeline-item-last"
+    >
+      <div
+        className="ant-timeline-item-tail"
+      />
+      <div
+        className="ant-timeline-item-head ant-timeline-item-head-blue"
+        style={
+          Object {
+            "borderColor": null,
+          }
+        }
+      />
+      <div
+        className="ant-timeline-item-content"
+      >
+        <div
+          data-timeline-id={undefined}
+          onBlur={undefined}
+          onClick={[Function]}
+          onFocus={undefined}
+          onMouseDown={[Function]}
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "width": 400,
+            }
+          }
+        >
+          <span
+            className="machine-time-time"
+          >
+            2017-08-07
+          </span>
+          <span
+            className="machine-time-type"
+          >
+            <b>
+              维修
+              :
+            </b>
+          </span>
+          <span
+            className="machine-time-des"
+          >
+            第一次维修
+          </span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

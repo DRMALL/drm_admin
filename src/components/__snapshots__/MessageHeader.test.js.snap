@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageHeader test 1`] = `
+<div
+  className="message-header-container"
+>
+  <div
+    className="message-header-left"
+  >
+    <div
+      className="message-header-item message-header-select"
+      data-id="未发布"
+      onClick={[Function]}
+    >
+      未发布
+    </div>
+    <div
+      className="message-header-item message-header-noselect"
+      data-id="已发布"
+      onClick={[Function]}
+    >
+      已发布
+    </div>
+  </div>
+  <div
+    className="message-header-link"
+  >
+    <a
+      className="content-link"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <div
+        className="content-link-block"
+      >
+        <i
+          className="anticon anticon-plus"
+        />
+      </div>
+      <div
+        className="content-link-text"
+      >
+        创建信息
+      </div>
+    </a>
+  </div>
+</div>
+`;

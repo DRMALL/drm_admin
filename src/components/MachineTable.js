@@ -4,7 +4,7 @@ import Table from 'antd/lib/table'
 import React from 'react'
 import TableTime from './TableTime'
 import TableTextHidden from './TableTextHidden'
-import TableAddress from './TableAddress'
+// import TableAddress from './TableAddress'
 import { browserHistory } from 'react-router'
 import Modal from 'antd/lib/modal'
 import machineDelById from '../actions/machineDelById'
@@ -53,7 +53,7 @@ export default props => {
     dataIndex: 'address',
     key: 'address',
     width: '10%',
-    render: text => TableAddress(text)
+    // render: text => TableAddress(text)
   },{
     title: '添加时间',
     dataIndex: 'createdAt',

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageTip test 1`] = `
+<div
+  className="page-tip"
+>
+  标题示例
+</div>
+`;
