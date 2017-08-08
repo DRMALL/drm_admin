@@ -59,10 +59,19 @@ export default ( state=authority, action ) => {
       return Object.assign({}, state, { authModal: false } )
     case 'AUTHROITY_DEL_AUTH_SUCCESS':
       return Object.assign({}, state, { authModal: false } )
+    case 'AUTHORITY_EDIT_POST_SUCCESS':
+      return Object.assign({}, state, { newAuthorityArr: [{
+    userId: '',
+    deviceId: '',
+    canView: false,
+    canMonitor: false
+  }], status: 'edit post success' } )
 
 //测试构造数据
     case 'AUTHORITY_TEST_AUTHORITY_ARR_CHANGE':
       return Object.assign({}, state, { newAuthorityArr: action.payload } )
+    case 'auth_post_test_authEditPost':
+      return Object.assign({}, state, action.payload )
     default:
       return state
   }

@@ -40,7 +40,7 @@ exports[`MachineTimeline test 1`] = `
           <span
             className="machine-time-time"
           >
-            2017-08-07
+            2017-08-08
           </span>
           <span
             className="machine-time-type"
@@ -93,7 +93,7 @@ exports[`MachineTimeline test 1`] = `
           <span
             className="machine-time-time"
           >
-            2017-08-07
+            2017-08-08
           </span>
           <span
             className="machine-time-type"

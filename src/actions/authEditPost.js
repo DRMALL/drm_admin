@@ -3,9 +3,11 @@
 import { authorityPut } from '../commons/apis'
 import Httpid from './Httpid'
 import store from '../commons/store'
+import dispatch from './dispatch'
 import { browserHistory } from 'react-router'
 
 export default () => {
+  return new Promise((resovle, reject) =>{
   const token =localStorage.getItem('token')
   const id = localStorage.getItem('authId')
   const { newAuthorityArr } = store.getState().authority
@@ -17,6 +19,13 @@ export default () => {
   Httpid(`${authorityPut}?authId=${id}&token=${token}`, 'post', true, obj )
   .then(res => {
     browserHistory.push('/authority')
+    dispatch('AUTHORITY_EDIT_POST_SUCCESS')
+    resovle('done')
   } )
-  .catch(res => console.error(res) )
+  .catch(res => {
+    console.error(res)
+    reject('done')
+  } )
+  })
+
 }
