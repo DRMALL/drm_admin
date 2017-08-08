@@ -7,9 +7,13 @@ import Button from 'antd/lib/button'
 import userResetInput from '../actions/userResetInput'
 import addUser from '../actions/addUser'
 import UserInfoInput from '../components/UserInfoInput'
+import getUserArr from '../actions/getUserArr'
 
 
 export default class User extends Component {
+  componentDidMount() {
+    getUserArr()
+  }
   render() {
     return(
       <div className='new-user-container' >
