@@ -3,15 +3,12 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Nav from './Nav'
-// import setUpfiles from '../setUpfiles'
+import setUpfiles from '../setUpfiles'
 
-it.skip('Nav snapshot test', ()=> {
-  // afterEach(() => setUpfiles())
+it('Nav snapshot test', ()=> {
+  const state = { nav: {sliderSelect:'权限管理'} }
 
-  const tree = renderer.create(<Nav />)
+  const tree = renderer.create(<Nav state={ state } />)
   expect(tree).toMatchSnapshot()
 
-  // const wraaper = render( <Nav /> )
-  // expect(toJson(wraaper)).toMatchSnapshot()
 })
-//此测试无效，主要是关于state的数据问题

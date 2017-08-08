@@ -26,6 +26,9 @@ if (typeof window !== 'undefined') {
       removeItem: function(key) {
         delete storage[key];
       },
+      clear: function(key) {
+        // delete storage;
+      },
       get length() {
         return Object.keys(storage).length;
       },

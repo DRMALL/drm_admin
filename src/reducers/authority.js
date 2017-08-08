@@ -37,7 +37,7 @@ export default ( state=authority, action ) => {
           deviceId: '',
           canView: false,
           canMonitor: false
-        }]})
+        }], status: 'new auth success'})
     case 'AUTHORITY_NEW_RESET':
       return Object.assign({}, state, { newAuthorityArr: [{
           userId: '',
@@ -46,7 +46,7 @@ export default ( state=authority, action ) => {
           canMonitor: false
         }]})
     case 'AUTHORITY_NEW_AUTHORITY_RESET':
-      return Object.assign({}, state, { newAuthorityArr: action.payload } )
+      return Object.assign({}, state, { newAuthorityArr: action.payload, status: 'newAuthorityArr reset'} )
     case 'AUTHORITY_GET_AUTHORITY_SUCCESS':
       return Object.assign({}, state, { authorityArray: action.payload, TauthorityArray: action.payload } )
     case 'AUTHORITY_GET_AUTHORITY_EDIT':
@@ -58,7 +58,7 @@ export default ( state=authority, action ) => {
     case 'AUTHORITY_CANCLE_DEL_AUTH':
       return Object.assign({}, state, { authModal: false } )
     case 'AUTHROITY_DEL_AUTH_SUCCESS':
-      return Object.assign({}, state, { authModal: false } )
+      return Object.assign({}, state, { authModal: false, status: 'del auth success' } )
     case 'AUTHORITY_EDIT_POST_SUCCESS':
       return Object.assign({}, state, { newAuthorityArr: [{
     userId: '',

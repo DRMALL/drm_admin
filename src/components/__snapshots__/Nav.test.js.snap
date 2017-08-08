@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav snapshot test 1`] = `
+<div
+  className="nav-containers ant-layout ant-layout-has-sider"
+>
+  <div
+    className="ant-layout-sider"
+    style={
+      Object {
+        "background": "#fff",
+        "borderRight": "1px solid #eee",
+        "flex": "0 0 150px",
+        "width": "150px",
+      }
+    }
+  >
+    <div
+      className="ant-layout-sider-children"
+    >
+      <div
+        className="nav-sider-log"
+      >
+        Drm
+      </div>
+      <ul
+        aria-activedescendant=""
+        className="ant-menu ant-menu-inline ant-menu-light ant-menu-root"
+        onKeyDown={[Function]}
+        role="menu"
+        style={Object {}}
+        tabIndex="0"
+      >
+        <li
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="ant-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="menuitem"
+          style={
+            Object {
+              "paddingLeft": 24,
+            }
+          }
+          title={undefined}
+        >
+          <a
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sider-icon nav-sider-message"
+            >
+              信息发布
+            </div>
+          </a>
+        </li>
+        <li
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="ant-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="menuitem"
+          style={
+            Object {
+              "paddingLeft": 24,
+            }
+          }
+          title={undefined}
+        >
+          <a
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sider-icon nav-sider-machine"
+            >
+              设备管理
+            </div>
+          </a>
+        </li>
+        <li
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="ant-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="menuitem"
+          style={
+            Object {
+              "paddingLeft": 24,
+            }
+          }
+          title={undefined}
+        >
+          <a
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sider-icon nav-sider-trouble"
+            >
+              故障诊断
+            </div>
+          </a>
+        </li>
+        <li
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="ant-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="menuitem"
+          style={
+            Object {
+              "paddingLeft": 24,
+            }
+          }
+          title={undefined}
+        >
+          <a
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sider-icon nav-sider-parts"
+            >
+              配件管理
+            </div>
+          </a>
+        </li>
+        <li
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="ant-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="menuitem"
+          style={
+            Object {
+              "paddingLeft": 24,
+            }
+          }
+          title={undefined}
+        >
+          <a
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sider-icon nav-sider-user"
+            >
+              用户管理
+            </div>
+          </a>
+        </li>
+        <li
+          aria-disabled={undefined}
+          aria-selected={true}
+          className="ant-menu-item-selected ant-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="menuitem"
+          style={
+            Object {
+              "paddingLeft": 24,
+            }
+          }
+          title={undefined}
+        >
+          <a
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sider-icon nav-sider-authority-select"
+            >
+              权限管理
+            </div>
+          </a>
+        </li>
+        <li
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="ant-menu-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="menuitem"
+          style={
+            Object {
+              "paddingLeft": 24,
+            }
+          }
+          title={undefined}
+        >
+          <a
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sider-icon nav-sider-work-order"
+            >
+              工单管理
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="ant-layout"
+  >
+    <div
+      className="ant-layout-header"
+      style={
+        Object {
+          "background": "#fff",
+        }
+      }
+    >
+      <div
+        className="nav-head-container"
+      >
+        <div
+          className="nav-head-left nav-head-block"
+        >
+          admin
+        </div>
+        <div
+          className="nav-hed-right nav-head-block"
+          onClick={[Function]}
+        >
+          退出
+        </div>
+      </div>
+    </div>
+    <div
+      className="ant-layout"
+      style={
+        Object {
+          "backgroundColor": "#F9FAFC",
+        }
+      }
+    >
+      <div
+        className="nav-content ant-layout-content"
+      />
+    </div>
+  </div>
+</div>
+`;

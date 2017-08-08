@@ -10,7 +10,7 @@ import NavHead from './NavHead'
 import navHandleClick from '../actions/navHandleClick'
 import getMachineArr from '../actions/getMachineArr'
 import getMessageArr from '../actions/getMessageArr'
-import store from '../commons/store'
+// import store from '../commons/store'
 
 
 
@@ -22,7 +22,7 @@ export default class Nav extends Component {
   }
 
   render(){
-    const { sliderSelect } = store.getState().nav
+    const { sliderSelect } = this.props.state.nav
     return(
       <Layout className={(window.location.pathname==='/machine/edit') ?'nav-container' : 'nav-containers'}  >
        <Sider width={150} style={{ background: '#fff', borderRight: '1px solid #eee'}} >

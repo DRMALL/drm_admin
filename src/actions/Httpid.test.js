@@ -21,20 +21,6 @@ it('Httpid test for get', () => {
   );
 })
 
-it('Httpid test for post', () => {
-    mock.post(api, function(req) {
-      return { body: { code: 402 } }
-    });
-    expect.assertions(1)
-    return Httpid( api, 'post', false, {} )
-            .then(e =>{
-              //这里不执行
-            })
-            .catch(e => {
-              expect(store.getState().login.loginStatus).toBe(false)
-            })
-
-})
 
 it('Http test for postxxx', () => {
 
@@ -44,13 +30,6 @@ it('Http test for postxxx', () => {
     expect.assertions(1)
     return Httpid( api, 'post', false, {} )
             .then(e =>{
-              console.log('xxx')
               expect(e.body.code).toEqual(201)
-              // // expect(store.getState().login.loginStatus).toBe(false)
             })
-            // .catch(e => {
-            //   console.log('144')
-            //   expect(store.getState().login.loginStatus).toBe(false)
-            // })
-
 })

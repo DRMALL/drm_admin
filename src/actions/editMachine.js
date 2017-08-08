@@ -34,12 +34,19 @@ export default () => {
       let id = localStorage.getItem('machineId')
 
       if(Taddress !== address ) editMachineLocation(address)
+      return new Promise((resolve,reject) => {
       Http(`${machineAction}/${id}`, 'put', true, datas)
       .then(res => {
         dispatch('MACHINE_EDIT_MACHINE_SUCCESS')
         browserHistory.push('/machine')
+        resolve()
         getMachineArr()
       })
-      .catch(res => console.error(res) )
+      .catch(res => {
+        console.error(res)
+        reject()
+      } )
+      })
+
     }
 }

@@ -60,7 +60,7 @@ export default ( state=machine, action ) => {
     case 'MACHINE_SELCET_TIME':
       return Object.assign({}, state, { line_time: action.payload } )
     case 'MACHINE_EDIT_MACHINE_SUCCESS':
-      return Object.assign({}, state, resetMachine )
+      return Object.assign({}, state, resetMachine, { status: 'edit machine success' } )
     case 'MACHINE_AFFIX_PADDING_CHANGE':
       return Object.assign({}, state, { affixChange: action.payload } )
     case 'MACHINE_GET_TIME_LINE_ID':
@@ -76,6 +76,10 @@ export default ( state=machine, action ) => {
       return Object.assign({}, state, { line_time: undefined, line_des: undefined, line_type: undefined } )
     case 'MACHINE_GET_DWONLOAD_EXCEL_TIME':
       return Object.assign({}, state, { downloadTime: action.payload } )
+
+//测试模拟数据
+    case 'machine_test_default_value':
+      return Object.assign({}, state, action.payload )
     default:
       return state
   }
