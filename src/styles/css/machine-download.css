@@ -11,3 +11,6 @@
 .machine-download-button {
   margin-top: 20px;
 }
+.machine-href {
+  text-decoration: none;
+}

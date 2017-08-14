@@ -23,9 +23,9 @@ export default props => {
     render: text =>  TableTextHidden( text, 40 )
   },{
     title:'提问人',
-    dataIndex: 'user',
-    key: 'user',
+    dataIndex: 'user.name',
     width: '10%',
+    render: text =>  TableTextHidden( text, 10 )
   },{
     title:'状态',
     dataIndex: 'isHanlded',

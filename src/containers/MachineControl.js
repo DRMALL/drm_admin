@@ -17,7 +17,7 @@ export default class MachineControl extends Component {
         <MachineInfo { ...this.props } />
         <PageTip tip='指标数据' />
         <MachineTarget />
-        <MachineDownload />
+        <MachineDownload { ...this.props } />
       </div>
       )
   }

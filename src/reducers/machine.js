@@ -19,6 +19,7 @@ const machine ={
   timeLineId: undefined,
   machineArr: [],
   machineModal: false,
+  downloadTime: []
 }
 
 const resetMachine = {

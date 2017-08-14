@@ -9,7 +9,7 @@ export default id => {
   .then(res => {
     const result = res.body.data
     result.fileList = result.images.map((item, index) => {
-      item.uid = index
+      item.uid = '-'+index
       item.status= "done"
       return item
     })

@@ -15,7 +15,7 @@ export default messageId => {
     delete result.updatedAt
     result.fileList = result.images.map((item, index) => {
       item.status = 'done'
-      item.uid = index
+      item.uid = '-'+index
       return item
     })
     dispatch('MESSAGE_GET_ONE_MESSAGE_SUCCESS', result )

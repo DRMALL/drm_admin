@@ -9,6 +9,7 @@ import { browserHistory } from 'react-router'
 import Modal from 'antd/lib/modal'
 import machineDelById from '../actions/machineDelById'
 import dispatch from '../actions/dispatch'
+import Tooltip from 'antd/lib/tooltip'
 
 export default props => {
   const { machineArr, machineModal } = props.state.machine
@@ -55,10 +56,15 @@ export default props => {
     render: text => <div>{text.slice(0,15).join(', ')}</div>
   },{
     title: '所在地',
-    dataIndex: 'address',
-    key: 'address',
+    dataIndex: 'location',
     width: '10%',
-    // render: text => TableAddress(text)
+    render: text =>
+      <Tooltip title={ text.slice(0,5).map(item => {
+        item = item.text
+        return item
+      }).join(', ') } >
+        { text[0].text }
+      </Tooltip>
   },{
     title: '添加时间',
     dataIndex: 'createdAt',
