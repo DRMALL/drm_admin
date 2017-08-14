@@ -13,7 +13,11 @@ export default messageId => {
     const result = res.body.data
     delete result.createdAt
     delete result.updatedAt
-    result.fileList = result.images
+    result.fileList = result.images.map((item, index) => {
+      item.status = 'done'
+      item.uid = index
+      return item
+    })
     dispatch('MESSAGE_GET_ONE_MESSAGE_SUCCESS', result )
   })
   .catch( res => {

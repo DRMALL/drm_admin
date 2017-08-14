@@ -52,7 +52,7 @@ export default props => {
     title: '负责人',
     dataIndex: 'incharges',
     width: '10%',
-    render: text => <div>{text.slice(0,4).join(', ')}</div>
+    render: text => <div>{text.slice(0,15).join(', ')}</div>
   },{
     title: '所在地',
     dataIndex: 'address',

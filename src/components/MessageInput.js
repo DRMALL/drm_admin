@@ -14,6 +14,7 @@ import dispatch from '../actions/dispatch'
 
 export default props => {
   const { previewVisible, previewImage, fileList, title, abstract, content } = props.state.message
+  console.log(fileList)
   const uploadButton = (
       <div>
         <Icon type="plus" />

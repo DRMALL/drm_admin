@@ -22,14 +22,16 @@ export default class MachineEdit extends Component {
       <div>
         <div className='machine-new-title' >修改设备</div>
         <div className='machine-edit-content' >
-          <MachineInput { ...this.props } />
+          <div>
+            <MachineInput { ...this.props } />
+          </div>
           <Affix onChange={ paddingTimeline } >
-          <div style={{ backgroundColor: '#fff', zIndex: 4 }}  >
+          <div style={{ backgroundColor: '#fff', marginTop: affixChange ? 0 : 250}}  >
             <MachineRecord { ...this.props.state.machine } />
             <Button onClick={ editMachine } className='machine-edit-button' >提交</Button>
-            </div>
+          </div>
           </Affix>
-          <div className='machine-edit-timeline' style={{ paddingTop: affixChange ? 270 : 0  }} >
+          <div className='machine-edit-timeline' style={{ marginTop: affixChange ? 500 : 30  }} >
             <MachineTimeline timelines={ timelines }
                              editTimeline={ editTimeline } />
           </div>
