@@ -6,9 +6,10 @@ import store from '../commons/store'
 import MissWarn from '../utils/MissWarn'
 import dispatch from './dispatch'
 import resetMachineImg from './resetMachineImg'
+import moment from 'moment'
 
 export default ()=> {
-  const { name, number, fileList, cc, pressure, combustible, description, address } = store.getState().machine
+  const { name, number, fileList, cc, pressure, combustible, description, address, line_time, line_des, line_type } = store.getState().machine
   if(!name||!number||!(fileList[0])||!cc||!pressure||!combustible||!description||!address) MissWarn()
    else {
     let imagesArr = Array.from({length: fileList.length})
@@ -19,7 +20,13 @@ export default ()=> {
       item.status = 'done'
       return item
     })
-    let data = {name, number, images, cc, pressure, combustible, description, address}
+    let timelines = []
+    if(line_time&&line_des&&line_type){
+    timelines = [
+      { line_time: moment(line_time).format('YYYY-MM-DD'), line_des, line_type }
+    ]
+    }
+    let data = { name, number, images, cc, pressure, combustible, description, address, timelines }
     Http(newMachine, 'post', true, data)
     .then(res => {
       resetMachineImg(fileList)

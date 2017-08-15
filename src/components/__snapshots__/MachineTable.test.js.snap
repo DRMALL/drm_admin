@@ -211,7 +211,9 @@ exports[`MachineTable test 1`] = `
                     </td>
                     <td
                       class=""
-                    />
+                    >
+                      <span />
+                    </td>
                     <td
                       class=""
                     />
@@ -288,7 +290,9 @@ exports[`MachineTable test 1`] = `
                     </td>
                     <td
                       class=""
-                    />
+                    >
+                      <span />
+                    </td>
                     <td
                       class=""
                     />
