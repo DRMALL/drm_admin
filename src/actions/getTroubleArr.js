@@ -11,7 +11,7 @@ export default () => {
   .then(res => {
     const result = res.body.data
     result.map(item => {
-      item.categoryxx = item.category.name
+      item.categoryxx = item.category ? item.category.text : null
       item.createdAtTime = moment(item.createdAt).format('YYYY-MM-DD HH:mm')
       return item
     })

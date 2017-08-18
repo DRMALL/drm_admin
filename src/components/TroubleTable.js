@@ -24,7 +24,7 @@ export default props => {
   key: 'category',
   width: '10%',
   render: text =>
-  <div>{text.text}</div>
+  <div>{ text ? text.text : '' }</div>
   },{
   title: '内容',
   dataIndex: 'content',
