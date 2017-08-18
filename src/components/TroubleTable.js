@@ -8,10 +8,10 @@ import TableTime from './TableTime'
 import Modal from 'antd/lib/modal'
 import troubleDelById from '../actions/troubleDelById'
 import dispatch from '../actions/dispatch'
+import getRichEditorValue from '../utils/getRichEditorValue'
 
 export default props => {
-  const { troubleArr, troubleModal, troubleId } = props.state.trouble
-  console.log(troubleId)
+  const { troubleArr, troubleModal } = props.state.trouble
   const columns = [{
   title: '标题',
   dataIndex: 'title',
@@ -30,7 +30,7 @@ export default props => {
   dataIndex: 'content',
   key: 'content',
   width: '30%',
-  render: text => TableTextHidden( text, 40 )
+  render: text => TableTextHidden( getRichEditorValue(text), 40 )
   },{
   title: '添加时间',
   dataIndex: 'createdAtTime',

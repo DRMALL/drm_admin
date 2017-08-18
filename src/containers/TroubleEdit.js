@@ -5,10 +5,14 @@ import getTroubleById from '../actions/getTroubleById'
 import troubleEdit from '../actions/troubleEdit'
 import TroubleInput from '../components/TroubleInput'
 import Button from 'antd/lib/button'
+import getTroubleKindArr from '../actions/getTroubleKindArr'
+import dispatch from '../actions/dispatch'
 
 export default class TroubleEdit extends Component {
   componentDidMount() {
     getTroubleById(localStorage.getItem('troubleId'))
+    getTroubleKindArr()
+    dispatch('TROUBLE_EDITOR_CAN')
   }
   render() {
     return(

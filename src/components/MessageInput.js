@@ -6,6 +6,7 @@ import Upload from 'antd/lib/upload'
 import Modal from 'antd/lib/modal'
 import Icon from 'antd/lib/icon'
 import beforeUpload from '../utils/beforeUpload'
+import LzEditor from 'react-lz-editor'
 
 
 import { uploadImg } from '../commons/apis'
@@ -13,8 +14,7 @@ import dispatch from '../actions/dispatch'
 
 
 export default props => {
-  const { previewVisible, previewImage, fileList, title, abstract, content } = props.state.message
-  console.log(fileList)
+  const { previewVisible, previewImage, fileList, title, abstract, content, isEdit } = props.state.message
   const uploadButton = (
       <div>
         <Icon type="plus" />
@@ -27,7 +27,8 @@ export default props => {
         <Input onChange={ getInputValue } placeholder='输入信息标题'
                data-path='MESSAGE' data-id='title' value={ title } />
         <div className='message-new-tip' >内容</div>
-        <Input.TextArea onChange={ getInputValue }  rows={6}  placeholder='输入信息内容' data-path='MESSAGE' data-id='content' value={ content } />
+        <LzEditor cbReceiver={ getMessageValue } image={ false } video={ false }
+                audio={ false } urls={ false } importContent={ content }  active={isEdit}/>
         <div className='message-new-tip' >摘要（64字以内）</div>
         <Input.TextArea onChange={ getInputValue } rows={2} placeholder='输入摘要'
                         data-path='MESSAGE' data-id='abstract' value={ abstract } />
@@ -51,6 +52,10 @@ export default props => {
         </div>
     </div>
     )
+}
+
+function getMessageValue(e){
+  dispatch('MESSAGE_GET_EDITOR_VALUE', { content: e })
 }
 
 function handlePreview(e) {

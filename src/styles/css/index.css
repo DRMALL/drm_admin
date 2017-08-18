@@ -462,6 +462,9 @@
   padding-top: 5px;
   width: 100px;
 }
+.trouble-input-editor {
+  flex: 1;
+}
 .trouble-new-title {
   font-size: 18px;
   font-family: PingFangSC;

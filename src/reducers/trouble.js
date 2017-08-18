@@ -9,7 +9,8 @@ const trouble = {
   kind: '',
   troubleKindId: '',
   troubleModal: false,
-  troubleId: ''
+  troubleId: '',
+  isEdit: true
 }
 const resetTrouble = {
   title: '',
@@ -44,6 +45,14 @@ export default ( state=trouble, action ) =>{
       return Object.assign({}, state, { troubleModal: false } )
     case 'TROUBLE_GET_TROUBLE_ID':
       return Object.assign({}, state, { troubleModal: true, troubleId: action.payload } )
+    case 'TROUBLE_GET_CONTENT_VALUE':
+      return Object.assign({},  state, action.payload, { isEdit: false })
+    case 'TROUBLE_EDITOR_CAN':
+      return Object.assign({}, state, { isEdit: true } )
+    case 'TROUBLE_NEW_RESET':
+      return Object.assign({}, state, resetTrouble )
+    case 'TROUBLE_ADD_START':
+      return Object.assign({}, state, { isEdit: true } )
     default :
       return state
   }

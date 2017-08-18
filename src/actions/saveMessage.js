@@ -27,6 +27,7 @@ export default e => {
 }
 
 function sendMessagexxxx(published){
+  dispatch('MESSAGE_CHANGE_EDITOR_STATUS')
   const { title, abstract, content, fileList } = store.getState().message
   let imagesArr = Array.from({ length: fileList.length })
   let images = imagesArr.map((item, index) => {

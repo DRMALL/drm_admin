@@ -7,13 +7,12 @@ import getInputValue from '../actions/getInputValue'
 // import { troubleType } from '../commons/troubleCommon'
 import dispatch from '../actions/dispatch'
 import changeTroubleType from '../utils/changeTroubleType'
-// import ReactDOM from 'react-dom';
 import LzEditor from 'react-lz-editor'
 
 export default props => {
-  const { title, categoryxx, content, troubleKinds } = props.state.trouble
+  const { title, categoryxx, content, troubleKinds, isEdit } = props.state.trouble
   function getValue(e){
-    console.log(e)
+    dispatch('TROUBLE_GET_CONTENT_VALUE', { content: e })
   }
   return (
     <div>
@@ -35,13 +34,11 @@ export default props => {
       </div>
       <div className='trouble-input-flexs' >
         <div  className='trouble-input-lefts' >问题描述</div>
-        <Input.TextArea style={{ width:300 }} onChange={ getInputValue }
-               data-path='TROUBLE' data-id='content'
-               placeholder='输入对设备的描述' autosize={{ minRows: 6, maxRows: 12 }}
-               value={ content }/>
+        <div className='trouble-input-editor' >
+        <LzEditor cbReceiver={ getValue } image={ false } video={ false }
+                audio={ false } urls={ false } importContent={ content }  active={isEdit}/>
+        </div>
       </div>
-      <LzEditor cbReceiver={ getValue } image={ false } video={ false }
-                audio={ false } urls={ false } />
     </div>
     )
 }

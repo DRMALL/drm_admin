@@ -11,8 +11,8 @@ import dispatch from './dispatch'
 import editMachineLocation from './editMachineLocation'
 
 export default () => {
-  const { name, number, fileList, cc, pressure, combustible, description, address, line_time, line_des, line_type, timelines, Taddress } = store.getState().machine
-  if(!name||!number||!(fileList[0])||!cc||!pressure||!combustible||!description||!address) MissWarn()
+  const { name, number, fileList, cc, pressure, combustible, description, address, line_time, line_des, line_type, timelines, Taddress, classify } = store.getState().machine
+  if(!name||!number||!(fileList[0])||!cc||!pressure||!combustible||!description||!address||!classify) MissWarn()
     else {
       let imgArr = Array.from({ length: fileList.length })
       let images = imgArr.map((item, index) => {
@@ -30,7 +30,7 @@ export default () => {
 
 
       if(line_time&&line_des&&line_type) timelines.push(timeline)
-      let datas = {name, number, images, cc, pressure, combustible, description, timelines }
+      let datas = {name, number, images, cc, pressure, combustible, description, timelines, classify }
       let id = localStorage.getItem('machineId')
 
       if(Taddress !== address ) editMachineLocation(address)

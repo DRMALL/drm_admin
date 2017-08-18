@@ -16,7 +16,7 @@ import beforeUpload from '../utils/beforeUpload'
 
 
 export default props => {
-  const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address } = props.state.machine
+  const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address, classify } = props.state.machine
   console.log(props.state.machine)
   const uploadButton = (
       <div>
@@ -67,6 +67,12 @@ export default props => {
                       <Select.Option key={ index } value={ item+'/cc' } >{ item }</Select.Option>)
                   }
           </Select>
+        </div>
+        <div className='machine-input-flex' >
+          <div  className='machine-input-left'>设备分类</div>
+          <Input  className='machine-input-right' onChange={ getInputValue }
+                  style={{ width: 400 }} placeholder='输入设备分类'
+                  data-path='MACHINE' data-id='classify' value={ classify } />
         </div>
         <div className='machine-input-flex' >
           <div  className='machine-input-left'>设备所在地</div>

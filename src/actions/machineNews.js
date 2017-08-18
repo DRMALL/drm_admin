@@ -9,8 +9,8 @@ import resetMachineImg from './resetMachineImg'
 import moment from 'moment'
 
 export default ()=> {
-  const { name, number, fileList, cc, pressure, combustible, description, address, line_time, line_des, line_type } = store.getState().machine
-  if(!name||!number||!(fileList[0])||!cc||!pressure||!combustible||!description||!address) MissWarn()
+  const { name, number, fileList, cc, pressure, combustible, description, address, line_time, line_des, line_type, classify } = store.getState().machine
+  if(!name||!number||!(fileList[0])||!cc||!pressure||!combustible||!description||!address||!classify) MissWarn()
    else {
     let imagesArr = Array.from({length: fileList.length})
     let images = imagesArr.map((item, index) => {
@@ -26,7 +26,7 @@ export default ()=> {
       { line_time: moment(line_time).format('YYYY-MM-DD'), line_des, line_type }
     ]
     }
-    let data = { name, number, images, cc, pressure, combustible, description, address, timelines }
+    let data = { name, number, images, cc, pressure, combustible, description, address, timelines, classify }
     Http(newMachine, 'post', true, data)
     .then(res => {
       resetMachineImg(fileList)

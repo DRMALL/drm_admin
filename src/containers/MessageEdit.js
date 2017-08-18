@@ -5,10 +5,12 @@ import Button from 'antd/lib/button'
 import getMessageById from '../actions/getMessageById'
 import MessageInput from '../components/MessageInput'
 import editMessage from '../actions/editMessage'
+import dispatch from '../actions/dispatch'
 
 export default class MessageEdit extends Component {
   componentDidMount() {
     getMessageById(localStorage.getItem('messageId'))
+    dispatch('MESSAGE_EDITOR_CAN_EDIT')
   }
   render() {
     const { published } = this.props.state.message

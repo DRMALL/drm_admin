@@ -11,6 +11,7 @@ export default e => {
   const { method } = e.currentTarget.dataset
   const { title, categoryxx, content } = store.getState().trouble
   if(title&&categoryxx&&content){
+  dispatch('TROUBLE_ADD_START')
   let category = categoryxx
   let data = { title, category, content }
     console.log(data)

@@ -8,7 +8,8 @@ const message = {
   title: '',
   abstract: '',
   content: '',
-  messageSelect: 'notsend'
+  messageSelect: 'notsend',
+  isEdit: false,
 }
 
 const resetMessage = {
@@ -43,7 +44,7 @@ export default ( state=message, action ) => {
                 abstract: '',
                 content: '',} )
     case 'MESSAGE_NEW_MESSAGE_START':
-      return Object.assign({}, state, { status: 'new message start' }, resetMessage )
+      return Object.assign({}, state, { status: 'new message start',   isEdit: true }, resetMessage )
     case 'MESSAGE_SAVE_FAIL':
       return Object.assign({}, state, { status: 'save message fail' } )
     case 'MESSAGE_GET_MESSAGE_ARR_START':
@@ -68,6 +69,12 @@ export default ( state=message, action ) => {
       return Object.assign({}, state, { status: 'edit message success' }, resetMessage )
     case 'MESSAGE_EDIT_MESSAGE_FAIL':
       return Object.assign({}, state, { status: 'edit message fail' } )
+    case 'MESSAGE_GET_EDITOR_VALUE':
+      return Object.assign({}, state, action.payload, { isEdit: false } )
+    case 'MESSAGE_EDITOR_CAN_EDIT':
+      return Object.assign({}, state, { isEdit: true } )
+    case 'MESSAGE_CHANGE_EDITOR_STATUS':
+      return Object.assign({}, state, { isEdit: true } )
     default :
       return state
   }

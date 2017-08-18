@@ -10,7 +10,6 @@ import NavHead from './NavHead'
 import navHandleClick from '../actions/navHandleClick'
 import getMachineArr from '../actions/getMachineArr'
 import getMessageArr from '../actions/getMessageArr'
-// import store from '../commons/store'
 
 
 
