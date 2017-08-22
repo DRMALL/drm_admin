@@ -14,7 +14,7 @@ export default (api, method, tip, data ) => {
           success(res, tip)
            resolve(res)
         }
-        else if(res.body.code===402) resetLogin()
+        else if(res.body.code===5050) resetLogin()
         else {
           fail(res)
           reject(res)
@@ -36,7 +36,7 @@ export default (api, method, tip, data ) => {
           success(res, tip)
           resolve(res)
         }
-        else if(res.body.code===402) resetLogin()
+        else if(res.body.code===5050) resetLogin()
         else {
           fail(res)
           reject(res)
@@ -57,7 +57,7 @@ export default (api, method, tip, data ) => {
           success(res, tip)
           resolve(res)
         }
-        else if(res.body.code===402) resetLogin()
+        else if(res.body.code===5050) resetLogin()
         else {
           fail(res)
           reject(res)
@@ -73,7 +73,9 @@ export default (api, method, tip, data ) => {
 }
 
 function success(res, tip) {
-  if(!tip) console.log('忽略')
+  if(!tip) {
+  //console.log('忽略')
+}
   else {
     notification.success({
       message: '提示',

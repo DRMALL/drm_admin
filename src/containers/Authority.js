@@ -13,8 +13,9 @@ import getMachineNameArr from '../actions/getMachineNameArr'
 export default class Authority extends Component{
   componentDidMount() {
     getAuthorityArr()
-    getUserNameArr()
-    getMachineNameArr()
+    .then(() => getUserNameArr())
+    .then(() => getMachineNameArr())
+    .catch(res => console.error('出错了！'))
   }
   render() {
       const { authorityArray, userNameArr, machineNameArr, authModal } = this.props.state.authority

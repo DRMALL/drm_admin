@@ -23,11 +23,14 @@ export default class WorkOrderEdit extends Component {
         <div className='workorder-edit-content' >
           <div className='workorder-edit-flex' >
             <div className='workorder-edit-left' >标题: </div>
-            <div >{ title }</div>
+            <div className='workorder-edit-right' >{ title }</div>
           </div>
           <div className='workorder-edit-flex' >
             <div className='workorder-edit-left'  >内容: </div>
-            <div>{ content }</div>
+            <div className='workorder-edit-right'  >{
+              content[0]==='<' ? <div dengerouslyInnerHTML={{__html: content}} /> :
+              content
+            }</div>
           </div>
           <div className='workorder-edit-tip' >设备描述</div>
           <Input.TextArea  placeholder='输入对设备的描述' data-path='WORKORDER'

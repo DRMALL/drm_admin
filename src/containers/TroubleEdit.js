@@ -11,7 +11,8 @@ import dispatch from '../actions/dispatch'
 export default class TroubleEdit extends Component {
   componentDidMount() {
     getTroubleById(localStorage.getItem('troubleId'))
-    getTroubleKindArr()
+    .then(() => getTroubleKindArr())
+    .catch(() => console.error('出错了！！'))
     dispatch('TROUBLE_EDITOR_CAN')
   }
   render() {

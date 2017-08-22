@@ -23,7 +23,7 @@ export default class HttpCalss {
         success(res, this.tip)
         resolve(res)
       }
-      else if(res.body.code===402){
+      else if(res.body.code===5050){
         fail(res)
         resetLogin()
         reject(res)
@@ -47,7 +47,7 @@ export default class HttpCalss {
 //         success(res, tip)
 //          resolve(res)
 //       }
-//       else if(res.body.code===402){
+//       else if(res.body.code===5050){
 //         fail(res)
 //         resetLogin()
 //         reject(res)

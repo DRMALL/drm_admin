@@ -10,14 +10,16 @@ import MachineTimeline from '../components/MachineTimeline'
 import Affix from 'antd/lib/affix'
 import dispatch from '../actions/dispatch'
 
+
 export default class MachineEdit extends Component {
   componentDidMount() {
     getMachineById(localStorage.getItem('machineId'))
+    dispatch('MACHINE_PUT_TIMELINE_SUCCESS')
   }
 
   render() {
-    const { number, affixChange, timelines, editTimeline } = this.props.state.machine
-    if(number)
+    const { name, number, pressure, affixChange, timelines, editTimeline } = this.props.state.machine
+    if(number||name||pressure)
     return(
       <div>
         <div className='machine-new-title' >修改设备</div>

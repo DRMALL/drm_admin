@@ -3,7 +3,8 @@
 import { partRemark } from '../commons/apis'
 import Httpid from './Httpid'
 import store from '../commons/store'
-import MissWarn from '../utils/MissWarn'
+// import MissWarn from '../utils/MissWarn'
+import message from 'antd/lib/message'
 import dispatch from './dispatch'
 import { browserHistory } from 'react-router'
 
@@ -16,7 +17,10 @@ export default () => {
     .then(res => resovle(res))
     .catch(res  => reject(res))
   }
-  else MissWarn()
+  else {
+    let str = !machineId ? '选择设备' : '添加备注'
+    message.warning(`请${str}后再次尝试`)
+  }
   })
 
 }

@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import store from '../commons/store'
-import verifyToken from '../actions/verifyToken'
 import '../styles/css/index.css'
 import 'antd/dist/antd.css'
 
@@ -16,7 +15,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.unsubscribe = store.subscribe( ()=> this.setState(store.getState()) )
-    verifyToken()
+    // verifyToken()
   }
 
   componentWillUnmount() {

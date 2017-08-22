@@ -75,7 +75,7 @@ export default props => {
   },{
     title: '操作',
     key: 'action',
-    width: '10%',
+    width: '8%',
     render: (text, record) =>(
       <div className='machine-table-action' >
         <div className='machine-table-left' data-machine-id={ text._id }
@@ -85,6 +85,9 @@ export default props => {
         <div className='machine-table-right' data-machine-id={ text._id }
              onClick={ navToMachineControl } >
           <i className="iconfont icon-details" ></i>
+        </div>
+        <div className='machine-table-right' onClick={ delMachinexx } data-machine-id={ text._id }  >
+          <i className="iconfont icon-shanchu message-del-icon"  ></i>
         </div>
       </div>
       )
@@ -100,9 +103,11 @@ export default props => {
     )
 }
 
-// function delMachinexx(e){
-//   dispatch('MACHINE_GET_DEL_MACHINE_ID', e.currentTarget.dataset.machineId)
-// }
+function delMachinexx(e){
+  dispatch('MACHINE_GET_DEL_MACHINE_ID', e.currentTarget.dataset.machineId)
+  // const { machineId } = e.currentTarget.dataset
+  // console.log(machineId)
+}
 
 function cancleDelAuth(){
   dispatch('MACHINE_CANCLE_DEL_MACHINE')
@@ -121,6 +126,4 @@ function navToMachineControl(e){
 }
 
 //设备删除
-        // <div className='message-arr-item' onClick={ delMachinexx } data-machine-id={ record._id }  >
-        //   <i className="iconfont icon-shanchu message-del-icon"  ></i>
-        // </div>
+

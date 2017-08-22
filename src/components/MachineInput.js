@@ -17,7 +17,6 @@ import beforeUpload from '../utils/beforeUpload'
 
 export default props => {
   const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address, classify } = props.state.machine
-  console.log(props.state.machine)
   const uploadButton = (
       <div>
         <Icon type="plus" />

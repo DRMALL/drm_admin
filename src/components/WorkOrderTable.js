@@ -5,22 +5,34 @@ import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
 import TableTextHidden from './TableTextHidden'
 import TableTime from './TableTime'
+import getRichEditorValue from '../utils/getRichEditorValue'
 
 
 export default props => {
   const { workOrder } = props.state.workOrder
-  // console.log(props)
+  console.log(workOrder)
   const columns = [{
     title:'标题',
     dataIndex: 'title',
     key: 'title',
     width: '15%',
+    render: text => <div>
+      {
+        text.length > 40 ? <div>{text.slice(0,40)+ '...'}</div> : <div>{text}</div>
+      }
+    </div>
   },{
     title:'内容',
     dataIndex: 'content',
     key: 'content',
     width: '30%',
-    render: text =>  TableTextHidden( text, 40 )
+    render: text =>
+    <div>
+    {
+      text[0]==='<' ? TableTextHidden( getRichEditorValue(text), 40 ) :
+      TableTextHidden( text, 40 )
+     }
+    </div>
   },{
     title:'提问人',
     dataIndex: 'user.name',

@@ -14,6 +14,6 @@ export default () => {
 }
 
 function navLogin() {
-  browserHistory.push('/login')
+  browserHistory.replace('/login')
   localStorage.clear()
 }

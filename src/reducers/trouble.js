@@ -10,7 +10,8 @@ const trouble = {
   troubleKindId: '',
   troubleModal: false,
   troubleId: '',
-  isEdit: true
+  isEdit: true,
+  troubleImgList: []
 }
 const resetTrouble = {
   title: '',
@@ -53,6 +54,8 @@ export default ( state=trouble, action ) =>{
       return Object.assign({}, state, resetTrouble )
     case 'TROUBLE_ADD_START':
       return Object.assign({}, state, { isEdit: true } )
+    case 'TROUBLE_GET_RICH_TEXT_IMGAGES':
+      return Object.assign({}, state, { troubleImgList: action.payload } )
     default :
       return state
   }

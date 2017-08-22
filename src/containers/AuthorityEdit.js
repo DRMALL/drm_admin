@@ -11,9 +11,11 @@ import Button from 'antd/lib/button'
 
 export default class AtuhEdit extends Component {
   componentDidMount() {
+    let id = localStorage.getItem('authId')
     getUserNameArr()
-    getMachineNameArr()
-    getAuthorityById(localStorage.getItem('authId'))
+    .then(() => getMachineNameArr())
+    .then(() => getAuthorityById(id) )
+    .catch(res => console.error('出错了！'))
   }
   render() {
     const { newAuthorityArr, userNameArr, machineNameArr } = this.props.state.authority

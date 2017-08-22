@@ -18,6 +18,9 @@
 .workorder-edit-left {
   width: 50px;
 }
+.workorder-edit-right {
+  flex: 1;
+}
 .workorder-edit-tip {
   margin-top: 15px;
   margin-bottom: 15px;

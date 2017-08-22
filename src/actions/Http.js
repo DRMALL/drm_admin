@@ -16,7 +16,7 @@ export default (api, method, tip, data ) => {
      			success(res, tip)
      			 resolve(res)
      		}
-     		else if(res.body.code===402) {
+     		else if(res.body.code===5050) {
           resetLogin()
           reject(res)
         }
@@ -41,7 +41,7 @@ export default (api, method, tip, data ) => {
      			success(res, tip)
      			resolve(res)
      		}
-     		// else if(res.body.code===402) {
+     		// else if(res.body.code===5050) {
         //   resetLogin()
         //   reject(res)
         // }
@@ -66,7 +66,7 @@ export default (api, method, tip, data ) => {
           success(res, tip)
           resolve(res)
         }
-        else if(res.body.code===402) {
+        else if(res.body.code===5050) {
           resetLogin()
           reject(res)
         }
@@ -92,7 +92,7 @@ export default (api, method, tip, data ) => {
           success(res, tip)
           resolve(res)
         }
-        else if(res.body.code===402) {
+        else if(res.body.code===5050) {
           resetLogin()
           reject(res)
         }
@@ -115,7 +115,7 @@ export default (api, method, tip, data ) => {
      			success(res, tip)
      			resolve(res)
      		}
-     		else if(res.body.code===402) {
+     		else if(res.body.code===5050) {
           resetLogin()
           reject(res)
         }

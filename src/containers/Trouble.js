@@ -12,7 +12,8 @@ import TroubleTable from '../components/TroubleTable'
 export default class User extends Component {
   componentDidMount() {
     getTroubleArr()
-    getTroubleKindArr()
+    .then(() => getTroubleKindArr())
+    .catch(() => console.error('出错了！'))
   }
   render() {
     // console.log(this.props.state.trouble)

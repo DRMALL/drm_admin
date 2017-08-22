@@ -45,7 +45,13 @@ export default props => {
     dataIndex: messageSelect==='send' ? 'publish_time' : '',
     width: '10%',
     key: 'publish_time',
-    render: text =>  TableTime(text, 15)
+    // render: (text, record )=>
+    //     <div>
+    //       {
+    //        text==='Invalid date' ? TableTime(record.createdAt, 15): TableTime(text, 15)
+    //       }
+    //     </div>
+    render: text => TableTime(text, 15)
   },{
     title: '操作',
     key: 'action',

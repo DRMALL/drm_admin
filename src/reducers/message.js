@@ -10,6 +10,7 @@ const message = {
   content: '',
   messageSelect: 'notsend',
   isEdit: false,
+  messageRichImg: []
 }
 
 const resetMessage = {
@@ -75,6 +76,10 @@ export default ( state=message, action ) => {
       return Object.assign({}, state, { isEdit: true } )
     case 'MESSAGE_CHANGE_EDITOR_STATUS':
       return Object.assign({}, state, { isEdit: true } )
+    case 'MESSAGE_GET_RICH_TEXT_IMGAGES':
+      return Object.assign({}, state, { messageRichImg: action.payload } )
+    // case 'MESSAGE_NAV_TO_PUBLISH':
+    //   return Object.assign({}, state, {  } )
     default :
       return state
   }

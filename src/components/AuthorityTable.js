@@ -16,28 +16,34 @@ export default props => {
   const columns = [{
     title: '用户',
     dataIndex: 'user.name',
+    width: '20%',
     filterDropdown: ( <TableFilter changeFun={ handleChangexx } arr={ userNameArr } /> )
   },{
     title: '查看权限',
     dataIndex: 'canView',
+    width: '10%',
     render: text =>
     <div>{ text ? '有' : '无' }</div>
   },{
     title: '监控权限',
     dataIndex: 'canMonitor',
+    width: '10%',
     render: text =>
     <div>{ text ? '有' : '无' }</div>
   },{
     title: '设备名称',
     dataIndex: 'device.name',
+    width: '25%',
     filterDropdown: ( <TableFilter changeFun={ handleChangeMachine } arr={ machineNameArr } /> )
   },{
     title: '修改时间',
     dataIndex: 'updatedAt',
+    width: '10%',
     render: text => TableTime(moment(text).format('YYYY-MM-DD HH:mm'), 15)
   },{
     title: '操作',
     key:'action',
+    width: '10%',
     render: (text, record) => (
       <div className='user-arr-action' >
         <div className='user-arr-item'  style={{ color: '#579df2' }}

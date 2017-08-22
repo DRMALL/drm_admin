@@ -14,7 +14,6 @@ export default class TroubleKind extends Component {
     getTroubleKindArr()
   }
   render() {
-    console.log(this.props.state.trouble)
     const { troubleKinds, kind } = this.props.state.trouble
     return(
       <div className='trouble-kind-container' >

@@ -7,6 +7,7 @@ import dispatch from './dispatch'
 import moment from 'moment'
 
 export default () => {
+  return new Promise((reslove, reject) => {
   Http(troubleAction, 'get', false)
   .then(res => {
     const result = res.body.data
@@ -15,7 +16,13 @@ export default () => {
       item.createdAtTime = moment(item.createdAt).format('YYYY-MM-DD HH:mm')
       return item
     })
-
     dispatch('TROUBLE_GET_TROUBLE_ARR', result )
+    reslove()
   })
+  .catch(res => {
+    console.error('出错了')
+    reject()
+  })
+  })
+
 }

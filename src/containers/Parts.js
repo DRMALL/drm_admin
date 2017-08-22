@@ -12,7 +12,6 @@ export default class User extends Component {
     getPartArr()
   }
   render() {
-    console.log(this.props.state.part)
     return(
       <div className='part-container' >
         <div className='part-content-title' >

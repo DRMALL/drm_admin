@@ -15,7 +15,9 @@ export default class Authority extends Component{
   componentDidMount() {
     dispatch('AUTHORITY_NEW_RESET')
     getUserNameArr()
-    getMachineNameArr()
+    .then(() => getMachineNameArr())
+    .catch(() => console.error('出错了！！'))
+
   }
   render() {
       console.log(this.props.state.authority)

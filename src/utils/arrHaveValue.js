@@ -9,6 +9,4 @@ function arrHaveValue(arr){
   return a
 }
 
-
-
 export default arrHaveValue

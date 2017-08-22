@@ -9,26 +9,49 @@ import beforeUpload from '../utils/beforeUpload'
 import LzEditor from 'react-lz-editor'
 
 
-import { uploadImg } from '../commons/apis'
+import { uploadImg, troubleImg } from '../commons/apis'
 import dispatch from '../actions/dispatch'
 
 
 export default props => {
-  const { previewVisible, previewImage, fileList, title, abstract, content, isEdit } = props.state.message
+  const { previewVisible, previewImage, fileList, title, abstract, content, isEdit, messageRichImg } = props.state.message
   const uploadButton = (
       <div>
         <Icon type="plus" />
         <div className="ant-upload-text">上传图片</div>
       </div>
   )
+  const token = localStorage.getItem('token')
+  const uploadProps = {
+      action: `${troubleImg}?token=${token}`,
+      name: 'bugs',
+      onChange: onChange,
+      listType: 'picture',
+      fileList: messageRichImg,
+      data: (file) => {
+      },
+      multiple: true,
+      beforeUpload: beforeUpload,
+      showUploadList: true
+  }
+  function onChange(e){
+    let result = e.fileList
+    result = result.map((item, index )=> {
+      item.url = item.response ? item.response.data.url  : ''
+      item.key = '-' + index
+      return item
+    })
+    dispatch('MESSAGE_GET_RICH_TEXT_IMGAGES', result)
+  }
   return (
     <div>
         <div className='message-new-tip' >标题</div>
         <Input onChange={ getInputValue } placeholder='输入信息标题'
                data-path='MESSAGE' data-id='title' value={ title } />
         <div className='message-new-tip' >内容</div>
-        <LzEditor cbReceiver={ getMessageValue } image={ false } video={ false }
-                audio={ false } urls={ false } importContent={ content }  active={isEdit}/>
+        <LzEditor cbReceiver={ getMessageValue }  video={ false }
+                audio={ false } urls={ false } importContent={ content }  active={isEdit}
+                autoSave={ false }  uploadProps={uploadProps} />
         <div className='message-new-tip' >摘要（64字以内）</div>
         <Input.TextArea onChange={ getInputValue } rows={2} placeholder='输入摘要'
                         data-path='MESSAGE' data-id='abstract' value={ abstract } />

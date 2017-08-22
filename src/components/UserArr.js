@@ -13,30 +13,37 @@ export default props => {
   const columns = [{
     title: '用户名称',
     dataIndex: 'name',
+    width: '10%',
     key:'name'
   },{
     title: '用户邮箱',
     dataIndex: 'email',
+    width: '10%',
     key:'email'
   },{
     title: '联系电话',
     dataIndex: 'phone',
+    width: '10%',
     key:'phone'
   },{
     title: '公司名称',
     dataIndex: 'company_name',
+    width: '20%',
     key:'company_name'
   },{
     title: '通讯地址',
     dataIndex: 'address',
+    width: '20%',
     key:'address'
   },{
     title: '创建时间',
     dataIndex: 'time',
+    width: '10%',
     key:'time'
   },{
     title: '操作',
     key:'action',
+    width: '10%',
     render: (text, record) => (
       <div className='user-arr-action' >
         <div className='user-arr-item'  style={{ color: '#579df2' }}

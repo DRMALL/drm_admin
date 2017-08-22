@@ -6,11 +6,15 @@ import dispatch from './dispatch'
 
 
 export default troubleId => {
-  Http( `${troubleAction}/${troubleId}`, 'get', false )
-  .then(res => {
-    const result =res.body.data
-    result.categoryxx = result.category._id
-    dispatch('TROUBLE_GET_TROUBLE_BY_ID', result )
+  return new Promise((resolve, reject) => {
+    Http( `${troubleAction}/${troubleId}`, 'get', false )
+    .then(res => {
+      const result =res.body.data
+      result.categoryxx = result.category._id
+      dispatch('TROUBLE_GET_TROUBLE_BY_ID', result )
+      resolve()
+    })
+    .catch(res => reject() )
   })
-  .catch(res => console.error(res) )
+
 }
