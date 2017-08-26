@@ -18,7 +18,7 @@
   padding: 20px 0;
 }
 .nav-container {
-  min-width: 1024px;
+  min-width: 1200px;
 }
 .nav-containers {
   position: absolute;
@@ -26,14 +26,14 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  min-width: 1024px;
+  min-width: 1200px;
 }
 .nav-sider-log {
   height: 90px;
   background-image: url("../../images/logo.png");
-  background-size: 15px 35px;
+  background-size: 18px 40px;
   background-repeat: no-repeat;
-  background-position: 40%;
+  background-position: 40% 40%;
   font-size: 16px;
   color: #0068d2;
   display: flex;
@@ -121,6 +121,7 @@
 .nav-content {
   margin: 20px;
   background-color: #fff;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.12);
 }
 .nav-head-container {
   margin-top: 12px;
@@ -165,6 +166,13 @@
   font-size: 15px;
   margin-top: 5px;
   align-items: center;
+}
+.new-user-button {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin-left: 120px;
+  margin-top: 40px;
 }
 .authority-title {
   font-size: 18px;
@@ -248,6 +256,7 @@
 }
 .message-header-select {
   border-bottom: 5px solid #579df2;
+  color: #579df2;
 }
 .message-header-noselect {
   border-bottom: 5px solid #fff;
@@ -274,6 +283,7 @@
 }
 .message-new-button {
   margin-top: 30px;
+  margin-bottom: 50px;
   width: 200px;
   display: flex;
   justify-content: space-between;
@@ -313,6 +323,7 @@
 }
 .message-edit-button {
   margin-top: 30px;
+  margin-bottom: 50px;
   width: 200px;
   display: flex;
   justify-content: space-between;
@@ -325,6 +336,7 @@
 }
 .machine-new-content {
   padding: 0 50px;
+  margin-bottom: 50px;
   font-size: 15px;
 }
 .machine-new-button {
@@ -347,6 +359,30 @@
   width: 200px;
   justify-content: space-between;
 }
+.machine-edit-xx {
+  margin-top: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+.machine-edit-btn {
+  background-color: #579df2;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid #579df2;
+  padding: 4px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.machine-edit-btns {
+  background-color: #fff;
+  border-radius: 4px;
+  color: rgba(0,0,0,0.87);
+  border: 1px solid rgba(0,0,0,0.12);
+  padding: 4px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
 .machine-input-flex {
   display: flex;
   align-items: center;
@@ -366,6 +402,8 @@
 }
 .machine-input-upload {
   margin-top: 10px;
+  height: 100px;
+  margin-bottom: 10px;
 }
 .machine-table-action {
   display: flex;
@@ -493,6 +531,7 @@
 .trouble-new-content {
   padding: 0 50px;
   font-size: 15px;
+  margin-bottom: 50px;
 }
 .trouble-new-button {
   margin-left: 100px;
@@ -588,6 +627,7 @@
   font-size: 18px;
   font-family: PingFangSC;
   font-weight: 800;
+  color: rgba(0,0,0,0.8);
 }
 .content-link {
   display: flex;
@@ -640,4 +680,29 @@
 .part-remark-input-text {
   width: 100px;
   line-height: 28px;
+}
+.trouble-del-icon {
+  color: #f00;
+}
+.table-icon-content {
+  display: flex;
+  align-items: center;
+}
+.table-icon-item {
+  align-items: center;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.del-icon {
+  color: #f00;
+}
+.edit-icon {
+  font-size: 20px;
+}
+.send-icon {
+  color: #579df2;
+  font-size: 15px;
+}
+.details-icon {
+  color: #579df2;
 }

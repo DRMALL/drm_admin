@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Table from 'antd/lib/table'
-import Icon from 'antd/lib/icon'
+// import Icon from 'antd/lib/icon'
 import editUser from '../actions/editUser'
 import userDel from '../actions/userDel'
 import Modal from 'antd/lib/modal'
@@ -45,13 +45,15 @@ export default props => {
     key:'action',
     width: '10%',
     render: (text, record) => (
-      <div className='user-arr-action' >
-        <div className='user-arr-item'  style={{ color: '#579df2' }}
+      <div className='table-icon-content' >
+        <div className='table-icon-item'  style={{ color: '#579df2' }}
              onClick={ editUser } data-user-id={ record._id } >
-          <i className="iconfont icon-compile"  style={{ color: '#0068d2' }} ></i>
+          <i className="iconfont icon-compile"  style={{ color: '#0068d2', fontSize:25 }} ></i>
         </div>
-        <div className='user-arr-item'  data-user-id={ record._id }
-             onClick={ confirmDelUser } data-user-name={ record.name } ><Icon type="delete" /></div>
+        <div className='table-icon-item'  data-user-id={ record._id }
+             onClick={ confirmDelUser } data-user-name={ record.name } >
+          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
+        </div>
       </div>
       )
   }]

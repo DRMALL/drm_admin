@@ -7,7 +7,7 @@ import getUserNameArr from '../actions/getUserNameArr'
 import getMachineNameArr from '../actions/getMachineNameArr'
 import AuthorityInputs from '../components/AuthorityInputs'
 import authEditPost from '../actions/authEditPost'
-import Button from 'antd/lib/button'
+// import Button from 'antd/lib/button'
 
 export default class AtuhEdit extends Component {
   componentDidMount() {
@@ -31,7 +31,7 @@ export default class AtuhEdit extends Component {
                                 machineNameArr={ machineNameArr }
                                 num={ 0 } />
         <div className='authority-new-button' >
-          <Button onClick={ authEditPost } >提交修改</Button>
+          <div className='machine-edit-btn' onClick={ authEditPost } >修改</div>
         </div>
       </div>
       )

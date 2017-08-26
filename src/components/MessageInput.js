@@ -17,8 +17,8 @@ export default props => {
   const { previewVisible, previewImage, fileList, title, abstract, content, isEdit, messageRichImg } = props.state.message
   const uploadButton = (
       <div>
-        <Icon type="plus" />
-        <div className="ant-upload-text">上传图片</div>
+        <Icon type="plus" style={{ fontSize: 28, marginBottom:12 }} />
+        <div className="ant-upload-text" style={{ fontSize:12 }} >上传图片</div>
       </div>
   )
   const token = localStorage.getItem('token')

@@ -5,7 +5,7 @@ import PageTip from '../components/PageTip'
 import getUserNameArr from '../actions/getUserNameArr'
 import getMachineNameArr from '../actions/getMachineNameArr'
 import AuthorityInputs from '../components/AuthorityInputs'
-import Button from 'antd/lib/button'
+// import Button from 'antd/lib/button'
 import authorityNew from '../actions/authorityNew'
 import authorityNewReset from '../actions/authorityNewReset'
 import dispatch from '../actions/dispatch'
@@ -40,8 +40,8 @@ export default class Authority extends Component{
             }
           </div>
           <div className='authority-new-button' >
-            <Button onClick={ authorityNewReset }  >重置</Button>
-            <Button onClick={ authorityNew }  >提交</Button>
+            <div className='machine-edit-btns' onClick={ authorityNewReset }  >重置</div>
+            <div className='machine-edit-btn' onClick={ authorityNew }  >提交</div>
           </div>
         </div>
       )

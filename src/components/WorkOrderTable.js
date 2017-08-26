@@ -10,7 +10,6 @@ import getRichEditorValue from '../utils/getRichEditorValue'
 
 export default props => {
   const { workOrder } = props.state.workOrder
-  console.log(workOrder)
   const columns = [{
     title:'标题',
     dataIndex: 'title',
@@ -63,7 +62,7 @@ export default props => {
     render: (text, record) =>
       <div style={{ cursor: 'pointer' }} data-order-id={ record._id }
            onClick={ navToOrderEdit } >
-        <i className="iconfont icon-compile" style={{ color: '#579df2' }} ></i>
+        <i className="iconfont icon-compile" style={{ color: '#579df2', fontSize: 25 }} ></i>
       </div>
   },]
   return(

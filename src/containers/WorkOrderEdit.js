@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import Input from 'antd/lib/input'
-import Button from 'antd/lib/button'
+// import Button from 'antd/lib/button'
 import getInputValue from '../actions/getInputValue'
 import getWorkOrderById from '../actions/getWorkOrderById'
 import { browserHistory } from 'react-router'
@@ -38,8 +38,8 @@ export default class WorkOrderEdit extends Component {
                   style={{ width:400 }} rows={ 5 }
                   value={ advice } />
           <div className='workorder-edit-button' >
-            <Button onClick={ giveUp } >放弃</Button>
-            <Button onClick={ workOrderEditxx } >提交</Button>
+            <div className='machine-edit-btns' onClick={ giveUp } >放弃</div>
+            <div className='machine-edit-btn' onClick={ workOrderEditxx } >提交</div>
           </div>
         </div>
       </div>

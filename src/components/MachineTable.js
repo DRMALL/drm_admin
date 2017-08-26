@@ -77,17 +77,17 @@ export default props => {
     key: 'action',
     width: '8%',
     render: (text, record) =>(
-      <div className='machine-table-action' >
-        <div className='machine-table-left' data-machine-id={ text._id }
+      <div className='table-icon-content' >
+        <div className='table-icon-item' data-machine-id={ text._id }
              onClick={ navToMachineEdit } >
-          <i className="iconfont icon-compile" style={{ fontSize:20 }} ></i>
+          <i className="iconfont icon-compile edit-icon" style={{ fontSize:25, color:'#579df2' }} ></i>
         </div>
-        <div className='machine-table-right' data-machine-id={ text._id }
+        <div className='table-icon-item' data-machine-id={ text._id }
              onClick={ navToMachineControl } >
-          <i className="iconfont icon-details" ></i>
+          <i className="iconfont icon-details details-icon" style={{ fontSize: 20 }} ></i>
         </div>
-        <div className='machine-table-right' onClick={ delMachinexx } data-machine-id={ text._id }  >
-          <i className="iconfont icon-shanchu message-del-icon"  ></i>
+        <div className='table-icon-item' onClick={ delMachinexx } data-machine-id={ text._id }  >
+          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
         </div>
       </div>
       )

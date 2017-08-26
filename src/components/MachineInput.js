@@ -12,15 +12,15 @@ import dispatch from '../actions/dispatch'
 import Icon from 'antd/lib/icon'
 import resetMachineImg from '../actions/resetMachineImg'
 import selectValue from '../utils/selectValue'
-import beforeUpload from '../utils/beforeUpload'
+import beforeUploadMachine from '../utils/beforeUploadMachine'
 
 
 export default props => {
   const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address, classify } = props.state.machine
   const uploadButton = (
       <div>
-        <Icon type="plus" />
-        <div className="ant-upload-text">上传图片</div>
+        <Icon type="plus" style={{ fontSize: 28, marginBottom:12 }}  />
+        <div className="ant-upload-text" style={{ fontSize:12 }} >上传图片</div>
       </div>
   )
     return(
@@ -88,7 +88,9 @@ export default props => {
                   value={ description } />
         </div>
         <div>
-          <div className='machine-input-left machine-input-flexs' >上传设备图片</div>
+          <div style={{ marginTop: 20 }} >
+            上传设备图片<span style={{ color: 'rgba(0,0,0,0.4)' }} >（最多8张）</span>
+          </div>
           <div className='machine-input-upload' >
             <Upload
               action={`${machineUploadImg}?token=${localStorage.getItem('token')}`}
@@ -96,12 +98,12 @@ export default props => {
               listType="picture-card"
               fileList={fileList}
               multiple={ true }
-              beforeUpload={ beforeUpload }
+              beforeUpload={ beforeUploadMachine }
               onPreview={ handlePreviewMachine }
               onChange={ handleChangeMachine }
               onRemove={ resetMachineImg }
             >
-              {fileList.length >= 10 ? null : uploadButton}
+              {fileList.length >= 8 ? null : uploadButton}
             </Upload>
             <Modal visible={ previewVisible } footer={null} onCancel={ handleCancelMachine }>
               <img alt="example" style={{ width: '100%' }} src={ previewImage } />
@@ -120,6 +122,9 @@ function handlePreviewMachine(e) {
 
 function handleChangeMachine(e){
   dispatch('MACHINE_UPLOAD_IMG', e.fileList)
+  let array = e.fileList
+  let arr = array.filter(item => item.status==='uploading')
+  if(!arr.length) dispatch('RESET_UPLOAD_IMG')
 }
 
 function handleCancelMachine(e){

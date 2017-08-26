@@ -41,7 +41,7 @@ const PartTable = ({ table }) => {
     width: '10%',
     render: (text, record) =>
     <div data-part-id={ record._id } onClick={ getPartId } >
-      <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2' }} ></i>
+      <i className="iconfont icon-compile trouble-table-icon"   style={{ color: '#0068d2', fontSize:25 }} ></i>
     </div>
   }]
   return (

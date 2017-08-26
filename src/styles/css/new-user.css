@@ -15,3 +15,10 @@
   margin-top: 5px;
   align-items: center;
 }
+.new-user-button {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin-left: 120px;
+  margin-top: 40px;
+}

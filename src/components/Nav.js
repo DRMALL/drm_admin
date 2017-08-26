@@ -36,7 +36,7 @@ export default class Nav extends Component {
           <Header style={{ background: '#fff' }} >
             <NavHead  { ...this.props } />
           </Header>
-           <Layout style={{ backgroundColor: '#F9FAFC' }}  >
+           <Layout style={{ backgroundColor: '#F9FAFC', minWidth: 1000 }}  >
              <Content className='nav-content' >{
                this.props.children && React.cloneElement(this.props.children, { state: this.props.state, location: window.location, })
             }</Content>

@@ -4,8 +4,8 @@ import React, { Component } from 'react'
 import getMachineById from '../actions/getMachineById'
 import MachineInput from '../components/MachineInput'
 import MachineRecord from '../components/MachineRecord'
-import Button from 'antd/lib/button'
 import editMachine from '../actions/editMachine'
+import editMachineTimeline from '../actions/editMachineTimeline'
 import MachineTimeline from '../components/MachineTimeline'
 import Affix from 'antd/lib/affix'
 import dispatch from '../actions/dispatch'
@@ -23,17 +23,25 @@ export default class MachineEdit extends Component {
     return(
       <div>
         <div className='machine-new-title' >修改设备</div>
-        <div className='machine-edit-content' >
-          <div>
+        <div  >
+          <div className='machine-edit-content' >
             <MachineInput { ...this.props } />
           </div>
-          <Affix onChange={ paddingTimeline } >
-          <div style={{ backgroundColor: '#fff', marginTop: affixChange ? 0 : 250}}  >
+          <div className='machine-edit-xx' >
+            <div className='machine-edit-btn' style={{ marginLeft: 150 }}
+                  onClick={ editMachine } >确认</div>
+          </div>
+          <div className='machine-new-title' >设备时间线</div>
+          <Affix onChange={ paddingTimeline }  >
+          <div style={{ backgroundColor: '#fff', paddingLeft: affixChange ? 50 : 50 }}  >
             <MachineRecord { ...this.props.state.machine } />
-            <Button onClick={ editMachine } className='machine-edit-button' >提交</Button>
+            <div style={{ display: 'flex', marginTop: 30, marginBottom:30 }} >
+              <div className='machine-edit-btn' onClick={ editMachineTimeline }
+                   style={{ marginLeft: 100 }} >提交</div>
+            </div>
           </div>
           </Affix>
-          <div className='machine-edit-timeline' style={{ marginTop: affixChange ? 500 : 30  }} >
+          <div className='machine-edit-timeline' style={{ marginTop: affixChange ? 300 : 0 }} >
             <MachineTimeline timelines={ timelines }
                              editTimeline={ editTimeline } />
           </div>

@@ -3,7 +3,6 @@
 import store from '../commons/store'
 import Http from './Http'
 import { browserHistory } from 'react-router'
-import moment from 'moment'
 // import MissWarn from '../utils/MissWarn'
 import message from 'antd/lib/message'
 import { machineAction } from '../commons/apis'
@@ -12,7 +11,7 @@ import dispatch from './dispatch'
 import editMachineLocation from './editMachineLocation'
 
 export default () => {
-  const { name, number, fileList, cc, pressure, combustible, description, address, line_time, line_des, line_type, timelines, Taddress, classify } = store.getState().machine
+  const { name, number, fileList, cc, pressure, combustible, description, address, Taddress, classify } = store.getState().machine
   if(!name||!number||!(fileList[0])||!cc||!pressure||!combustible||!description||!address||!classify) {
     const str = !name ? '设备名称' : !number ? '设备编号' : !pressure ? '压力分类' : !combustible ? '燃料分类' : !cc ? '排量分类' : !classify ? '设备分类' : !address ? '设备所在地' : !description ? '设备描述' : '设备图片'
     message.warning(`请输入${str}后再次尝试`)
@@ -26,15 +25,15 @@ export default () => {
         item.status = 'done'
         return item
       })
-      let timeline = {}
-      timeline.line_time = moment(line_time).format('YYYY-MM-DD')
-      timeline.line_des = line_des
-      timeline.line_type = line_type
+      // let timeline = {}
+      // timeline.line_time = moment(line_time).format('YYYY-MM-DD')
+      // timeline.line_des = line_des
+      // timeline.line_type = line_type
 
 
 
-      if(line_time&&line_des&&line_type) timelines.push(timeline)
-      let datas = {name, number, images, cc, pressure, combustible, description, timelines, classify }
+      // if(line_time&&line_des&&line_type) timelines.push(timeline)
+      let datas = {name, number, images, cc, pressure, combustible, description,  classify }
       let id = localStorage.getItem('machineId')
 
       if(Taddress !== address ) editMachineLocation(address)

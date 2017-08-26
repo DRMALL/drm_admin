@@ -13,7 +13,7 @@ import authCheckChange from '../utils/authCheckChange'
 const Option = Select.Option
 export default props => {
   const { userNameArr, machineNameArr, newAuthorityArr, num, pathname } = props
-  // console.log('xxx',newAuthorityArr)
+  console.log('xxx',newAuthorityArr)
   return (
     <div className='authority-input-container' >
       <div className='authority-input-flex' >
@@ -48,13 +48,13 @@ export default props => {
           onSelect={ addSelectUser }
           placeholder="选择用户"
           optionFilterProp="children"
-          value={ changeAuthIdToText(newAuthorityArr[num].userId, userNameArr ) }
+          value={ changeAuthIdToTextss(newAuthorityArr[num].userId, userNameArr ) }
           // onChange={handleChange}
           filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
         >
         {
           userNameArr.map(item =>
-            <Option value={ num + '-' + item._id } key={ item._id } >{ item.name }</Option>)
+            <Option value={ num + '-' + item._id } key={ item._id } >{ item.name+'(' + item.email +')' }</Option>)
         }
         </Select>
         <div style={{ visibility: (newAuthorityArr.length -1 === num && pathname !=='/authority/edit') ? 'visible' : 'hidden'}} className='authority-input-icon'
@@ -66,6 +66,12 @@ export default props => {
     )
 }
 
+
+function changeAuthIdToTextss(id, array){
+   let arr = array.filter(item => item._id ===id)
+   if(arr.length) return arr[0].name + '(' + arr[0].email +')'
+   else return null
+}
 
 function addSelectUser(e){
   //目前为单选

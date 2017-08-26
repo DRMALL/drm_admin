@@ -1,14 +1,15 @@
 
+//专门用于设备上传前的检查
 
 import notification from 'antd/lib/notification'
-// import store from '../commons/store'
-// import dispatch from '../actions/dispatch'
+import store from '../commons/store'
+import dispatch from '../actions/dispatch'
 
-function beforeUpload(file){
-  // const { fileList, imgNum } = store.getState().machine
-  // dispatch('UPLOAD_IMG_GET_NUM', imgNum + 1 )
-  // if( fileList.length + imgNum >= 8 ) return false
-  // else {
+function beforeUploadMachine(file){
+  const { fileList,imgNum } = store.getState().machine
+  dispatch('UPLOAD_IMG_GET_NUM', imgNum + 1 )
+  if( fileList.length + imgNum >= 8 ) return false
+  else {
   const type = file.type
   let upload = type ==='image/png'|| type ==='image/gif'|| type ==='image/bmp'|| type ==='image/jpeg' ||  type ==='image/jpg' ||type === 'image/webp'
   if(upload){
@@ -18,6 +19,7 @@ function beforeUpload(file){
         description:'图片大于500k, 不予上传！'})
       return boolean
   }
+  else if(fileList.length>=8) return false
   else {
     notification.error({
     message: '提示',
@@ -25,9 +27,9 @@ function beforeUpload(file){
   })
   return false
 }
-  // }
+  }
 
 
 }
 
-export default beforeUpload
+export default beforeUploadMachine

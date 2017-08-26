@@ -15,3 +15,27 @@
   width: 200px;
   justify-content: space-between;
 }
+.machine-edit-xx {
+  margin-top: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+.machine-edit-btn {
+  background-color: #579df2;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid #579df2;
+  padding: 4px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.machine-edit-btns {
+  background-color: #fff;
+  border-radius: 4px;
+  color: rgba(0,0,0,0.87);
+  border: 1px solid rgba(0,0,0,0.12);
+  padding: 4px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}

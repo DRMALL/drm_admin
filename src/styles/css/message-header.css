@@ -18,6 +18,7 @@
 }
 .message-header-select {
   border-bottom: 5px solid #579df2;
+  color: #579df2;
 }
 .message-header-noselect {
   border-bottom: 5px solid #fff;

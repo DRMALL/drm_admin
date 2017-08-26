@@ -19,7 +19,8 @@ const machine ={
   timeLineId: undefined,
   machineArr: [],
   machineModal: false,
-  downloadTime: []
+  downloadTime: [],
+  imgNum: 0,
 }
 
 const resetMachine = {
@@ -77,6 +78,10 @@ export default ( state=machine, action ) => {
       return Object.assign({}, state, { line_time: undefined, line_des: undefined, line_type: undefined } )
     case 'MACHINE_GET_DWONLOAD_EXCEL_TIME':
       return Object.assign({}, state, { downloadTime: action.payload } )
+    case 'UPLOAD_IMG_GET_NUM':
+      return Object.assign({}, state, { imgNum: action.payload } )
+    case 'RESET_UPLOAD_IMG':
+      return Object.assign({}, state, { imgNum: 0 } )
 
 //测试模拟数据
     case 'machine_test_default_value':

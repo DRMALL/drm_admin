@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import MachineInput from '../components/MachineInput'
-import Button from 'antd/lib/button'
+// import Button from 'antd/lib/button'
 import machineNews from '../actions/machineNews'
 import MachineRecord from '../components/MachineRecord'
 import dispatch from '../actions/dispatch'
@@ -19,7 +19,10 @@ export default class MachineNew extends Component {
         <div className='machine-new-content' >
           <MachineInput { ...this.props } />
           <MachineRecord { ...this.props.state.machine } />
-          <Button className='machine-new-button' onClick={ machineNews } >提交</Button>
+          <div style={{ display: 'flex', marginTop: 20 }} >
+            <div className='machine-new-button machine-edit-btn' onClick={ machineNews }
+                >提交</div>
+          </div>
         </div>
       </div>
       )

@@ -57,16 +57,16 @@ export default props => {
     key: 'action',
     width: '15%',
     render: (text, record) => (
-      <div className='message-arr-action' >
-        <div className='message-arr-item'  style={{ color: '#579df2' }}
+      <div className='table-icon-content' >
+        <div className='table-icon-item' onClick={ delMessagexx } data-message-id={ record._id }  >
+          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
+        </div>
+        <div className='table-icon-item'  style={{ color: '#579df2' }}
              onClick={ editMessagexx } data-message-id={ record._id } >
-             <i className="iconfont icon-compile  message-edit-icon" ></i>
+             <i className="iconfont icon-compile  edit-icon" style={{ fontSize:25 }} ></i>
         </div>
-        <div className='message-arr-item' style={{ display: messageSelect==='send' ? 'none' : 'block' }} onClick={ confirSendxx } data-message-id={ record._id } >
-          <i className="iconfont icon-fasong  message-send-icon" style={{ width:12,height:12 }}  ></i>
-        </div>
-        <div className='message-arr-item' onClick={ delMessagexx } data-message-id={ record._id }  >
-          <i className="iconfont icon-shanchu message-del-icon"  ></i>
+        <div className='table-icon-item' style={{ display: messageSelect==='send' ? 'none' : 'block' }} onClick={ confirSendxx } data-message-id={ record._id } >
+          <i className="iconfont icon-fasong  send-icon" style={{ fontSize:15 }}  ></i>
         </div>
       </div>
       )
@@ -105,16 +105,16 @@ export default props => {
     key: 'action',
     width: '15%',
     render: (text, record) => (
-      <div className='message-arr-action' >
-        <div className='message-arr-item'  style={{ color: '#579df2' }}
+      <div className='table-icon-content' >
+        <div className='table-icon-item' onClick={ delMessagexx } data-message-id={ record._id }  >
+          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
+        </div>
+        <div className='table-icon-item'  style={{ color: '#579df2' }}
              onClick={ editMessagexx } data-message-id={ record._id } >
-             <i className="iconfont icon-compile  message-edit-icon" ></i>
+             <i className="iconfont icon-compile  edit-icon" style={{ fontSize:25 }} ></i>
         </div>
-        <div className='message-arr-item' style={{ display: messageSelect==='send' ? 'none' : 'block' }} onClick={ confirSendxx } data-message-id={ record._id } >
-          <i className="iconfont icon-fasong  message-send-icon" style={{ width:12,height:12 }}  ></i>
-        </div>
-        <div className='message-arr-item' onClick={ delMessagexx } data-message-id={ record._id }  >
-          <i className="iconfont icon-shanchu message-del-icon"  ></i>
+        <div className='table-icon-item' style={{ display: messageSelect==='send' ? 'none' : 'block' }} onClick={ confirSendxx } data-message-id={ record._id } >
+          <i className="iconfont icon-fasong  send-icon" style={{ fontSize: 15 }}  ></i>
         </div>
       </div>
       )

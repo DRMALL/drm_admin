@@ -45,13 +45,13 @@ export default props => {
     key:'action',
     width: '10%',
     render: (text, record) => (
-      <div className='user-arr-action' >
-        <div className='user-arr-item'  style={{ color: '#579df2' }}
+      <div className='table-icon-content' >
+        <div className='table-icon-item'  style={{ color: '#579df2' }}
              onClick={ navToEditAuth } data-auth-id={ record._id } >
-          <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2' }} ></i>
+          <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2', fontSize:25 }} ></i>
         </div>
-        <div className='user-arr-item' onClick={ delAuth } data-auth-id={ record._id }  >
-          <i className="iconfont icon-shanchu message-del-icon"  ></i>
+        <div className='table-icon-item' onClick={ delAuth } data-auth-id={ record._id }  >
+          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
         </div>
       </div>
       )

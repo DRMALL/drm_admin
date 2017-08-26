@@ -44,10 +44,10 @@ export default props => {
   render: (text, record) =>
     <div className='troubel-cation' >
       <div onClick={ getTrouble } data-trouble-id={ record._id } >
-        <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2' }} ></i>
+        <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2', fontSize: 25 }} ></i>
       </div>
-      <div className='user-arr-item' onClick={ delTroubel } data-trouble-id={ record._id }  >
-          <i className="iconfont icon-shanchu message-del-icon"  ></i>
+      <div className='user-arr-item' onClick={ delTroubel } data-trouble-id={ record._id } style={{ marginLeft: 10 }} >
+          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20,marginBottom: 3}} ></i>
         </div>
     </div>
   },]
