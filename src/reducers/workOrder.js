@@ -7,12 +7,13 @@ const workOrder = {
   title:'',
   content: '',
   advice: '',
+  isShowModal: false,
 }
 
 export default ( state=workOrder, action )=> {
   switch(action.type){
     case 'WORKORDER_GET_ORDER_ARR':
-      return Object.assign({}, state, { TworkOrder: action.payload } )
+      return Object.assign({}, state, { TworkOrder: action.payload, isShowModal: false } )
     case 'WORKORDER_SELECT_WITCH_ORDER_DISPLAY':
       return Object.assign({}, state, { workOrder: action.payload } )
     case 'WORKORDER_DISPLAY_TROUBLE_ORDER':
@@ -27,6 +28,14 @@ export default ( state=workOrder, action )=> {
       return Object.assign({}, state, action.payload )
     case 'WORKORDER_EDIT_RESET':
       return Object.assign({}, state, { advice: '' } )
+    case 'WORKORDER_GET_DEL_ORDER_ID':
+      return Object.assign({}, state, { workOrderId: action.payload, isShowModal: true } )
+    case 'WORKORDER_CANCLE_ORDER':
+      return Object.assign({}, state, { isShowModal: false } )
+    case 'WORKORDER_DEL_WORKORDER_FAIL':
+      return Object.assign({}, state, { isShowModal: false } )
+    case 'WORKORDER_DEL_WORKORDER_SUCCESS':
+      return Object.assign({}, state, { isShowModal: false } )
     default:
       return state
   }

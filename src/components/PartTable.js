@@ -4,6 +4,7 @@ import React from 'react'
 import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
 import TableTextHidden from './TableTextHidden'
+// import delIcon from '../images/dels.png'
 
 const PartTable = ({ table }) => {
   const columns =[{

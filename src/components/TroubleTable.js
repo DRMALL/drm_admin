@@ -9,6 +9,7 @@ import Modal from 'antd/lib/modal'
 import troubleDelById from '../actions/troubleDelById'
 import dispatch from '../actions/dispatch'
 import getRichEditorValue from '../utils/getRichEditorValue'
+import delIcon from '../images/dels.png'
 
 export default props => {
   const { troubleArr, troubleModal } = props.state.trouble
@@ -35,19 +36,19 @@ export default props => {
   title: '添加时间',
   dataIndex: 'createdAtTime',
   key: 'createdAtTime',
-  width: '20%',
+  width: '10%',
   render: text =>  TableTime( text, 15 )
   },{
   title: '操作',
   key: 'action',
-  width: '15%',
+  width: '10%',
   render: (text, record) =>
     <div className='troubel-cation' >
       <div onClick={ getTrouble } data-trouble-id={ record._id } >
         <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2', fontSize: 25 }} ></i>
       </div>
       <div className='user-arr-item' onClick={ delTroubel } data-trouble-id={ record._id } style={{ marginLeft: 10 }} >
-          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20,marginBottom: 3}} ></i>
+          <img src={ delIcon } alt='删除' style={{ width:20,height:20, marginBottom:5 }} />
         </div>
     </div>
   },]

@@ -23,14 +23,30 @@ exports[`PartTable test 1`] = `
               class=""
             >
               <colgroup>
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
+                <col
+                  style="width:10%;min-width:10%;"
+                />
+                <col
+                  style="width:15%;min-width:15%;"
+                />
+                <col
+                  style="width:15%;min-width:15%;"
+                />
+                <col
+                  style="width:10%;min-width:10%;"
+                />
+                <col
+                  style="width:10%;min-width:10%;"
+                />
+                <col
+                  style="width:20%;min-width:20%;"
+                />
+                <col
+                  style="width:10%;min-width:10%;"
+                />
+                <col
+                  style="width:10%;min-width:10%;"
+                />
               </colgroup>
               <thead
                 class="ant-table-thead"
@@ -139,7 +155,7 @@ exports[`PartTable test 1`] = `
                     >
                       <i
                         class="iconfont icon-compile trouble-table-icon"
-                        style="color:#0068d2;"
+                        style="color:#0068d2;font-size:25px;"
                       />
                     </div>
                   </td>
@@ -186,7 +202,7 @@ exports[`PartTable test 1`] = `
                     >
                       <i
                         class="iconfont icon-compile trouble-table-icon"
-                        style="color:#0068d2;"
+                        style="color:#0068d2;font-size:25px;"
                       />
                     </div>
                   </td>

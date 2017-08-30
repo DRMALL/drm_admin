@@ -15,6 +15,7 @@ export default () => {
     getMachineArr()
   } )
   .catch(res => {
+    dispatch('MACHINE_DEL_MACHINE_FAIL')
     console.error(res)
   })
 }

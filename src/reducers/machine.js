@@ -21,6 +21,11 @@ const machine ={
   machineModal: false,
   downloadTime: [],
   imgNum: 0,
+  timelineKind: undefined,
+  TimelineKindArr: [],
+  CCKindArr: [],
+  presureKindArr: [],
+  fuleKindArr:[]
 }
 
 const resetMachine = {
@@ -34,9 +39,11 @@ const resetMachine = {
   address: '',
   line_time: null,
   line_des: '',
+  line_type: null,
   timetype: null,
   timelines: [],
   affixChange: false,
+  classify:null,
 }
 
 export default ( state=machine, action ) => {
@@ -74,6 +81,8 @@ export default ( state=machine, action ) => {
       return Object.assign({}, state,  { delMachineId: undefined, machineModal: false } )
     case 'MACHINE_DEL_MACHINE_SUCCESS':
       return Object.assign({}, state,  { delMachineId: undefined, machineModal: false } )
+    case 'MACHINE_DEL_MACHINE_FAIL':
+      return Object.assign({}, state, { machineModal: false } )
     case 'MACHINE_PUT_TIMELINE_SUCCESS':
       return Object.assign({}, state, { line_time: undefined, line_des: undefined, line_type: undefined } )
     case 'MACHINE_GET_DWONLOAD_EXCEL_TIME':
@@ -82,6 +91,22 @@ export default ( state=machine, action ) => {
       return Object.assign({}, state, { imgNum: action.payload } )
     case 'RESET_UPLOAD_IMG':
       return Object.assign({}, state, { imgNum: 0 } )
+    case 'MACHINE_TIME_GET_MACHINE_TIME_SUCCESS':
+      return Object.assign({}, state, { TimelineKindArr: action.payload } )
+    case 'MACHINE_KIND_NEW_INPUT_RESET':
+      return Object.assign({}, state, { timelineKind: undefined, CCKind:undefined, presureKind: undefined, fuleKind: undefined } )
+    case 'MACHINE_KIND_ARR_GET_KIND_ID':
+      return Object.assign({}, state, { KindId: action.payload, editValue:undefined } )
+    case 'MACHINE_GET_EDIT_VALUE':
+      return Object.assign({}, state, { editValue: action.payload } )
+    case 'MACHINE_GET_INPUT_EDIT_VALUE':
+      return Object.assign({}, state, { editValue: action.payload } )
+    case 'MACHINE_CC_GET_MACHINE_CC_SUCCESS':
+      return Object.assign({}, state, { CCKindArr: action.payload } )
+    case 'MACHINE_PRESURE_GET_MACHINE_PRESURE_SUCCESS':
+      return Object.assign({}, state, { presureKindArr: action.payload } )
+    case 'MACHINE_FULE_GET_MACHINE_FULE_SUCCESS':
+      return Object.assign({}, state, { fuleKindArr: action.payload } )
 
 //测试模拟数据
     case 'machine_test_default_value':

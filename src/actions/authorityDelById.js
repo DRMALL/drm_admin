@@ -17,6 +17,7 @@ export default () => {
     resolve()
   })
   .catch(res => {
+    dispatch('AUTHROITY_DEL_AUTH_FAIL')
     console.error(res)
     reject()
   })

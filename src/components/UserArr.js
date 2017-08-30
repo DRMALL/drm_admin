@@ -6,7 +6,7 @@ import Table from 'antd/lib/table'
 import editUser from '../actions/editUser'
 import userDel from '../actions/userDel'
 import Modal from 'antd/lib/modal'
-// import store from '../commons/store'
+import delIcon from '../images/dels.png'
 
 export default props => {
   const { userArr } = props.state.user
@@ -52,7 +52,7 @@ export default props => {
         </div>
         <div className='table-icon-item'  data-user-id={ record._id }
              onClick={ confirmDelUser } data-user-name={ record.name } >
-          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
+          <img src={ delIcon } alt='删除' style={{ width:20,height:20 }} />
         </div>
       </div>
       )

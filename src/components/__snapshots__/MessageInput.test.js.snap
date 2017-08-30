@@ -23,17 +23,725 @@ exports[`MessageInput test 1`] = `
   >
     内容
   </div>
-  <textarea
-    className="ant-input"
-    data-id="content"
-    data-path="MESSAGE"
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder="输入信息内容"
-    rows={6}
-    style={Object {}}
-    value={undefined}
-  />
+  <div
+    className="RichEditor-root editorHidden"
+    content={undefined}
+    id="text-editor-container"
+  >
+    <div>
+      <div
+        className="RichEditor-controls"
+      >
+        <span
+          className="RichEditor-styleButton"
+          onClick={[Function]}
+          title="undo (Ctrl-Z/Cmd-Z)"
+        >
+          <i
+            className="anticon anticon-editor_undo"
+          />
+        </span>
+        <span
+          className="RichEditor-styleButton"
+          onClick={[Function]}
+          title="redo (Ctrl-Y/Cmd-Shift-Z)"
+        >
+          <i
+            className="anticon anticon-editor_redo"
+          />
+        </span>
+      </div>
+      <div
+        className="RichEditor-controls"
+      >
+        <span
+          className="RichEditor-styleButton"
+          onBlur={undefined}
+          onClick={[Function]}
+          onFocus={undefined}
+          onMouseDown={[Function]}
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          onTouchStart={[Function]}
+        >
+          <i
+            className="anticon anticon-editor_empty_style"
+          />
+        </span>
+      </div>
+      <div
+        className="RichEditor-controls"
+      >
+        <span
+          className="RichEditor-styleButton"
+          onClick={[Function]}
+          title="Paste plain text "
+        >
+          <i
+            className="anticon anticon-editor_paset_text"
+          />
+        </span>
+      </div>
+      <div
+        className="RichEditor-controls"
+      >
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Head level 1"
+          >
+            <i
+              className="anticon anticon-editor_H1"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Head level 2"
+          >
+            <i
+              className="anticon anticon-editor_H2"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Head level 3"
+          >
+            <i
+              className="anticon anticon-editor_H3"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Head level 4"
+          >
+            <i
+              className="anticon anticon-editor_H4"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Quotes"
+          >
+            <i
+              className="anticon anticon-editor_refs"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Unordered list"
+          >
+            <i
+              className="anticon anticon-editor_ul"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Ordered list"
+          >
+            <i
+              className="anticon anticon-editor_ol"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Predefined"
+          >
+            <i
+              className="anticon anticon-editor_pre"
+            />
+          </span>
+        </span>
+      </div>
+      <div
+        className="RichEditor-controls"
+      >
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Left"
+          >
+            <i
+              className="anticon anticon-editor_alignment_left"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Center"
+          >
+            <i
+              className="anticon anticon-editor_alignment_center"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Right"
+          >
+            <i
+              className="anticon anticon-editor_alignment_right"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Justify"
+          >
+            <i
+              className="anticon anticon-editor_alignment_justify"
+            />
+          </span>
+        </span>
+      </div>
+      <div
+        className="RichEditor-controls"
+      >
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Bold"
+          >
+            <i
+              className="anticon anticon-editor_b"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Italic"
+          >
+            <i
+              className="anticon anticon-editor_i"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Underline"
+          >
+            <i
+              className="anticon anticon-editor_u"
+            />
+          </span>
+        </span>
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            title="Code"
+          >
+            <i
+              className="anticon anticon-editor_e"
+            />
+          </span>
+        </span>
+      </div>
+      <div
+        className="RichEditor-controls"
+        style={
+          Object {
+            "paddingRight": "20px",
+          }
+        }
+      >
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#ED5565",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#Da4453",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#fc6e51",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#e9573f",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#ffce54",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#f6bb42",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#a0d468",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#bcc152",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#48cfad",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#37bc9b",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#4fc1e9",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#38afda",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#5d9cec",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#4a89dc",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#ac92ec",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#967adc",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#ccd1d9",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#aab2bd",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#656d78",
+              }
+            }
+          >
+            　
+          </span>
+        </div>
+        <div
+          className="RichEditor-color"
+        >
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#434a54",
+              }
+            }
+          >
+            　
+          </span>
+          <span
+            className="RichEditor-controls-split"
+          >
+            |
+          </span>
+        </div>
+      </div>
+      <div
+        className="RichEditor-controls"
+      >
+        <span>
+          <span
+            className="RichEditor-styleButton"
+            onClick={[Function]}
+          >
+            <i
+              className="anticon anticon-editor_image_masker"
+              title="Insert watermark images"
+            />
+          </span>
+        </span>
+        <span
+          className="RichEditor-styleButton"
+          onClick={[Function]}
+        >
+          <i
+            className="anticon anticon-editor_image"
+            title="Insert original images"
+          />
+        </span>
+        <div
+          style={
+            Object {
+              "display": "inline",
+              "height": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 0,
+            }
+          }
+        />
+      </div>
+      <div
+        className="RichEditor-controls"
+      >
+        <span
+          className="RichEditor-styleButton"
+          onClick={[Function]}
+        >
+          Full
+        </span>
+      </div>
+    </div>
+    <div
+      className="RichEditor-editor"
+      onClick={undefined}
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      <div
+        className="DraftEditor-root"
+      >
+        <div
+          className="DraftEditor-editorContainer"
+        >
+          <div
+            aria-activedescendant={undefined}
+            aria-autocomplete={undefined}
+            aria-describedby={null}
+            aria-expanded={undefined}
+            aria-haspopup={undefined}
+            aria-label={undefined}
+            aria-owns={undefined}
+            autoCapitalize={undefined}
+            autoComplete={undefined}
+            autoCorrect={undefined}
+            className="notranslate public-DraftEditor-content"
+            contentEditable={true}
+            data-testid={undefined}
+            onBeforeInput={[Function]}
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
+            onCompositionStart={[Function]}
+            onCopy={[Function]}
+            onCut={[Function]}
+            onDragEnd={[Function]}
+            onDragEnter={[Function]}
+            onDragLeave={[Function]}
+            onDragOver={[Function]}
+            onDragStart={[Function]}
+            onDrop={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onKeyUp={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onSelect={[Function]}
+            role="textbox"
+            spellCheck={true}
+            style={
+              Object {
+                "outline": "none",
+                "whiteSpace": "pre-wrap",
+                "wordWrap": "break-word",
+              }
+            }
+            suppressContentEditableWarning={true}
+            tabIndex={undefined}
+          >
+            <div
+              data-contents="true"
+            >
+              <div
+                className=""
+                data-block={true}
+                data-editor="ds59f"
+                data-offset-key="furpc-0-0"
+              >
+                <div
+                  className="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"
+                  data-offset-key="furpc-0-0"
+                >
+                  <span
+                    data-offset-key="furpc-0-0"
+                    style={Object {}}
+                  >
+                    <br
+                      data-text="true"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "none",
+          "height": "500px",
+          "width": "100%",
+        }
+      }
+    >
+      <textarea
+        onChange={[Function]}
+        placeholder="Please markdown here"
+        style={
+          Object {
+            "height": "100%",
+            "overflowY": "visible",
+            "width": "100%",
+          }
+        }
+        value={undefined}
+      />
+    </div>
+  </div>
   <div
     className="message-new-tip"
   >
@@ -97,9 +805,20 @@ exports[`MessageInput test 1`] = `
           <div>
             <i
               className="anticon anticon-plus"
+              style={
+                Object {
+                  "fontSize": 28,
+                  "marginBottom": 12,
+                }
+              }
             />
             <div
               className="ant-upload-text"
+              style={
+                Object {
+                  "fontSize": 12,
+                }
+              }
             >
               上传图片
             </div>

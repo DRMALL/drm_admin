@@ -17,7 +17,7 @@ exports[`TimeLineEdit test 1`] = `
       <div>
         <input
           class="ant-calendar-picker-input ant-input"
-          placeholder="2017-08-15"
+          placeholder="2017-08-30"
           readonly=""
           value=""
         />

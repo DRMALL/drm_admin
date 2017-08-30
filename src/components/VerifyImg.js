@@ -15,7 +15,7 @@ export default class MyImage extends Component{
       // const { verifyArr, verifyBgStar } = this.props.state.login
       const { verifyArr, verifyBgStar } = store.getState().login
         return (
-        <Stage width={200} height={70} onClick={ change } id='verifyChange' >
+        <Stage width={150} height={70} onClick={ change } id='verifyChange' >
           <Layer >
           {
            verifyArr.map((item,index) =>

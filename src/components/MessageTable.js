@@ -8,6 +8,7 @@ import messageChangeStatus from '../actions/messageChangeStatus'
 import messageDel from '../actions/messageDel'
 import TableTextHidden from './TableTextHidden'
 import TableTime from './TableTime'
+import delIcon from '../images/dels.png'
 
 //本页面没有配置好table，还是使用了复制。。
 export default props => {
@@ -59,7 +60,7 @@ export default props => {
     render: (text, record) => (
       <div className='table-icon-content' >
         <div className='table-icon-item' onClick={ delMessagexx } data-message-id={ record._id }  >
-          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
+          <img src={ delIcon } alt='删除' style={{ width:20,height:20 }} />
         </div>
         <div className='table-icon-item'  style={{ color: '#579df2' }}
              onClick={ editMessagexx } data-message-id={ record._id } >
@@ -107,7 +108,7 @@ export default props => {
     render: (text, record) => (
       <div className='table-icon-content' >
         <div className='table-icon-item' onClick={ delMessagexx } data-message-id={ record._id }  >
-          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
+          <img src={ delIcon } alt='删除' style={{ width:20,height:20 }} />
         </div>
         <div className='table-icon-item'  style={{ color: '#579df2' }}
              onClick={ editMessagexx } data-message-id={ record._id } >

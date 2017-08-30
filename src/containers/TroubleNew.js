@@ -17,7 +17,7 @@ export default class TroubleNew extends Component {
     console.log(this.props.state.trouble)
     return(
     <div>
-      <div className='trouble-new-title' >添加故障</div>
+      <div className='trouble-new-title' >添加新的知识</div>
       <div className='trouble-new-content' >
         <TroubleInput  { ...this.props } />
         <div style={{display: 'flex'}}>

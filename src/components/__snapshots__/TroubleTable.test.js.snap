@@ -34,10 +34,10 @@ exports[`TroubleTable test 1`] = `
                     style="width:30%;min-width:30%;"
                   />
                   <col
-                    style="width:20%;min-width:20%;"
+                    style="width:10%;min-width:10%;"
                   />
                   <col
-                    style="width:15%;min-width:15%;"
+                    style="width:10%;min-width:10%;"
                   />
                 </colgroup>
                 <thead
@@ -126,15 +126,18 @@ exports[`TroubleTable test 1`] = `
                         >
                           <i
                             class="iconfont icon-compile trouble-table-icon"
-                            style="color:#0068d2;"
+                            style="color:#0068d2;font-size:25px;"
                           />
                         </div>
                         <div
                           class="user-arr-item"
                           data-trouble-id="sd345"
+                          style="margin-left:10px;"
                         >
-                          <i
-                            class="iconfont icon-shanchu message-del-icon"
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;margin-bottom:5px;"
                           />
                         </div>
                       </div>
@@ -182,15 +185,18 @@ exports[`TroubleTable test 1`] = `
                         >
                           <i
                             class="iconfont icon-compile trouble-table-icon"
-                            style="color:#0068d2;"
+                            style="color:#0068d2;font-size:25px;"
                           />
                         </div>
                         <div
                           class="user-arr-item"
                           data-trouble-id="sd3ds45"
+                          style="margin-left:10px;"
                         >
-                          <i
-                            class="iconfont icon-shanchu message-del-icon"
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;margin-bottom:5px;"
                           />
                         </div>
                       </div>

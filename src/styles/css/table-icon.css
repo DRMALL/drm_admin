@@ -1,0 +1,22 @@
+.table-icon-content {
+  display: flex;
+  align-items: center;
+}
+.table-icon-item {
+  align-items: center;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.del-icon {
+  color: #f00;
+}
+.edit-icon {
+  font-size: 20px;
+}
+.send-icon {
+  color: #579df2;
+  font-size: 15px;
+}
+.details-icon {
+  color: #579df2;
+}

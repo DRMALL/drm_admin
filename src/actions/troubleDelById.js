@@ -14,6 +14,7 @@ export default () => {
     getTroubleArr()
   })
   .catch( res => {
+    dispatch('TROUBLE_DEL_TROUBLE_FAIL')
     console.error(res)
   } )
 }

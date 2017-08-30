@@ -10,6 +10,7 @@ import Modal from 'antd/lib/modal'
 import machineDelById from '../actions/machineDelById'
 import dispatch from '../actions/dispatch'
 import Tooltip from 'antd/lib/tooltip'
+import delIcon from '../images/dels.png'
 
 export default props => {
   const { machineArr, machineModal } = props.state.machine
@@ -87,7 +88,7 @@ export default props => {
           <i className="iconfont icon-details details-icon" style={{ fontSize: 20 }} ></i>
         </div>
         <div className='table-icon-item' onClick={ delMachinexx } data-machine-id={ text._id }  >
-          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
+          <img src={ delIcon } alt='删除' style={{ width:20,height:20 }} />
         </div>
       </div>
       )

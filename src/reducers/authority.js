@@ -59,6 +59,8 @@ export default ( state=authority, action ) => {
       return Object.assign({}, state, { authModal: false } )
     case 'AUTHROITY_DEL_AUTH_SUCCESS':
       return Object.assign({}, state, { authModal: false, status: 'del auth success' } )
+    case 'AUTHROITY_DEL_AUTH_fail':
+      return Object.assign({}, state, { authModal: false, status: 'del auth fail' } )
     case 'AUTHORITY_EDIT_POST_SUCCESS':
       return Object.assign({}, state, { newAuthorityArr: [{
     userId: '',

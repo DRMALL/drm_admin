@@ -114,13 +114,19 @@ exports[`WorkOrderTable test 1`] = `
                         class="ant-table-row-indent indent-level-0"
                         style="padding-left:0px;"
                       />
-                      标题
+                      <div>
+                        <div>
+                          标题
+                        </div>
+                      </div>
                     </td>
                     <td
                       class=""
                     >
                       <div>
-                        asldjajtwe;ojawrw
+                        <div>
+                          asldjajtwe;ojawrw
+                        </div>
                       </div>
                     </td>
                     <td
@@ -143,13 +149,27 @@ exports[`WorkOrderTable test 1`] = `
                       class=""
                     >
                       <div
-                        data-order-id="2323dsrw"
-                        style="cursor:pointer;"
+                        class="table-icon-content"
                       >
-                        <i
-                          class="iconfont icon-compile"
-                          style="color:#579df2;"
-                        />
+                        <div
+                          class="table-icon-item"
+                          data-order-id="2323dsrw"
+                        >
+                          <i
+                            class="iconfont icon-compile"
+                            style="color:#579df2;font-size:25px;"
+                          />
+                        </div>
+                        <div
+                          class="table-icon-item"
+                          data-work-order-id="2323dsrw"
+                        >
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;"
+                          />
+                        </div>
                       </div>
                     </td>
                   </tr>
@@ -163,13 +183,19 @@ exports[`WorkOrderTable test 1`] = `
                         class="ant-table-row-indent indent-level-0"
                         style="padding-left:0px;"
                       />
-                      标题
+                      <div>
+                        <div>
+                          标题
+                        </div>
+                      </div>
                     </td>
                     <td
                       class=""
                     >
                       <div>
-                        asldjajtwe;ojawrw
+                        <div>
+                          asldjajtwe;ojawrw
+                        </div>
                       </div>
                     </td>
                     <td
@@ -192,13 +218,27 @@ exports[`WorkOrderTable test 1`] = `
                       class=""
                     >
                       <div
-                        data-order-id="2323dsrds"
-                        style="cursor:pointer;"
+                        class="table-icon-content"
                       >
-                        <i
-                          class="iconfont icon-compile"
-                          style="color:#579df2;"
-                        />
+                        <div
+                          class="table-icon-item"
+                          data-order-id="2323dsrds"
+                        >
+                          <i
+                            class="iconfont icon-compile"
+                            style="color:#579df2;font-size:25px;"
+                          />
+                        </div>
+                        <div
+                          class="table-icon-item"
+                          data-work-order-id="2323dsrds"
+                        >
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;"
+                          />
+                        </div>
                       </div>
                     </td>
                   </tr>

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import getInputValue from '../actions/getInputValue'
-import { recordKind } from '../commons/machineLable'
+// import { recordKind } from '../commons/machineLable'
 import Select from 'antd/lib/select'
 import Input from 'antd/lib/input'
 import selectValue from '../utils/selectValue'
@@ -12,7 +12,7 @@ import dispatch from '../actions/dispatch'
 
 
 export default props => {
-  const { line_time, line_type, line_des } = props
+  const { line_time, line_type, line_des, TimelineKindArr } = props
   return (
     <div onChange={affixed => console.log(affixed)} >
       <div className='machine-input-flex' >
@@ -25,8 +25,8 @@ export default props => {
           <Select style={{ width: 400 }} placeholder='选择分类'
                   onChange={ selectValue } value={ line_type } >
                   {
-                    recordKind.map((item, index) =>
-                      <Select.Option key={ index } value={ item+'/line_type' } >{ item }</Select.Option>)
+                    TimelineKindArr.map((item, index) =>
+                      <Select.Option key={ index } value={ item.text+'/line_type' } >{ item.text }</Select.Option>)
                   }
           </Select>
         </div>

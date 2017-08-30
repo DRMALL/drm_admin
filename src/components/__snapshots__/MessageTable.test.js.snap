@@ -141,33 +141,36 @@ exports[`MessageTable test 1`] = `
                       class=""
                     >
                       <div
-                        class="message-arr-action"
+                        class="table-icon-content"
                       >
                         <div
-                          class="message-arr-item"
+                          class="table-icon-item"
+                          data-message-id="edt34"
+                        >
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;"
+                          />
+                        </div>
+                        <div
+                          class="table-icon-item"
                           data-message-id="edt34"
                           style="color:#579df2;"
                         >
                           <i
-                            class="iconfont icon-compile  message-edit-icon"
+                            class="iconfont icon-compile  edit-icon"
+                            style="font-size:25px;"
                           />
                         </div>
                         <div
-                          class="message-arr-item"
+                          class="table-icon-item"
                           data-message-id="edt34"
                           style="display:none;"
                         >
                           <i
-                            class="iconfont icon-fasong  message-send-icon"
-                            style="width:12px;height:12px;"
-                          />
-                        </div>
-                        <div
-                          class="message-arr-item"
-                          data-message-id="edt34"
-                        >
-                          <i
-                            class="iconfont icon-shanchu message-del-icon"
+                            class="iconfont icon-fasong  send-icon"
+                            style="font-size:15px;"
                           />
                         </div>
                       </div>
@@ -210,33 +213,36 @@ exports[`MessageTable test 1`] = `
                       class=""
                     >
                       <div
-                        class="message-arr-action"
+                        class="table-icon-content"
                       >
                         <div
-                          class="message-arr-item"
+                          class="table-icon-item"
+                          data-message-id="df345"
+                        >
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;"
+                          />
+                        </div>
+                        <div
+                          class="table-icon-item"
                           data-message-id="df345"
                           style="color:#579df2;"
                         >
                           <i
-                            class="iconfont icon-compile  message-edit-icon"
+                            class="iconfont icon-compile  edit-icon"
+                            style="font-size:25px;"
                           />
                         </div>
                         <div
-                          class="message-arr-item"
+                          class="table-icon-item"
                           data-message-id="df345"
                           style="display:none;"
                         >
                           <i
-                            class="iconfont icon-fasong  message-send-icon"
-                            style="width:12px;height:12px;"
-                          />
-                        </div>
-                        <div
-                          class="message-arr-item"
-                          data-message-id="df345"
-                        >
-                          <i
-                            class="iconfont icon-shanchu message-del-icon"
+                            class="iconfont icon-fasong  send-icon"
+                            style="font-size:15px;"
                           />
                         </div>
                       </div>

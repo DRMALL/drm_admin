@@ -6,10 +6,15 @@ import { browserHistory } from 'react-router'
 import TableTextHidden from './TableTextHidden'
 import TableTime from './TableTime'
 import getRichEditorValue from '../utils/getRichEditorValue'
+import dispatch from '../actions/dispatch'
+import workOrderDelById from '../actions/workOrderDelById'
+import Modal from 'antd/lib/modal'
+import delIcon from '../images/dels.png'
 
 
 export default props => {
-  const { workOrder } = props.state.workOrder
+  const { workOrder, isShowModal } = props.state.workOrder
+  console.log(workOrder)
   const columns = [{
     title:'标题',
     dataIndex: 'title',
@@ -60,16 +65,34 @@ export default props => {
     dataIndex: 'action',
     width: '10%',
     render: (text, record) =>
-      <div style={{ cursor: 'pointer' }} data-order-id={ record._id }
-           onClick={ navToOrderEdit } >
-        <i className="iconfont icon-compile" style={{ color: '#579df2', fontSize: 25 }} ></i>
+      <div className='table-icon-content' >
+        <div  data-order-id={ record._id }
+             onClick={ navToOrderEdit } className='table-icon-item' >
+          <i className="iconfont icon-compile" style={{ color: '#579df2', fontSize: 25 }} ></i>
+        </div>
+        <div className='table-icon-item' onClick={ delWorkOrderxx } data-work-order-id={ record._id }  >
+          <img src={ delIcon } alt='删除' style={{ width:20,height:20 }} />
+        </div>
       </div>
   },]
   return(
     <div>
       <Table columns={ columns } dataSource={ workOrder } rowKey={ record => record._id } />
+      <Modal title='提示' visible={ isShowModal } okText='确定' cancelText='取消'
+             onOk={ workOrderDelById } onCancel={ cancleDel }  >
+        <p>确定删除此工单？</p>
+      </Modal>
     </div>
     )
+}
+
+function delWorkOrderxx(e){
+  const { workOrderId } = e.currentTarget.dataset
+  dispatch('WORKORDER_GET_DEL_ORDER_ID', workOrderId)
+}
+
+function cancleDel(){
+  dispatch('WORKORDER_CANCLE_ORDER')
 }
 
 function navToOrderEdit(e){

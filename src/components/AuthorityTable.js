@@ -10,6 +10,7 @@ import store from '../commons/store'
 import TableFilter from './TableFilter'
 import Modal from 'antd/lib/modal'
 import authorityDelById from '../actions/authorityDelById'
+import delIcon from '../images/dels.png'
 
 export default props => {
   const { authorityArray, userNameArr, machineNameArr, authModal } = props
@@ -51,7 +52,7 @@ export default props => {
           <i className="iconfont icon-compile trouble-table-icon"  style={{ color: '#0068d2', fontSize:25 }} ></i>
         </div>
         <div className='table-icon-item' onClick={ delAuth } data-auth-id={ record._id }  >
-          <i className="iconfont icon-shanchu del-icon" style={{ fontSize: 20 }} ></i>
+          <img src={ delIcon } alt='删除' style={{ width:20,height:20 }} />
         </div>
       </div>
       )

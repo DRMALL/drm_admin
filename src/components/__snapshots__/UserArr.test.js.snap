@@ -24,13 +24,27 @@ exports[`UserArr test 1`] = `
                 class=""
               >
                 <colgroup>
-                  <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
+                  <col
+                    style="width:10%;min-width:10%;"
+                  />
+                  <col
+                    style="width:10%;min-width:10%;"
+                  />
+                  <col
+                    style="width:10%;min-width:10%;"
+                  />
+                  <col
+                    style="width:20%;min-width:20%;"
+                  />
+                  <col
+                    style="width:20%;min-width:20%;"
+                  />
+                  <col
+                    style="width:10%;min-width:10%;"
+                  />
+                  <col
+                    style="width:10%;min-width:10%;"
+                  />
                 </colgroup>
                 <thead
                   class="ant-table-thead"
@@ -123,23 +137,25 @@ exports[`UserArr test 1`] = `
                       class=""
                     >
                       <div
-                        class="user-arr-action"
+                        class="table-icon-content"
                       >
                         <div
-                          class="user-arr-item"
+                          class="table-icon-item"
                           style="color:#579df2;"
                         >
                           <i
                             class="iconfont icon-compile"
-                            style="color:#0068d2;"
+                            style="color:#0068d2;font-size:25px;"
                           />
                         </div>
                         <div
-                          class="user-arr-item"
+                          class="table-icon-item"
                           data-user-name="张三"
                         >
-                          <i
-                            class="anticon anticon-delete"
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;"
                           />
                         </div>
                       </div>
@@ -178,23 +194,25 @@ exports[`UserArr test 1`] = `
                       class=""
                     >
                       <div
-                        class="user-arr-action"
+                        class="table-icon-content"
                       >
                         <div
-                          class="user-arr-item"
+                          class="table-icon-item"
                           style="color:#579df2;"
                         >
                           <i
                             class="iconfont icon-compile"
-                            style="color:#0068d2;"
+                            style="color:#0068d2;font-size:25px;"
                           />
                         </div>
                         <div
-                          class="user-arr-item"
+                          class="table-icon-item"
                           data-user-name="李四"
                         >
-                          <i
-                            class="anticon anticon-delete"
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;"
                           />
                         </div>
                       </div>

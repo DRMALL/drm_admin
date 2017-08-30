@@ -55,7 +55,7 @@ exports[`MachineTable test 1`] = `
                     style="width:10%;min-width:10%;"
                   />
                   <col
-                    style="width:10%;min-width:10%;"
+                    style="width:8%;min-width:8%;"
                   />
                 </colgroup>
                 <thead
@@ -221,23 +221,34 @@ exports[`MachineTable test 1`] = `
                       class=""
                     >
                       <div
-                        class="machine-table-action"
+                        class="table-icon-content"
                       >
                         <div
-                          class="machine-table-left"
+                          class="table-icon-item"
                           data-machine-id="4541342dsf"
                         >
                           <i
-                            class="iconfont icon-compile"
+                            class="iconfont icon-compile edit-icon"
+                            style="font-size:25px;color:#579df2;"
+                          />
+                        </div>
+                        <div
+                          class="table-icon-item"
+                          data-machine-id="4541342dsf"
+                        >
+                          <i
+                            class="iconfont icon-details details-icon"
                             style="font-size:20px;"
                           />
                         </div>
                         <div
-                          class="machine-table-right"
+                          class="table-icon-item"
                           data-machine-id="4541342dsf"
                         >
-                          <i
-                            class="iconfont icon-details"
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;"
                           />
                         </div>
                       </div>
@@ -300,23 +311,34 @@ exports[`MachineTable test 1`] = `
                       class=""
                     >
                       <div
-                        class="machine-table-action"
+                        class="table-icon-content"
                       >
                         <div
-                          class="machine-table-left"
+                          class="table-icon-item"
                           data-machine-id="4541342dssdr"
                         >
                           <i
-                            class="iconfont icon-compile"
+                            class="iconfont icon-compile edit-icon"
+                            style="font-size:25px;color:#579df2;"
+                          />
+                        </div>
+                        <div
+                          class="table-icon-item"
+                          data-machine-id="4541342dssdr"
+                        >
+                          <i
+                            class="iconfont icon-details details-icon"
                             style="font-size:20px;"
                           />
                         </div>
                         <div
-                          class="machine-table-right"
+                          class="table-icon-item"
                           data-machine-id="4541342dssdr"
                         >
-                          <i
-                            class="iconfont icon-details"
+                          <img
+                            alt="删除"
+                            src="dels.png"
+                            style="width:20px;height:20px;"
                           />
                         </div>
                       </div>

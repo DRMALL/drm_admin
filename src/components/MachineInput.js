@@ -3,7 +3,7 @@
 import React from 'react'
 import Input from 'antd/lib/input'
 import Select from 'antd/lib/select'
-import { pressureArr, fuelArr, displacementArr } from '../commons/machineLable'
+// import { pressureArr, fuelArr, displacementArr } from '../commons/machineLable'
 import getInputValue from '../actions/getInputValue'
 import Upload from 'antd/lib/upload'
 import { machineUploadImg } from '../commons/apis'
@@ -16,7 +16,7 @@ import beforeUploadMachine from '../utils/beforeUploadMachine'
 
 
 export default props => {
-  const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address, classify } = props.state.machine
+  const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address, classify, CCKindArr, presureKindArr, fuleKindArr } = props.state.machine
   const uploadButton = (
       <div>
         <Icon type="plus" style={{ fontSize: 28, marginBottom:12 }}  />
@@ -42,8 +42,8 @@ export default props => {
           <Select style={{ width: 400 }} placeholder='选择压力分类'
                   onChange={ selectValue } value={ pressure } >
                   {
-                    pressureArr.map((item, index) =>
-                      <Select.Option key={ index } value={ item+'/pressure' } >{ item }</Select.Option>)
+                    presureKindArr.map((item, index) =>
+                      <Select.Option key={ index } value={ item.text+'/pressure' } >{ item.text }</Select.Option>)
                   }
           </Select>
         </div>
@@ -52,8 +52,8 @@ export default props => {
           <Select style={{ width: 400 }} placeholder='选择燃料分类'
                   onChange={ selectValue } value={ combustible } >
                   {
-                    fuelArr.map((item, index) =>
-                      <Select.Option key={ index } value={ item+'/combustible' } >{ item }</Select.Option>)
+                    fuleKindArr.map((item, index) =>
+                      <Select.Option key={ index } value={ item.text+'/combustible' } >{ item.text }</Select.Option>)
                   }
           </Select>
         </div>
@@ -62,8 +62,8 @@ export default props => {
           <Select style={{ width: 400 }} placeholder='选择排量分类'
                   onChange={ selectValue } value={ cc } >
                   {
-                    displacementArr.map((item, index) =>
-                      <Select.Option key={ index } value={ item+'/cc' } >{ item }</Select.Option>)
+                    CCKindArr.map((item, index) =>
+                      <Select.Option key={ index } value={ item.text+'/cc' } >{ item.text }</Select.Option>)
                   }
           </Select>
         </div>
@@ -80,9 +80,9 @@ export default props => {
                   data-path='MACHINE' data-id='address' value={ address } />
         </div>
         <div className='machine-input-flexs' >
-          <div className='machine-input-left' >设备描述</div>
+          <div className='machine-input-left' >设备备注</div>
           <Input.TextArea rows={4} style={{ width: 400 }}
-                  placeholder='输入设备描述'
+                  placeholder='输入设备备注'
                   onChange={ getInputValue }
                   data-path='MACHINE' data-id='description'
                   value={ description } />

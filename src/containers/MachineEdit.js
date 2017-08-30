@@ -9,12 +9,16 @@ import editMachineTimeline from '../actions/editMachineTimeline'
 import MachineTimeline from '../components/MachineTimeline'
 import Affix from 'antd/lib/affix'
 import dispatch from '../actions/dispatch'
+import getMachineCCKindArr from '../actions/getMachineCCKindArr'
+import getMachineFuleKindArr from '../actions/getMachineFuleKindArr'
+import getMachinePresureKindArr from '../actions/getMachinePresureKindArr'
+import getMachineTimeKindArr from '../actions/getMachineTimeKindArr'
 
 
 export default class MachineEdit extends Component {
   componentDidMount() {
-    getMachineById(localStorage.getItem('machineId'))
     dispatch('MACHINE_PUT_TIMELINE_SUCCESS')
+    Promise.all([getMachineTimeKindArr(), getMachineCCKindArr(), getMachinePresureKindArr(), getMachineFuleKindArr(), getMachineById(localStorage.getItem('machineId'))])
   }
 
   render() {

@@ -44,6 +44,8 @@ export default ( state=trouble, action ) =>{
       return Object.assign({}, state, { troubleModal: false } )
     case 'TROUBLE_DEL_TROUBLE_SUCCESS':
       return Object.assign({}, state, { troubleModal: false } )
+    case 'TROUBLE_DEL_TROUBLE_FAIL':
+      return Object.assign({}, state, { troubleModal: false } )
     case 'TROUBLE_GET_TROUBLE_ID':
       return Object.assign({}, state, { troubleModal: true, troubleId: action.payload } )
     case 'TROUBLE_GET_CONTENT_VALUE':
