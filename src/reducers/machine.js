@@ -107,6 +107,12 @@ export default ( state=machine, action ) => {
       return Object.assign({}, state, { presureKindArr: action.payload } )
     case 'MACHINE_FULE_GET_MACHINE_FULE_SUCCESS':
       return Object.assign({}, state, { fuleKindArr: action.payload } )
+    case 'MACHINE_GET_MACHINE_STATUS_INFO_BY_ID':
+      return Object.assign({}, state, { machineStatusInfo: action.payload} )
+    case 'MACHINE_STATUS_INFO_RESET':
+      return Object.assign({}, state, { machineStatusInfo: undefined } )
+    case 'MACHINE_SELECT_MACHINE_NAME_AND_ADDRESS':
+      return Object.assign({}, state, action.payload )
 
 //测试模拟数据
     case 'machine_test_default_value':

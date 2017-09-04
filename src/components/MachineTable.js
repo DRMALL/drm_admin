@@ -46,6 +46,12 @@ export default props => {
     width: '10%',
     render: text => TableTextHidden( text, 10)
   },{
+    title: '备注',
+    dataIndex: 'remark',
+    key: 'remark',
+    width: '10%',
+    render: text => TableTextHidden( text, 10)
+  },{
     title: '状态',
     dataIndex: 'status',
     key: 'status',
@@ -60,12 +66,15 @@ export default props => {
     dataIndex: 'location',
     width: '10%',
     render: text =>
-      <Tooltip title={ text.slice(0,5).map(item => {
+    <div>{
+      text.length ? <Tooltip title={ text.slice(0,5).map(item => {
         item = item.text
         return item
       }).join(', ') } >
         { text[0].text }
-      </Tooltip>
+      </Tooltip> : <div></div>
+    }
+    </div>
   },{
     title: '添加时间',
     dataIndex: 'createdAt',
@@ -83,7 +92,9 @@ export default props => {
              onClick={ navToMachineEdit } >
           <i className="iconfont icon-compile edit-icon" style={{ fontSize:25, color:'#579df2' }} ></i>
         </div>
-        <div className='table-icon-item' data-machine-id={ text._id }
+        <div className='table-icon-item' data-machine-number={ text.number }
+             data-machine-name={  text.name  }
+             data-machine-address={  text.location[0] ? text.location[0].text : ''  }
              onClick={ navToMachineControl } >
           <i className="iconfont icon-details details-icon" style={{ fontSize: 20 }} ></i>
         </div>
@@ -121,8 +132,9 @@ function navToMachineEdit(e){
 }
 
 function navToMachineControl(e){
-  const { machineId } = e.currentTarget.dataset
-  localStorage.setItem('machineId', machineId)
+  const { machineNumber, machineName, machineAddress } = e.currentTarget.dataset
+  dispatch('MACHINE_SELECT_MACHINE_NAME_AND_ADDRESS', { machineName, machineAddress })
+  localStorage.setItem('machineNumber', machineNumber)
   browserHistory.push('/machine/control')
 }
 

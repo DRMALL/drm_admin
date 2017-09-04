@@ -25,6 +25,7 @@ export const machineTimelineKindAction = `${host}timelines`
 export const machineCCKindAction = `${host}ccsorts`
 export const machinePressureKindAction = `${host}presorts`
 export const machineFuleKindAction = `${host}fuelsorts`
+export const machineStatusInfo = `${host}moniterdevs`
 // export const machineDelTimeline = `${host}devices/deviceId/timeline/del`
 export const newAuthority = `${host}auths/new`
 export const authorityAction = `${host}auths`

@@ -80,9 +80,9 @@ export default props => {
                   data-path='MACHINE' data-id='address' value={ address } />
         </div>
         <div className='machine-input-flexs' >
-          <div className='machine-input-left' >设备备注</div>
+          <div className='machine-input-left' >设备描述</div>
           <Input.TextArea rows={4} style={{ width: 400 }}
-                  placeholder='输入设备备注'
+                  placeholder='输入设备描述'
                   onChange={ getInputValue }
                   data-path='MACHINE' data-id='description'
                   value={ description } />
