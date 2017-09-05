@@ -16,7 +16,7 @@ import beforeUploadMachine from '../utils/beforeUploadMachine'
 
 
 export default props => {
-  const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address, classify, CCKindArr, presureKindArr, fuleKindArr } = props.state.machine
+  const { fileList, previewImage, previewVisible, name, number, cc, pressure, combustible, description, address, classify, CCKindArr, presureKindArr, fuleKindArr, remark } = props.state.machine
   const uploadButton = (
       <div>
         <Icon type="plus" style={{ fontSize: 28, marginBottom:12 }}  />
@@ -86,6 +86,14 @@ export default props => {
                   onChange={ getInputValue }
                   data-path='MACHINE' data-id='description'
                   value={ description } />
+        </div>
+        <div className='machine-input-flexs' >
+          <div className='machine-input-left' >设备备注</div>
+          <Input.TextArea rows={4} style={{ width: 400 }}
+                  placeholder='输入设备备注'
+                  onChange={ getInputValue }
+                  data-path='MACHINE' data-id='remark'
+                  value={ remark } />
         </div>
         <div>
           <div style={{ marginTop: 20 }} >

@@ -11,9 +11,9 @@ import dispatch from './dispatch'
 import editMachineLocation from './editMachineLocation'
 
 export default () => {
-  const { name, number, fileList, cc, pressure, combustible, description, address, Taddress, classify } = store.getState().machine
+  const { name, number, fileList, cc, pressure, combustible, description, address, Taddress, classify, remark } = store.getState().machine
   if(!name||!number||!(fileList[0])||!cc||!pressure||!combustible||!description||!address||!classify) {
-    const str = !name ? '设备名称' : !number ? '设备编号' : !pressure ? '压力分类' : !combustible ? '燃料分类' : !cc ? '排量分类' : !classify ? '设备分类' : !address ? '设备所在地' : !description ? '设备描述' : '设备图片'
+    const str = !name ? '设备名称' : !number ? '设备编号' : !pressure ? '压力分类' : !combustible ? '燃料分类' : !cc ? '排量分类' : !classify ? '设备分类' : !address ? '设备所在地' : !description ? '设备描述' : !remark ? '设备备注' : '设备图片'
     message.warning(`请输入${str}后再次尝试`)
   }
     else {
@@ -33,7 +33,7 @@ export default () => {
 
 
       // if(line_time&&line_des&&line_type) timelines.push(timeline)
-      let datas = {name, number, images, cc, pressure, combustible, description,  classify }
+      let datas = {name, number, images, cc, pressure, combustible, description,  classify, remark }
       let id = localStorage.getItem('machineId')
 
       if(Taddress !== address ) editMachineLocation(address)

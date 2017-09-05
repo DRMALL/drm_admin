@@ -44,6 +44,7 @@ const resetMachine = {
   timelines: [],
   affixChange: false,
   classify:null,
+  remark: null,
 }
 
 export default ( state=machine, action ) => {

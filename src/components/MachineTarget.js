@@ -8,7 +8,7 @@ export default props => {
   console.log(arr)
   const columns =[{
     title: '指标名称',
-    dataIndex: 'key',
+    dataIndex: 'name',
     width: 120
   },{
     title: '值',

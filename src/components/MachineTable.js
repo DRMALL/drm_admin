@@ -133,8 +133,10 @@ function navToMachineEdit(e){
 
 function navToMachineControl(e){
   const { machineNumber, machineName, machineAddress } = e.currentTarget.dataset
-  dispatch('MACHINE_SELECT_MACHINE_NAME_AND_ADDRESS', { machineName, machineAddress })
+  // dispatch('MACHINE_SELECT_MACHINE_NAME_AND_ADDRESS', { machineName, machineAddress })
   localStorage.setItem('machineNumber', machineNumber)
+  localStorage.setItem('machineName', machineName)
+  localStorage.setItem('machineAddress', machineAddress)
   browserHistory.push('/machine/control')
 }
 
