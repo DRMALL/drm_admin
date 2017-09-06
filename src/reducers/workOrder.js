@@ -8,6 +8,8 @@ const workOrder = {
   content: '',
   advice: '',
   isShowModal: false,
+  isShowPre: false,
+  preImg: undefined,
 }
 
 export default ( state=workOrder, action )=> {
@@ -36,6 +38,10 @@ export default ( state=workOrder, action )=> {
       return Object.assign({}, state, { isShowModal: false } )
     case 'WORKORDER_DEL_WORKORDER_SUCCESS':
       return Object.assign({}, state, { isShowModal: false } )
+    case 'WORKORDER_PREVIEW_IMG':
+      return Object.assign({}, state, { isShowPre: true, preImg: action.payload } )
+    case 'WORKORDER_HIDDEN_IMG':
+      return Object.assign({}, state, { isShowPre: false, preImg: undefined } )
     default:
       return state
   }

@@ -8,6 +8,7 @@ import getWorkOrderById from '../actions/getWorkOrderById'
 import { browserHistory } from 'react-router'
 import dispatch from '../actions/dispatch'
 import workOrderEditxx from '../actions/workOrderEditxx'
+import Modal from 'antd/lib/modal'
 
 
 export default class WorkOrderEdit extends Component {
@@ -16,7 +17,7 @@ export default class WorkOrderEdit extends Component {
     getWorkOrderById(localStorage.getItem('workOrderId'))
   }
   render() {
-    const { title, content, advice } = this.props.state.workOrder
+    const { title, content, advice, images, preImg, isShowPre } = this.props.state.workOrder
     return(
       <div>
         <div className='workorder-edit-title' >处理工单</div>
@@ -32,6 +33,15 @@ export default class WorkOrderEdit extends Component {
               content
             }</div>
           </div>
+          <div className='workorder-edit-flex'  style={{ display: (images&&images.length) ? 'flex' : 'none' }} >
+            <div className='workorder-edit-left'  >图片: </div>
+            <div className='workorder-edit-right'  >{
+              (images&&images.length) ?images.map(item =>
+                <img src={ item.url } alt='设备图片' key={ item._id }
+                style={{ width: 300, height:300, marginLeft:20, marginBottom: 20 }}
+                 onClick={ preWorkOrderImg } data-img={ item.url } />) : ''
+            }</div>
+          </div>
           <div className='workorder-edit-tip' >设备描述</div>
           <Input.TextArea  placeholder='输入对设备的描述' data-path='WORKORDER'
                   data-id='advice' onChange={ getInputValue }
@@ -42,9 +52,21 @@ export default class WorkOrderEdit extends Component {
             <div className='machine-edit-btn' onClick={ workOrderEditxx } >提交</div>
           </div>
         </div>
+        <Modal visible={ isShowPre } onCancel={ hiddenPreImg } onOk={ hiddenPreImg } >
+          <img src={ preImg } alt='设备图片' style={{ width: '100%', height: '100%' }} />
+        </Modal>
       </div>
       )
   }
+}
+
+function hiddenPreImg(){
+  dispatch('WORKORDER_HIDDEN_IMG')
+}
+
+function preWorkOrderImg(e){
+  const { img } = e.currentTarget.dataset
+  dispatch('WORKORDER_PREVIEW_IMG', img)
 }
 
 function giveUp(){
