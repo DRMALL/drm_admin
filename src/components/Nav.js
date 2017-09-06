@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import Layout from 'antd/lib/layout'
 import { siderArr } from '../commons/siderItem'
 import { browserHistory } from 'react-router'
-import dispatch from '../actions/dispatch'
+// import dispatch from '../actions/dispatch'
 import NavHead from './NavHead'
 import whichSelect from '../utils/whichSelect'
 
@@ -19,7 +19,9 @@ export default class Nav extends Component {
   }
 
   render(){
-    const { sliderSelect } = this.props.state.nav
+    // const { sliderSelect } = this.props.state.nav
+    const sliderSelect = whichSelect(window.location.pathname)
+    // console.log(sliderSelect)
     return(
       <Layout className={(window.location.pathname==='/machine/edit') ?'nav-container' : 'nav-containers'}  >
        <Sider width={150} style={{ background: '#fff', borderRight: '1px solid #eee'}} >
@@ -49,7 +51,7 @@ export default class Nav extends Component {
 
 function  navToitem(e){
   let pathname  = e.currentTarget.dataset.pathname
-  dispatch('NAV_ON_SELECT', whichSelect(pathname))
+  // dispatch('NAV_ON_SELECT', whichSelect(pathname))
   browserHistory.push(pathname)
 }
 
