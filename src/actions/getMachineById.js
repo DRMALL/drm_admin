@@ -22,7 +22,7 @@ export default id => {
       return item
     })
     result.timelines = result.timelines.sort(function(a,b){
-      return (b.time - a.time)
+      return (a.time - b.time)
     })
     dispatch('MACHINE_GET_MACHINE_BY_ID', result)
   })

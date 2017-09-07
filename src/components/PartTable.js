@@ -4,6 +4,8 @@ import React from 'react'
 import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
 import TableTextHidden from './TableTextHidden'
+import TableTime from './TableTime'
+import moment from 'moment'
 // import delIcon from '../images/dels.png'
 
 const PartTable = ({ table }) => {
@@ -21,7 +23,7 @@ const PartTable = ({ table }) => {
     width: '15%',
   },{
     title: '件／台／套',
-    dataIndex: 'reserve',
+    dataIndex: 'unit',
     width: '10%',
   },{
     title: '类型',
@@ -34,8 +36,9 @@ const PartTable = ({ table }) => {
     render: text => TableTextHidden(text, 30)
   },{
     title: '添加时间',
-    dataIndex: 'time',
+    dataIndex: 'createdAt',
     width: '10%',
+    render: text => TableTime(moment(text).format('YYYY-MM-DD HH:mm'), 15)
   },{
     title: '操作',
     key: 'action',

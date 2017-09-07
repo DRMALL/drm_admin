@@ -663,6 +663,19 @@
   justify-content: space-between;
   width: 45px;
 }
+.parttitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.parttitle-right {
+  font-size: 18px;
+  margin-right: 100px;
+  font-family: PingFangSC;
+  font-weight: 800;
+  color: rgba(0,0,0,0.8);
+  cursor: pointer;
+}
 .page-tip {
   font-size: 18px;
   font-family: PingFangSC;
@@ -773,4 +786,11 @@
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+}
+.part-upload {
+  padding: 25px 50px;
+}
+.part-upload-content {
+  margin-top: 50px;
+  font-size: 15px;
 }

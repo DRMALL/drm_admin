@@ -1,3 +1,16 @@
+.parttitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.parttitle-right {
+  font-size: 18px;
+  margin-right: 100px;
+  font-family: PingFangSC;
+  font-weight: 800;
+  color: rgba(0,0,0,0.8);
+  cursor: pointer;
+}
 .page-tip {
   font-size: 18px;
   font-family: PingFangSC;

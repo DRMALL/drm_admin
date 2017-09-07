@@ -34,3 +34,4 @@ export const authEdit = `${host}auths/one`
 export const authDel = `${host}auth/del`
 export const partsAction = `${host}parts`
 export const partRemark = `${host}parts/remark`
+export const partUploadfile = `${host}parts/uploadfile`
