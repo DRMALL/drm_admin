@@ -36,10 +36,9 @@ export default props => {
   }
   function onChange(e){
     let result = e.fileList
-    result = result.map((item, index )=> {
+    result.map((item, index )=> {
       item.url = item.response ? item.response.data.url  : ''
       item.key = '-' + index
-      return item
     })
     dispatch('MESSAGE_GET_RICH_TEXT_IMGAGES', result)
   }

@@ -1952,9 +1952,9 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@*, debug@2.6.8, debug@^2.6.0, debug@^2.6.6, debug@^2.6.8:
-  version "2.6.8"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
+debug@*, debug@2.6.7, debug@^2.1.1, debug@^2.2.0, debug@^2.6.3, debug@~2.6.4, debug@~2.6.6:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.7.tgz#92bad1f6d05bbb6bba22cca88bcd0ec894c2861e"
   dependencies:
     ms "2.0.0"
 
@@ -1968,9 +1968,9 @@ debug@2.3.3:
   dependencies:
     ms "0.7.2"
 
-debug@2.6.7, debug@^2.1.1, debug@^2.2.0, debug@^2.6.3, debug@~2.6.4, debug@~2.6.6:
-  version "2.6.7"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.7.tgz#92bad1f6d05bbb6bba22cca88bcd0ec894c2861e"
+debug@2.6.8, debug@^2.6.0, debug@^2.6.6, debug@^2.6.8:
+  version "2.6.8"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
     ms "2.0.0"
 
@@ -4248,9 +4248,9 @@ leancloud-storage@^2.1.0:
     superagent "^3.3.1"
     underscore "^1.8.3"
 
-leanengine@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/leanengine/-/leanengine-2.0.4.tgz#8130a87648ef9e4f5656af2eb40c65a2a00b2b84"
+leanengine@^2.0.4:
+  version "2.0.5"
+  resolved "http://registry.npm.taobao.org/leanengine/download/leanengine-2.0.5.tgz#3c393cdfc5075cbda9ebe4e6311d19b436aa7e31"
   dependencies:
     body-parser "^1.16.0"
     connect "^3.5.0"
@@ -6039,9 +6039,9 @@ react-lazy-load@^3.0.10:
     lodash.throttle "^4.0.0"
     prop-types "^15.5.8"
 
-react-lz-editor@^0.11.2:
+react-lz-editor@0.11.2:
   version "0.11.2"
-  resolved "https://registry.yarnpkg.com/react-lz-editor/-/react-lz-editor-0.11.2.tgz#22378965fc0bde6bb2181d4dc063786655472e05"
+  resolved "http://registry.npm.taobao.org/react-lz-editor/download/react-lz-editor-0.11.2.tgz#22378965fc0bde6bb2181d4dc063786655472e05"
   dependencies:
     antd "^2.8.3"
     draft-js "^0.10.0"
@@ -6465,13 +6465,13 @@ rx-lite@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
 
-safe-buffer@^5.0.1, safe-buffer@~5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
-
-safe-buffer@^5.1.0, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
+safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
+
+safe-buffer@~5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
 
 sane@~1.6.0:
   version "1.6.0"

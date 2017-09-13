@@ -36,7 +36,7 @@ export default class Authority extends Component{
                                 userNameArr={ userNameArr }
                                 machineNameArr={ machineNameArr }
                                 num={ index }
-                                key={index}/> )
+                                key={ index }/> )
             }
           </div>
           <div className='authority-new-button' >
