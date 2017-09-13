@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import Input from 'antd/lib/input'
 import Select from 'antd/lib/select'
@@ -10,6 +8,8 @@ import changeTroubleType from '../utils/changeTroubleType'
 import LzEditor from 'react-lz-editor'
 import beforeUpload from '../utils/beforeUpload'
 import  { troubleImg } from '../commons/apis'
+import Editor from '../containers/Editor'
+
 
 export default props => {
   const { title, categoryxx, content, troubleKinds, isEdit, troubleImgList } = props.state.trouble
@@ -31,13 +31,17 @@ export default props => {
   }
   function onChange(e){
     let result = e.fileList
-    result = result.map((item, index )=> {
+    result.map((item, index )=> {
       item.url = item.response ? item.response.data.url  : ''
       item.key = '-' + index
-      return item
     })
     dispatch('TROUBLE_GET_RICH_TEXT_IMGAGES', result)
   }
+
+  function change(e) {
+    dispatch('TROUBLE_GET_RICH_TEXT_IMGAGES', e.target.value)
+  }
+
   return (
     <div>
       <div className='trouble-input-flex' >
@@ -50,18 +54,22 @@ export default props => {
         <div className='trouble-input-left' >分类</div>
         <Select style={{ width:300 }} onChange={ troubleSelect }
                placeholder='请输入分类' value={ changeTroubleType(categoryxx, troubleKinds) }  >
-            {
-              troubleKinds.map( (item, index) =>
-              <Select.Option key={index} value={ item._id } >{item.text}</Select.Option> )
-            }
+          {
+            troubleKinds.map( (item, index) =>
+            <Select.Option key={ index } value={ item._id }>{item.text}</Select.Option> )
+          }
         </Select>
       </div>
       <div className='trouble-input-flexs' >
         <div  className='trouble-input-lefts' >问题描述</div>
-        <div className='trouble-input-editor' >
-        <LzEditor cbReceiver={ getValue }  video={ false } uploadProps={uploadProps}
+        <div className='trouble-input-editor'>
+{/*        <LzEditor cbReceiver={ getValue }  video={ false } uploadProps={uploadProps}
                 audio={ false } urls={ false } importContent={ content }  active={isEdit}
-                autoSave={ false }/>
+                autoSave={ false }/>*/}
+
+          <Editor bounds='.trouble-input-editor' 
+                  onChange={getValue}
+                  value={content}/>
         </div>
       </div>
     </div>
