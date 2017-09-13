@@ -8,7 +8,7 @@
     "express": "4.15.3",
     "history": "4.6.3",
     "konva": "1.2.2",
-    "leanengine": "2.0.4",
+    "leanengine": "^2.0.4",
     "moment": "2.18.1",
     "react": "15.4.2",
     "react-dom": "15.4.2",
@@ -35,6 +35,7 @@
     "node": "7.x"
   },
   "scripts": {
+    "code": "npm-run-all -p watch-css start-js",
     "start-js": "react-scripts start",
     "start": "node server.js",
     "build": "react-scripts build",
