@@ -38,10 +38,6 @@ export default props => {
     dispatch('TROUBLE_GET_RICH_TEXT_IMGAGES', result)
   }
 
-  function change(e) {
-    dispatch('TROUBLE_GET_RICH_TEXT_IMGAGES', e.target.value)
-  }
-
   return (
     <div>
       <div className='trouble-input-flex' >
