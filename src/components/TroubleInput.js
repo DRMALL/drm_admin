@@ -14,29 +14,30 @@ import Editor from '../containers/Editor'
 export default props => {
   const { title, categoryxx, content, troubleKinds, isEdit, troubleImgList } = props.state.trouble
   function getValue(e){
+    console.log(e)
     dispatch('TROUBLE_GET_CONTENT_VALUE', { content: e })
   }
   const token = localStorage.getItem('token')
-  const uploadProps = {
-      action: `${troubleImg}?token=${token}`,
-      name: 'bugs',
-      onChange: onChange,
-      listType: 'picture',
-      fileList: troubleImgList,
-      data: (file) => {
-      },
-      multiple: true,
-      beforeUpload: beforeUpload,
-      showUploadList: true
-  }
-  function onChange(e){
-    let result = e.fileList
-    result.map((item, index )=> {
-      item.url = item.response ? item.response.data.url  : ''
-      item.key = '-' + index
-    })
-    dispatch('TROUBLE_GET_RICH_TEXT_IMGAGES', result)
-  }
+  // const uploadProps = {
+  //     action: `${troubleImg}?token=${token}`,
+  //     name: 'bugs',
+  //     onChange: onChange,
+  //     listType: 'picture',
+  //     fileList: troubleImgList,
+  //     data: (file) => {
+  //     },
+  //     multiple: true,
+  //     beforeUpload: beforeUpload,
+  //     showUploadList: true
+  // }
+  // function onChange(e){
+  //   let result = e.fileList
+  //   result.map((item, index )=> {
+  //     item.url = item.response ? item.response.data.url  : ''
+  //     item.key = '-' + index
+  //   })
+  //   dispatch('TROUBLE_GET_RICH_TEXT_IMGAGES', result)
+  // }
 
   return (
     <div>

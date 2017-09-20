@@ -7,6 +7,7 @@ import Modal from 'antd/lib/modal'
 import Icon from 'antd/lib/icon'
 import beforeUpload from '../utils/beforeUpload'
 import LzEditor from 'react-lz-editor'
+import Editor from '../containers/Editor'
 
 
 import { uploadImg, troubleImg } from '../commons/apis'
@@ -22,35 +23,37 @@ export default props => {
       </div>
   )
   const token = localStorage.getItem('token')
-  const uploadProps = {
-      action: `${troubleImg}?token=${token}`,
-      name: 'bugs',
-      onChange: onChange,
-      listType: 'picture',
-      fileList: messageRichImg,
-      data: (file) => {
-      },
-      multiple: true,
-      beforeUpload: beforeUpload,
-      showUploadList: true
-  }
-  function onChange(e){
-    let result = e.fileList
-    result.map((item, index )=> {
-      item.url = item.response ? item.response.data.url  : ''
-      item.key = '-' + index
-    })
-    dispatch('MESSAGE_GET_RICH_TEXT_IMGAGES', result)
-  }
+  // const uploadProps = {
+  //     action: `${troubleImg}?token=${token}`,
+  //     name: 'bugs',
+  //     onChange: onChange,
+  //     listType: 'picture',
+  //     fileList: messageRichImg,
+  //     data: (file) => {
+  //     },
+  //     multiple: true,
+  //     beforeUpload: beforeUpload,
+  //     showUploadList: true
+  // }
+  // function onChange(e){
+  //   let result = e.fileList
+  //   result.map((item, index )=> {
+  //     item.url = item.response ? item.response.data.url  : ''
+  //     item.key = '-' + index
+  //   })
+  //   dispatch('MESSAGE_GET_RICH_TEXT_IMGAGES', result)
+  // }
   return (
     <div>
         <div className='message-new-tip' >标题</div>
         <Input onChange={ getInputValue } placeholder='输入信息标题'
                data-path='MESSAGE' data-id='title' value={ title } />
         <div className='message-new-tip' >内容</div>
-        <LzEditor cbReceiver={ getMessageValue }  video={ false }
+{/*        <LzEditor cbReceiver={ getMessageValue }  video={ false }
                 audio={ false } urls={ false } importContent={ content }  active={isEdit}
-                autoSave={ false }  uploadProps={uploadProps} />
+                autoSave={ false }  uploadProps={uploadProps} />*/}
+        <Editor onChange={getMessageValue}
+                value={content}/>
         <div className='message-new-tip' >摘要（64字以内）</div>
         <Input.TextArea onChange={ getInputValue } rows={2} placeholder='输入摘要'
                         data-path='MESSAGE' data-id='abstract' value={ abstract } />

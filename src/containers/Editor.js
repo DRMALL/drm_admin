@@ -5,9 +5,15 @@ import 'react-quill/dist/quill.snow.css'
 export default class Editor extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      value: ''
-    }
+    this.editor = null
+  }
+
+  componentDidMount() {
+    this.getRef()
+  }
+
+  getRef() {
+    const editor = this.refs.editor.getEditor()
   }
 
   render() {
@@ -16,22 +22,27 @@ export default class Editor extends Component {
                   onChange={this.props.onChange}
                   modules={this.props.modules || Editor.modules}
                   formats={Editor.formats}
-                  theme='snow'
+                  theme={'snow'}
                   bounds={this.props.bounds}
-                  placeholder="开始编辑"/>
+                  placeholder="开始编辑"
+                  ref='editor'>
+        <div 
+            style={{minHeight: '300px'}}                     
+          />
+      </ReactQuill>
     )
   }
 }
 
 Editor.modules = {
   toolbar: [
-    [{ 'header': [1, 2, 3, 4, 5, 6]}, { 'font': [] }],
-    [{size: []}],
+    [{ 'header': [1, 2, 3, 4, 5, 6]}],
+    // [{size: []}],
     [{ 'color': [] }, { 'background': [] }], 
     ['bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block'],
-    [{'list': 'ordered'}, {'list': 'bullet'}, 
-     {'indent': '-1'}, {'indent': '+1'}],
-    ['link', 'image', 'video'],
+    [{'list': 'ordered'}, {'list': 'bullet'}], 
+     // {'indent': '-1'}, {'indent': '+1'}],
+    ['link', 'image'], // video
     [{align: []}],[{ 'direction': 'rtl' }],
     ['clean']
   ]
