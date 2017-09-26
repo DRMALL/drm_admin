@@ -12,10 +12,10 @@ function beforeUpload(file){
   const type = file.type
   let upload = type ==='image/png'|| type ==='image/gif'|| type ==='image/bmp'|| type ==='image/jpeg' ||  type ==='image/jpg' ||type === 'image/webp'
   if(upload){
-      const boolean = file.size/1024 < 500
+      const boolean = file.size/1024 < 10000
       if(!boolean)  notification.warning({
         message: '提示',
-        description:'图片大于500k, 不予上传！'})
+        description:'图片大于10MB, 不予上传！'})
       return boolean
   }
   else {
