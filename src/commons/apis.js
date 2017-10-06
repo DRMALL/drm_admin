@@ -1,4 +1,4 @@
-const host = 'https://api.wardenger.me/admin/'
+const host = 'https://drmtest.sparklog.com/admin/'
 // const host = 'http://192.168.2.236:3000/admin/'
 
 export const login = `${host}session`
