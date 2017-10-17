@@ -25,14 +25,30 @@ export default class MachineControl extends Component {
   //     )
   // }
   render() {
-    const { machineStatusInfo } = this.props.state.machine
-    const machineAddress = localStorage.getItem('machineAddress')
-    const machineName = localStorage.getItem('machineName')
+    console.log(2222, this.props.state.machine)
+    const { machineStatusInfo } = this.props.state.machine,
+          machineAddress = localStorage.getItem('machineAddress'),
+          machineName = localStorage.getItem('machineName'),
+          machineNumber = localStorage.getItem('machineNumber'), 
+          machinePressure = localStorage.getItem('machinePressure'),
+          machineClassify = localStorage.getItem('machineClassify'),
+          machineCc = localStorage.getItem('machineCc'),
+          machineRemark = localStorage.getItem('machineRemark'),
+          machineCombustible = localStorage.getItem('machineCombustible'),
+          machineDescription = localStorage.getItem('machineDescription')
+
     return(
       <div className='machine-control-container' >
          <PageTip tip='设备监控' />
-         <MachineInfo machineName={ machineName } machineAddress={ machineAddress }
-                machineStatusInfo={ machineStatusInfo } />
+         <MachineInfo machineClassify={ machineClassify } 
+                      machineCc={ machineCc } 
+                      machineRemark={ machineRemark } 
+                      machineCombustible={ machineCombustible } 
+                      machineDescription={ machineDescription } 
+                      machineName={ machineName } 
+                      machineAddress={ machineAddress }
+                      machineNumber={ machineNumber }
+                      machinePressure={ machinePressure } />
         <PageTip tip='指标数据' />
         <MachineTarget arr={ machineStatusInfo }  />
         <MachineDownload { ...this.props } />

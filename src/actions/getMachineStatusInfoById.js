@@ -43,6 +43,7 @@ export default number => {
                     ]
   Httpid(`${machineStatusInfo}?number=${number}&token=${token}`, 'get', false)
   .then(res => {
+    console.log(33333333333, res)
     const result = res.body.data.data
     let arr = result.map((item, index )=> {
        item.name = infoArrText[index].text

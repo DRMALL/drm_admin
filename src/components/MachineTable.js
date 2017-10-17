@@ -92,8 +92,16 @@ export default props => {
              onClick={ navToMachineEdit } >
           <i className="iconfont icon-compile edit-icon" style={{ fontSize:25, color:'#579df2' }} ></i>
         </div>
-        <div className='table-icon-item' data-machine-number={ text.number }
-             data-machine-name={  text.name  }
+        <div className='table-icon-item' 
+             data-machine-number={ text.number }
+             data-machine-name={ text.name }
+             data-machine-cc={ text.cc }
+             data-machine-combustible={ text.combustible }
+             data-machine-description={ text.description }
+             data-machine-remark={ text.remark }
+             data-machine-status={ text.status }
+             data-machine-classify={ text.classify }
+             data-machine-pressure={ text.pressure }
              data-machine-address={  text.location[0] ? text.location[0].text : ''  }
              onClick={ navToMachineControl } >
           <i className="iconfont icon-details details-icon" style={{ fontSize: 20 }} ></i>
@@ -131,12 +139,13 @@ function navToMachineEdit(e){
   browserHistory.push('/machine/edit')
 }
 
-function navToMachineControl(e){
-  const { machineNumber, machineName, machineAddress } = e.currentTarget.dataset
-  // dispatch('MACHINE_SELECT_MACHINE_NAME_AND_ADDRESS', { machineName, machineAddress })
-  localStorage.setItem('machineNumber', machineNumber)
-  localStorage.setItem('machineName', machineName)
-  localStorage.setItem('machineAddress', machineAddress)
+function navToMachineControl(e){  // dispatch('MACHINE_SELECT_MACHINE_NAME_AND_ADDRESS', { machineName, machineAddress })
+  Object.keys(e.currentTarget.dataset).map(item => {
+    localStorage.setItem(item, e.currentTarget.dataset[item])
+  })
+  // localStorage.setItem('machineNumber', machineNumber)
+  // localStorage.setItem('machineName', machineName)
+  // localStorage.setItem('machineAddress', machineAddress)
   browserHistory.push('/machine/control')
 }
 
