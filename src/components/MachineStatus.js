@@ -4,14 +4,14 @@ import React from 'react'
 
 export default props => {
   const { info } = props
-  const date = (ts => {
-    return new Date(ts).toLocaleString()
-  })(info.ts)
-  const status = (ts => {
-    let condition = Number(new Date().getTime()) - Number(ts) > 600*1000
+  const date = (updatedAt => {
+    return new Date(updatedAt).toLocaleString()
+  })(info.updatedAt)
+  const status = (updatedAt => {
+    let condition = Number(new Date().getTime()) - Number(new Date(updatedAt).getTime()) > 600*1000
     if (condition) return '已离线'
     else return '运行中'
-  })(info.ts)
+  })(info.updatedAt)
 
   return(
     <div className='machine-info-container' >

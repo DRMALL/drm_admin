@@ -17,15 +17,15 @@ export default props => {
   machineArr.map(item => {
     let condition = Number(new Date().getTime()) - Number(new Date(item.updatedAt).getTime()) > 600*1000
     if (condition) 
-      return item.updatedAt = '已离线'
+      return item.status = '已离线'
     else 
-      return item.updatedAt = '运行中'
+      return item.status = '运行中'
   })
   const columns =[{
     title: '设备名称',
     dataIndex: 'name',
     key: 'name',
-    width: '8%'
+    width: '13%'
   },{
     title: '设备编号',
     dataIndex: 'number',
@@ -60,9 +60,9 @@ export default props => {
     render: text => TableTextHidden( text, 10)
   },{
     title: '状态',
-    dataIndex: 'updatedAt',
+    dataIndex: 'status',
     key: 'status',
-    width: '10%',
+    width: '5%',
   },{
     title: '负责人',
     dataIndex: 'incharges',
@@ -121,7 +121,9 @@ export default props => {
   },]
   return(
     <div>
+      <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
       <Table dataSource={ machineArr } columns={ columns } rowKey='_id' />
+      </div>
       <Modal title='提示' visible={ machineModal } okText='确定' cancelText='取消'
              onOk={ machineDelById } onCancel={ cancleDelAuth }  >
         <p>确定删除此设备？</p>
