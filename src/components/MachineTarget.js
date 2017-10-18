@@ -21,7 +21,7 @@ export default props => {
   }]
   return(
     <div style={{ width: 480, marginTop: 22, border: '2px solid #f7f7f7' }} >
-      <Table dataSource={ arr } columns={ columns } rowKey='key' />
+      <Table dataSource={ arr } columns={ columns } rowKey='orgName' />
     </div>
     )
 }

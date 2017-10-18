@@ -15,9 +15,9 @@ import React from 'react'
 parseFloat()
 
 export default props => {
-  const { machineName, machineAddress, machineStatusInfo, machineClassify, machineNumber, machinePressure, machineCombustible, machineCc, machineDescription, machineRemark } = props
-  const waterNum = machineStatusInfo ? parseFloat(machineStatusInfo[15].value.split(' ')[0]) + parseFloat(machineStatusInfo[16].value.split(' ')[0]) : 0
-  const gasNum = machineStatusInfo ? parseFloat(machineStatusInfo[7].value.split(' ')[0]) +parseFloat(machineStatusInfo[8].value.split(' ')[0]) : 0
+  const { machineName, machineAddress, machineClassify, machineNumber, machinePressure, machineCombustible, machineCc, machineDescription, machineRemark } = props
+  // const waterNum = machineStatusInfo ? parseFloat(machineStatusInfo[15].value.split(' ')[0]) + parseFloat(machineStatusInfo[16].value.split(' ')[0]) : 0
+  // const gasNum = machineStatusInfo ? parseFloat(machineStatusInfo[7].value.split(' ')[0]) +parseFloat(machineStatusInfo[8].value.split(' ')[0]) : 0
 
   return(
     <div className='machine-info-container' >
