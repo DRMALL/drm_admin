@@ -7,6 +7,7 @@
     "cors": "2.8.3",
     "express": "4.15.3",
     "history": "4.6.3",
+    "jquery": "^3.2.1",
     "konva": "1.2.2",
     "leanengine": "^2.0.4",
     "moment": "2.18.1",
