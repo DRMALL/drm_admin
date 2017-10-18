@@ -5,7 +5,17 @@ import React from 'react'
 
 export default props => {
   const { arr } = props
-  arr.map((item, index) => item.key = index)
+  arr.map((item, index) => {
+    item.key = index
+    if (item.value == 0) {
+      item.value = '关闭'
+      item.unitName = '开关'
+    }
+    else if(item.value == 1) {
+      item.value = '打开'
+      item.unitName = '开关'
+    }
+  })
   const columns =[{
     title: '指标',
     dataIndex: 'quotaName',
