@@ -45,12 +45,12 @@ export default number => {
   .then(res => {
     console.log(33333333333, res)
     const result = res.body.data.data
-    let arr = result.map((item, index )=> {
-       item.name = infoArrText[index].text
-       item.value = item.value + ' ' + infoArrText[index].unit
-       return item
-    })
-    dispatch('MACHINE_GET_MACHINE_STATUS_INFO_BY_ID', arr)
+    // let arr = result.map((item, index )=> {
+    //    item.name = infoArrText[index].name
+    //    item.value = item.value + ' ' + infoArrText[index].unit
+    //    return item
+    // })
+    dispatch('MACHINE_GET_MACHINE_STATUS_INFO_BY_ID', result)
   })
   .catch(res => console.error(res))
 }
