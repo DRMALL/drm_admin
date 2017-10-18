@@ -8,16 +8,24 @@ import dispatch from '../actions/dispatch'
 import { machineExcle } from '../commons/apis'
 import moment from 'moment'
 import message from 'antd/lib/message'
+import request from 'superagent'
 
 export default props => {
-  const { downloadTime } = props.state.machine
-  const startTime = moment(downloadTime[0]).format('YYYY-MM-DD')
-  const endTime = moment(downloadTime[1]).format('YYYY-MM-DD')
+  const { downloadTime, machineStatusInfo } = props.state.machine
+  const startTime = (new Date(moment(downloadTime[0])._d)).getTime()
+  const endTime = (new Date(moment(downloadTime[1])._d)).getTime()
   const token = localStorage.getItem('token')
   function tipsExcle(){
-  if(downloadTime.length) return
-  else message.warn('请选择时间后，在导出数据!!')
-}
+    if(downloadTime.length) {
+        request(`${machineExcle}?startTime=${startTime}&endTime=${endTime}&number=${machineStatusInfo.number}&token=${token}`)
+        .then(res => {
+          const result = res.body.data
+          window.location.href = result
+        })
+        .catch(res => console.error(res))
+    }
+    else message.warn('请选择时间后，在导出数据!!')
+  }
   return(
     <div className='machine-download-container' >
       <div className='machine-download-flex' >
@@ -25,9 +33,7 @@ export default props => {
         <DatePicker.RangePicker onChange={ getSelectTime } />
       </div>
       <Button className='machine-download-button' onClick={ tipsExcle } >
-        <a href={`${machineExcle}?startTime=${startTime}&endTime=${endTime}&token=${token}`} className='machine-href' target="_blank" disabled={ downloadTime.length===0 ? true : false } >
           导出excel
-        </a>
       </Button>
     </div>
     )
