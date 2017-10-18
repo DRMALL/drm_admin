@@ -5,7 +5,7 @@ import React from 'react'
 
 export default props => {
   const { arr } = props
-  console.log(arr)
+  arr.map((item, index) => item.key = index)
   const columns =[{
     title: '指标',
     dataIndex: 'quotaName',
@@ -21,7 +21,7 @@ export default props => {
   }]
   return(
     <div style={{ width: 480, marginTop: 22, border: '2px solid #f7f7f7' }} >
-      <Table dataSource={ arr } columns={ columns } rowKey='orgName' />
+      <Table pagination={false} dataSource={ arr } columns={ columns } rowKey={ arr.key}/>
     </div>
     )
 }

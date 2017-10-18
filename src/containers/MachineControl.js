@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PageTip from '../components/PageTip'
 import MachineInfo from '../components/MachineInfo'
 import MachineTarget from '../components/MachineTarget'
+import MachineStatus from '../components/MachineStatus'
 import MachineDownload from '../components/MachineDownload'
 import getMachineStatusInfoById from '../actions/getMachineStatusInfoById'
 import dispatch from '../actions/dispatch'
@@ -25,7 +26,9 @@ export default class MachineControl extends Component {
   //     )
   // }
   render() {
-    console.log(2222, this.props.state.machine)
+    if (!this.props.state.machine.machineStatusInfo) 
+      return <div></div>
+    console.log(1000, this.props.state)
     const { machineStatusInfo } = this.props.state.machine,
           machineAddress = localStorage.getItem('machineAddress'),
           machineName = localStorage.getItem('machineName'),
@@ -39,7 +42,7 @@ export default class MachineControl extends Component {
 
     return(
       <div className='machine-control-container' >
-         <PageTip tip='设备监控' />
+         <PageTip tip='设备参数' />
          <MachineInfo machineClassify={ machineClassify } 
                       machineCc={ machineCc } 
                       machineRemark={ machineRemark } 
@@ -49,8 +52,10 @@ export default class MachineControl extends Component {
                       machineAddress={ machineAddress }
                       machineNumber={ machineNumber }
                       machinePressure={ machinePressure } />
+        <PageTip tip='设备状态' />
+        <MachineStatus info={ machineStatusInfo }  />
         <PageTip tip='指标数据' />
-        <MachineTarget arr={ machineStatusInfo }  />
+        <MachineTarget arr={ machineStatusInfo.data }  />
         <MachineDownload { ...this.props } />
       </div>
       )

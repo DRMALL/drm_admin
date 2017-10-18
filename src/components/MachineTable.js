@@ -14,6 +14,13 @@ import delIcon from '../images/dels.png'
 
 export default props => {
   const { machineArr, machineModal } = props.state.machine
+  machineArr.map(item => {
+    let condition = Number(new Date().getTime()) - Number(new Date(item.updatedAt).getTime()) > 600*1000
+    if (condition) 
+      return item.updatedAt = '已离线'
+    else 
+      return item.updatedAt = '运行中'
+  })
   const columns =[{
     title: '设备名称',
     dataIndex: 'name',
@@ -53,7 +60,7 @@ export default props => {
     render: text => TableTextHidden( text, 10)
   },{
     title: '状态',
-    dataIndex: 'status',
+    dataIndex: 'updatedAt',
     key: 'status',
     width: '10%',
   },{
