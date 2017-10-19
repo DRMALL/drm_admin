@@ -59,7 +59,9 @@ export default props => {
   }]
   return(
     <div>
-      <Table columns={columns} dataSource={authorityArray} rowKey='_id' />
+      <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
+        <Table columns={columns} dataSource={authorityArray} rowKey='_id' />
+      </div>
       <Modal title='提示' visible={ authModal } okText='确定' cancelText='取消'
              onOk={ authorityDelById } onCancel={ cancleDelAuth } >
              <p>确定删除此权限？</p>

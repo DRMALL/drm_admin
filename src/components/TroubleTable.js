@@ -54,7 +54,9 @@ export default props => {
   },]
   return (
     <div>
-      <Table dataSource={troubleArr} columns={columns} rowKey={ record => record._id } />
+      <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
+        <Table dataSource={troubleArr} columns={columns} rowKey={ record => record._id } />
+      </div>
       <Modal title='提示' visible={ troubleModal } okText='确定' cancelText='取消'
              onOk={ troubleDelById } onCancel={ cancleDeltrouble } >
              <p>确定删除此信息？</p>

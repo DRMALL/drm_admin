@@ -122,7 +122,7 @@ export default props => {
   return(
     <div>
       <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
-      <Table dataSource={ machineArr } columns={ columns } rowKey='_id' />
+        <Table dataSource={ machineArr } columns={ columns } rowKey='_id' />
       </div>
       <Modal title='提示' visible={ machineModal } okText='确定' cancelText='取消'
              onOk={ machineDelById } onCancel={ cancleDelAuth }  >

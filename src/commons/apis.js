@@ -1,7 +1,7 @@
-// const host = 'https://drmtest.sparklog.com/admin/'
+const host = 'https://drmtest.sparklog.com/admin/'
 // const host = 'http://192.168.2.236:3000/admin/'
 // const host = 'http://192.168.2.252:3000/admin/'
-const host = 'localhost:30001/admin/'
+// const host = 'http://192.168.1.101:3000/admin/'
 
 export const login = `${host}session`
 export const newUser = `${host}users/new`

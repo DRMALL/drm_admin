@@ -49,7 +49,9 @@ const PartTable = ({ table }) => {
     </div>
   }]
   return (
-    <Table dataSource={ table } columns={ columns } rowKey='_id' />
+    <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
+      <Table dataSource={ table } columns={ columns } rowKey='_id' />
+    </div>
     )
 }
 

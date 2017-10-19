@@ -77,7 +77,9 @@ export default props => {
   },]
   return(
     <div>
-      <Table columns={ columns } dataSource={ workOrder } rowKey={ record => record._id } />
+      <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
+        <Table columns={ columns } dataSource={ workOrder } rowKey={ record => record._id } />
+      </div>
       <Modal title='提示' visible={ isShowModal } okText='确定' cancelText='取消'
              onOk={ workOrderDelById } onCancel={ cancleDel }  >
         <p>确定删除此工单？</p>

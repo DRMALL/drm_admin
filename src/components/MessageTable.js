@@ -122,7 +122,9 @@ export default props => {
   },]
   return(
     <div>
-      <Table dataSource={ messageArr } columns={ messageSelect==='send' ? columns : columnnosend } />
+      <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
+        <Table dataSource={ messageArr } columns={ messageSelect==='send' ? columns : columnnosend } />
+      </div>
     </div>
     )
 }

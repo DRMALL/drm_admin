@@ -59,7 +59,9 @@ export default props => {
   }]
   return(
     <div>
-      <Table columns={columns} dataSource={userArr} />
+      <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
+        <Table columns={columns} dataSource={userArr} />
+      </div>
     </div>
     )
 }
