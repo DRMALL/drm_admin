@@ -17,12 +17,12 @@ export default props => {
   const token = localStorage.getItem('token')
   function tipsExcle(){
     if(downloadTime.length) {
-        request(`${machineExcle}?startTime=${startTime}&endTime=${endTime}&number=${machineStatusInfo.number}&token=${token}`)
-        .then(res => {
-          const result = res.body.data
-          window.location.href = result
-        })
-        .catch(res => console.error(res))
+      message.info('数据导出中...')
+        // request(`${machineExcle}?startTime=${startTime}&endTime=${endTime}&number=${machineStatusInfo.number}&token=${token}`)
+        // .then(res => {
+        //   window.location.href = res
+        // })
+        // .catch(res => console.error(res))
     }
     else message.warn('请选择时间后，在导出数据!!')
   }
@@ -32,9 +32,15 @@ export default props => {
         <div className='machine-download-text' >导出历史数据</div>
         <DatePicker.RangePicker onChange={ getSelectTime } />
       </div>
-      <Button className='machine-download-button' onClick={ tipsExcle } >
-          导出excel
-      </Button>
+      {
+        downloadTime.length 
+         ? (<Button className='machine-download-button' onClick={ tipsExcle } >
+        <a href={`${machineExcle}?startTime=${startTime}&endTime=${endTime}&number=${machineStatusInfo.number}&token=${token}`}>导出excel</a>
+      </Button>)
+         : (<Button disabled className='machine-download-button' onClick={ tipsExcle } >
+              导出excel
+            </Button>)
+      }
     </div>
     )
 }
