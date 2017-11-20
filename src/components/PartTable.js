@@ -22,17 +22,13 @@ const PartTable = ({ table }) => {
     dataIndex: 'model',
     width: '15%',
   },{
-    title: '件／台／套',
+    title: '单位',
     dataIndex: 'unit',
-    width: '10%',
-  },{
-    title: '类型',
-    dataIndex: 'types',
     width: '10%',
   },{
     title: '备注',
     dataIndex: 'remark',
-    width: '20%',
+    width: '30%',
     render: text => TableTextHidden(text, 30)
   },{
     title: '添加时间',

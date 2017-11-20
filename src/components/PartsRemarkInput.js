@@ -9,14 +9,14 @@ import store from '../commons/store'
 
 const PartsRemarkInput = ({machineArray}) => (
   <div className='part-remark-input' >
-    <div className='part-remark-input-flex' >
+{/*    <div className='part-remark-input-flex' >
       <div className='part-remark-input-text' >设备编号</div>
       <SelectOption arr={ machineArray } keys='number' />
     </div>
     <div className='part-remark-input-flex' >
       <div className='part-remark-input-text' >设备名称</div>
       <SelectOption arr={ machineArray } keys='name' />
-    </div>
+    </div>*/}
     <div className='part-remark-input-flex' >
       <div className='part-remark-input-text' >备注</div>
       <Input.TextArea onChange={ getInputValue } style={{ width: 300 }}
