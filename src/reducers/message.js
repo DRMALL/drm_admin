@@ -1,7 +1,10 @@
 
 
 const message = {
-  messageArr: [],
+  unpublishedMeta: null,
+  publishedMeta: null,
+  publishedMessage: [],
+  unpublishedMessage: [],
   previewVisible: false,
   previewImage: '',
   fileList: [],
@@ -48,16 +51,22 @@ export default ( state=message, action ) => {
       return Object.assign({}, state, { status: 'new message start',   isEdit: true }, resetMessage )
     case 'MESSAGE_SAVE_FAIL':
       return Object.assign({}, state, { status: 'save message fail' } )
-    case 'MESSAGE_GET_MESSAGE_ARR_START':
+    case 'MESSAGE_GET_MESSAGE_UNPUBLISHED_START':
       return Object.assign({}, state, { status: 'get message arr start' } )
-    case 'MESSAGE_GET_MESSAGE_ARR_SUCCESS':
-      return Object.assign({}, state, { status: 'get message arr success', messageArr: action.payload, messageArray: action.payload } )
-    case 'MESSAGE_GET_MESSAGE_ARR_FAIL':
+    case 'MESSAGE_GET_MESSAGE_UNPUBLISHED_SUCCESS':
+      return Object.assign({}, state, { status: 'get message arr success', unpublishedMeta: action.payload.meta, unpublishedMessage: action.payload.data })
+    case 'MESSAGE_GET_MESSAGE_UNPUBLISHED_FAIL':
+      return Object.assign({}, state, { status: 'get message arr fail' } )
+    case 'MESSAGE_GET_MESSAGE_PUBLISHED_START':
+      return Object.assign({}, state, { status: 'get message arr start' } )
+    case 'MESSAGE_GET_MESSAGE_PUBLISHED_SUCCESS':
+      return Object.assign({}, state, { status: 'get message arr success', publishedMeta: action.payload.meta, publishedMessage: action.payload.data })
+    case 'MESSAGE_GET_MESSAGE_PUBLISHED_FAIL':
       return Object.assign({}, state, { status: 'get message arr fail' } )
     case 'MESSAGE_SELECT_SEND_FASLE':
-      return Object.assign({}, state, { messageArr: state.messageArray.filter( item => item.published===false ), messageSelect: 'notsend' } )
+      return Object.assign({}, state, { messageSelect: 'notsend' } )
     case 'MESSAGE_SELECT_SEND_TRUE':
-      return Object.assign({}, state, { messageArr: state.messageArray.filter( item => item.published=== true ), messageSelect: 'send' } )
+      return Object.assign({}, state, { messageSelect: 'send' } )
     case 'MESSAGE_GET_ONE_MESSAGE_START':
       return Object.assign({}, state, { status:'get message start' })
     case 'MESSAGE_GET_ONE_MESSAGE_SUCCESS':

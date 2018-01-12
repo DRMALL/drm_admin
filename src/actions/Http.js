@@ -7,8 +7,30 @@ export default (api, method, tip, data ) => {
 	return new Promise((resolve, reject) => {
      const token =  localStorage.getItem('token')
 
+		 if(method==='getWithQuery'){
+     	request
+     	.get(`${api}&token=${token}`)
+     	.then(res =>{
+     		if(res.body.code===200){
+     			success(res, tip)
+     			 resolve(res)
+     		}
+     		else if(res.body.code===5050) {
+          resetLogin()
+          reject(res)
+        }
+     		else {
+     			fail(res)
+     			reject(res)
+     		}
+     	})
+     	.catch(res => {
+     		fail(res)
+     		reject(res)
+     	})
+     }
 
-     if(method==='get'){
+     else if(method==='get'){
      	request
      	.get(`${api}?token=${token}`)
      	.then(res =>{

@@ -12,7 +12,7 @@ import delIcon from '../images/dels.png'
 
 //本页面没有配置好table，还是使用了复制。。
 export default props => {
-  const { messageArr, messageSelect } = props.state.message
+  const { unpublishedMessage, publishedMessage, messageSelect, publishedMeta, unpublishedMeta } = props.state.message
   const columns = [{
     title: '标题',
     dataIndex: 'title',
@@ -120,10 +120,26 @@ export default props => {
       </div>
       )
   },]
+
+  const pagination = {
+    onChange(page, size) {
+    },
+    total: publishedMeta ? publishedMeta.count : 10
+  }
+
+  const unPagination = {
+    onChange(page, size) {
+    },
+    total: unpublishedMeta ? unpublishedMeta.count : 10
+  }
+
   return(
     <div>
       <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
-        <Table dataSource={ messageArr } columns={ messageSelect==='send' ? columns : columnnosend } />
+        <Table
+          dataSource={ messageSelect === 'send' ? publishedMessage : unpublishedMessage }
+          columns={ messageSelect==='send' ? columnnosend : columns }
+          pagination={ messageSelect == 'notsend' ? unPagination : pagination} />
       </div>
     </div>
     )

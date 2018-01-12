@@ -1,5 +1,5 @@
-
-
+import getMessagePublished from '../actions/getMessagePublished'
+import getMessageUnpublished from '../actions/getMessageUnpublished'
 import React from 'react'
 import dispatch from '../actions/dispatch'
 import ContentLink from './ContentLink'
@@ -23,8 +23,11 @@ export default MessageHeader
 function messageSelect(e){
   const { id } = e.currentTarget.dataset
   if(id==='未发布'){
+    getMessageUnpublished()
     dispatch('MESSAGE_SELECT_SEND_FASLE')
   }
-  else
-  dispatch('MESSAGE_SELECT_SEND_TRUE')
+  else {
+    getMessagePublished()
+    dispatch('MESSAGE_SELECT_SEND_TRUE')
+  }
 }
