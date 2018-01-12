@@ -18,6 +18,7 @@ const machine ={
   affixChange: false,
   timeLineId: undefined,
   machineArr: [],
+  meta: null,
   machineModal: false,
   downloadTime: [],
   imgNum: 0,
@@ -64,7 +65,7 @@ export default ( state=machine, action ) => {
     case 'MACHINE_NEW_MACHINE_RESET':
       return Object.assign({}, state, resetMachine )
     case 'MACHINE_GET_MACHINE_ARR_SUCCESS':
-      return Object.assign({}, state, { machineArr: action.payload } )
+      return Object.assign({}, state, { machineArr: action.payload.data, meta: action.payload.meta} )
     case 'MACHINE_GET_MACHINE_BY_ID':
       return Object.assign({}, state, action.payload )
     case 'MACHINE_SELCET_TIME':

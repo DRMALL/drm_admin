@@ -1,5 +1,5 @@
 
-
+import getMachineArr from '../actions/getMachineArr'
 import Table from 'antd/lib/table'
 import React from 'react'
 import TableTime from './TableTime'
@@ -13,12 +13,12 @@ import Tooltip from 'antd/lib/tooltip'
 import delIcon from '../images/dels.png'
 
 export default props => {
-  const { machineArr, machineModal } = props.state.machine
+  const { machineArr, machineModal, meta } = props.state.machine
   machineArr.map(item => {
     let condition = Number(new Date().getTime()) - Number(new Date(item.updatedAt).getTime()) > 600*1000
-    if (condition) 
+    if (condition)
       return item.status = '已离线'
-    else 
+    else
       return item.status = '运行中'
   })
   const columns =[{
@@ -99,7 +99,7 @@ export default props => {
              onClick={ navToMachineEdit } >
           <i className="iconfont icon-compile edit-icon" style={{ fontSize:25, color:'#579df2' }} ></i>
         </div>
-        <div className='table-icon-item' 
+        <div className='table-icon-item'
              data-machine-number={ text.number }
              data-machine-name={ text.name }
              data-machine-cc={ text.cc }
@@ -119,10 +119,20 @@ export default props => {
       </div>
       )
   },]
+
+  const pagination = {
+    total: meta ? meta.count : 10,
+    // pageSize: 1,
+    onChange(page, size) {
+      let offset = page == 1 ? size : (page - 1) * size
+      getMachineArr(offset)
+    }
+  }
+
   return(
     <div>
       <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
-        <Table dataSource={ machineArr } columns={ columns } rowKey='_id' />
+        <Table dataSource={ machineArr } columns={ columns } rowKey='_id' pagination={pagination} />
       </div>
       <Modal title='提示' visible={ machineModal } okText='确定' cancelText='取消'
              onOk={ machineDelById } onCancel={ cancleDelAuth }  >
@@ -159,4 +169,3 @@ function navToMachineControl(e){  // dispatch('MACHINE_SELECT_MACHINE_NAME_AND_A
 }
 
 //设备删除
-
