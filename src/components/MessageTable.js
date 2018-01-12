@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
@@ -9,6 +7,8 @@ import messageDel from '../actions/messageDel'
 import TableTextHidden from './TableTextHidden'
 import TableTime from './TableTime'
 import delIcon from '../images/dels.png'
+import getMessagePublished from '../actions/getMessagePublished'
+import getMessageUnpublished from '../actions/getMessageUnpublished'
 
 //本页面没有配置好table，还是使用了复制。。
 export default props => {
@@ -123,12 +123,16 @@ export default props => {
 
   const pagination = {
     onChange(page, size) {
+      let offset = page == 1 ? size : (page - 1) * size
+      getMessagePublished(offset)
     },
     total: publishedMeta ? publishedMeta.count : 10
   }
 
   const unPagination = {
     onChange(page, size) {
+      let offset = page == 1 ? size : (page - 1) * size
+      getMessageUnpublished(offset)
     },
     total: unpublishedMeta ? unpublishedMeta.count : 10
   }
