@@ -26,13 +26,15 @@ export default props => {
   width: '10%',
   render: text =>
   <div>{ text ? text.text : '' }</div>
-  },{
-  title: '内容',
-  dataIndex: 'content',
-  key: 'content',
-  width: '30%',
-  render: text => TableTextHidden( getRichEditorValue(text), 40 )
-  },{
+  },
+  // {
+  // title: '内容',
+  // dataIndex: 'content',
+  // key: 'content',
+  // width: '30%',
+  // render: text => TableTextHidden( getRichEditorValue(text), 40 )
+  // },
+  {
   title: '添加时间',
   dataIndex: 'createdAtTime',
   key: 'createdAtTime',
