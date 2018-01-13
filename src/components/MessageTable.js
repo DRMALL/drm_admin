@@ -123,7 +123,7 @@ export default props => {
 
   const pagination = {
     onChange(page, size) {
-      let offset = page == 1 ? size : (page - 1) * size
+      let offset = (page - 1) * size
       getMessagePublished(offset)
     },
     total: publishedMeta ? publishedMeta.count : 10
@@ -131,7 +131,7 @@ export default props => {
 
   const unPagination = {
     onChange(page, size) {
-      let offset = page == 1 ? size : (page - 1) * size
+      let offset = (page - 1) * size
       getMessageUnpublished(offset)
     },
     total: unpublishedMeta ? unpublishedMeta.count : 10

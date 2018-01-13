@@ -124,7 +124,7 @@ export default props => {
     total: meta ? meta.count : 10,
     // pageSize: 1,
     onChange(page, size) {
-      let offset = page == 1 ? size : (page - 1) * size
+      let offset = (page - 1) * size
       getMachineArr(offset)
     }
   }

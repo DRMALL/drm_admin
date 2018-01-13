@@ -1,5 +1,4 @@
 
-import getTroubleArr from '../actions/getTroubleArr'
 import React from 'react'
 import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
@@ -10,6 +9,7 @@ import troubleDelById from '../actions/troubleDelById'
 import dispatch from '../actions/dispatch'
 import getRichEditorValue from '../utils/getRichEditorValue'
 import delIcon from '../images/dels.png'
+import getTroubleArr from '../actions/getTroubleArr'
 
 export default props => {
   const { troubleArr, troubleModal, meta } = props.state.trouble
