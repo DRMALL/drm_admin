@@ -7,9 +7,10 @@ import editUser from '../actions/editUser'
 import userDel from '../actions/userDel'
 import Modal from 'antd/lib/modal'
 import delIcon from '../images/dels.png'
+import getUserArr from '../actions/getUserArr'
 
 export default props => {
-  const { userArr } = props.state.user
+  const { userArr, meta } = props.state.user
   const columns = [{
     title: '用户名称',
     dataIndex: 'name',
@@ -57,10 +58,19 @@ export default props => {
       </div>
       )
   }]
+
+  const pagination = {
+    total: meta ? meta.count : 10,
+    onChange(page, size) {
+      let offset = (page - 1) * size
+      getUserArr(offset)
+    }
+  }
+
   return(
     <div>
       <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
-        <Table columns={columns} dataSource={userArr} />
+        <Table columns={columns} dataSource={userArr} pagination={pagination}/>
       </div>
     </div>
     )
@@ -82,4 +92,3 @@ function confirmDelUser(e){
     maskClosable: true
   })
 }
-

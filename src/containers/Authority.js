@@ -18,7 +18,7 @@ export default class Authority extends Component{
     .catch(res => console.error('出错了！'))
   }
   render() {
-      const { authorityArray, userNameArr, machineNameArr, authModal } = this.props.state.authority
+      const { authorityArray, userNameArr, machineNameArr, authModal, meta } = this.props.state.authority
     return(
         <div>
           <div className='user-head' >
@@ -27,9 +27,9 @@ export default class Authority extends Component{
           <AuthorityTable authorityArray={ authorityArray }
                           userNameArr={ userNameArr }
                           machineNameArr={ machineNameArr }
-                          authModal={ authModal } />
+                          authModal={ authModal }
+                          meta={ meta } />
         </div>
       )
   }
 }
-

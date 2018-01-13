@@ -18,7 +18,7 @@ export default class User extends Component {
         <div className='part-content-title' >
           <PartTitle tip='配件管理' />
         </div>
-        <PartTable table={ this.props.state.part.partArr } />
+        <PartTable table={ this.props.state.part.partArr } meta={ this.props.state.part.meta }/>
       </div>
       )
   }

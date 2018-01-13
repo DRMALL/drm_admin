@@ -1,5 +1,5 @@
 
-
+import getTroubleArr from '../actions/getTroubleArr'
 import React from 'react'
 import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
@@ -12,7 +12,7 @@ import getRichEditorValue from '../utils/getRichEditorValue'
 import delIcon from '../images/dels.png'
 
 export default props => {
-  const { troubleArr, troubleModal } = props.state.trouble
+  const { troubleArr, troubleModal, meta } = props.state.trouble
   const columns = [{
   title: '标题',
   dataIndex: 'title',
@@ -52,10 +52,24 @@ export default props => {
         </div>
     </div>
   },]
+
+  const pagination = {
+    total: meta ? meta.count : 10,
+    onChange(page, size) {
+      console.log(page, size)
+      let offset = (page - 1) * size
+      getTroubleArr(offset)
+    }
+  }
+
   return (
     <div>
       <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
-        <Table dataSource={troubleArr} columns={columns} rowKey={ record => record._id } />
+        <Table
+          dataSource={troubleArr}
+          columns={columns}
+          rowKey={ record => record._id }
+          pagination={pagination} />
       </div>
       <Modal title='提示' visible={ troubleModal } okText='确定' cancelText='取消'
              onOk={ troubleDelById } onCancel={ cancleDeltrouble } >

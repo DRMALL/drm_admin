@@ -2,6 +2,7 @@
 
 const part = {
   partArr: [],
+  meta: null,
   machineId: undefined,
   remark: undefined,
 }
@@ -9,7 +10,7 @@ const part = {
 export default (state=part, action) => {
   switch(action.type){
     case 'PART_GET_PART_ARR_SUCCESS':
-      return Object.assign({}, state, { partArr: action.payload } )
+      return Object.assign({}, state, { partArr: action.payload.data, meta: action.payload.meta } )
     case 'PART_GET_MACHINE_ID':
       return Object.assign({}, state, { machineId: action.payload } )
     case 'PART_ADD_REMARK_SUCCESS':

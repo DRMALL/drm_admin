@@ -2,6 +2,7 @@
 
 const authority ={
   authorityArray:[],
+  meta: null,
   userNameArr: [],
   machineNameArr: [],
   newAuthorityArr: [{
@@ -48,7 +49,7 @@ export default ( state=authority, action ) => {
     case 'AUTHORITY_NEW_AUTHORITY_RESET':
       return Object.assign({}, state, { newAuthorityArr: action.payload, status: 'newAuthorityArr reset'} )
     case 'AUTHORITY_GET_AUTHORITY_SUCCESS':
-      return Object.assign({}, state, { authorityArray: action.payload, TauthorityArray: action.payload } )
+      return Object.assign({}, state, { authorityArray: action.payload.data, TauthorityArray: action.payload.data, meta: action.payload.meta  } )
     case 'AUTHORITY_GET_AUTHORITY_EDIT':
       return Object.assign({}, state, { newAuthorityArr: action.payload } )
     case 'AUTHORITY_FILTER_VALUE_TABLE':

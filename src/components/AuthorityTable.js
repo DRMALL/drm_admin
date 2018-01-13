@@ -11,9 +11,10 @@ import TableFilter from './TableFilter'
 import Modal from 'antd/lib/modal'
 import authorityDelById from '../actions/authorityDelById'
 import delIcon from '../images/dels.png'
+import getAuthorityArr from '../actions/getAuthorityArr'
 
 export default props => {
-  const { authorityArray, userNameArr, machineNameArr, authModal } = props
+  const { authorityArray, userNameArr, machineNameArr, authModal, meta } = props
   const columns = [{
     title: '用户',
     dataIndex: 'user.name',
@@ -57,10 +58,19 @@ export default props => {
       </div>
       )
   }]
+
+  const pagination = {
+    total: meta ? meta.count : 10,
+    onChange(page, size) {
+      let offset = (page - 1) * size
+      getAuthorityArr(offset)
+    }
+  }
+
   return(
     <div>
       <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
-        <Table columns={columns} dataSource={authorityArray} rowKey='_id' />
+        <Table columns={columns} dataSource={authorityArray} rowKey='_id' pagination={pagination}/>
       </div>
       <Modal title='提示' visible={ authModal } okText='确定' cancelText='取消'
              onOk={ authorityDelById } onCancel={ cancleDelAuth } >

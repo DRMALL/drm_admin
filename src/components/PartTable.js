@@ -1,14 +1,13 @@
-
-
 import React from 'react'
 import Table from 'antd/lib/table'
 import { browserHistory } from 'react-router'
 import TableTextHidden from './TableTextHidden'
 import TableTime from './TableTime'
 import moment from 'moment'
+import getPartArr from '../actions/getPartArr'
 // import delIcon from '../images/dels.png'
 
-const PartTable = ({ table }) => {
+const PartTable = ({ table, meta }) => {
   const columns =[{
     title: '物料代码',
     dataIndex: 'code',
@@ -44,9 +43,18 @@ const PartTable = ({ table }) => {
       <i className="iconfont icon-compile trouble-table-icon"   style={{ color: '#0068d2', fontSize:25 }} ></i>
     </div>
   }]
+
+  const pagination = {
+    total: meta ? meta.count : 10,
+    onChange(page, size) {
+      let offset = (page - 1) * size
+      getPartArr(offset)
+    }
+  }
+
   return (
     <div style={{paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
-      <Table dataSource={ table } columns={ columns } rowKey='_id' />
+      <Table dataSource={ table } columns={ columns } rowKey='_id' pagination={pagination}/>
     </div>
     )
 }

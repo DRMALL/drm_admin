@@ -6,12 +6,12 @@ import dispatch from './dispatch'
 // import changeTroubleType from '../utils/changeTroubleType'
 import moment from 'moment'
 
-export default () => {
+export default (offset = 0) => {
   return new Promise((reslove, reject) => {
-  Http(troubleAction, 'get', false)
+  Http(`${troubleAction}?offset=${offset}`, 'getWithQuery', false)
   .then(res => {
-    const result = res.body.data
-    result.map(item => {
+    const result = res.body
+    result.data = result.data.map(item => {
       item.categoryxx = item.category ? item.category.text : null
       item.createdAtTime = moment(item.createdAt).format('YYYY-MM-DD HH:mm')
       return item

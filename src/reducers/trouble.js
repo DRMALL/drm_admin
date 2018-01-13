@@ -5,6 +5,7 @@ const trouble = {
   categoryxx: '',
   content: '',
   troubleArr: [],
+  meta: null,
   troubleKinds: [],
   kind: '',
   troubleKindId: '',
@@ -29,7 +30,7 @@ export default ( state=trouble, action ) =>{
     case 'TROUBLE_ADD_RESET':
       return Object.assign({}, state, resetTrouble )
     case 'TROUBLE_GET_TROUBLE_ARR':
-      return Object.assign({}, state, { troubleArr: action.payload} )
+      return Object.assign({}, state, { troubleArr: action.payload.data, meta: action.payload.meta} )
     case 'TROUBLE_GET_TROUBLE_BY_ID':
       return Object.assign({}, state, action.payload )
     case 'TROUBLE_GET_TROUBLE_KIND_ARR':

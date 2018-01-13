@@ -2,6 +2,7 @@
 
 const user ={
   userArr: [],
+  meta: null,
   name: null,
   password: null,
   email: null,
@@ -20,7 +21,7 @@ export default ( state=user, action ) => {
     case 'USER_NEW_INPUT_RESET':
       return Object.assign({}, state, {   name: null, password: null, email: null, phone: null, company_name: null, address: null } )
     case 'USER_GET_ALL_USERS':
-      return Object.assign({}, state, { userArr: action.payload } )
+      return Object.assign({}, state, { userArr: action.payload.data, meta: action.payload.meta } )
     case 'USER_GET_USER_INFO_BY_ID':
       return Object.assign({}, state,  action.payload  )
     case 'USER_SHORT_PARAMETER':
