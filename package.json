@@ -34,9 +34,6 @@
     "redux-mock-store": "1.2.3",
     "superagent-mocker": "0.5.2"
   },
-  "engines": {
-    "node": "7.x"
-  },
   "scripts": {
     "code": "npm-run-all -p watch-css start-js",
     "start-js": "react-scripts start",
